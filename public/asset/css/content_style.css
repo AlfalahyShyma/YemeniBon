@@ -1636,13 +1636,13 @@ Remove or comment-out the code block below to see how the browser will fall-back
     transition: 0.5s;
 }
 
-.card-in:hover img {
-    /* width: 120px; */
-    /* height: 120px; */
-    /* border-radius: 60px;
+/* .card-in:hover img {
+     width: 120px;
+     height: 120px; 
+    border-radius: 60px;
     top: 0px;
-    transition: 0.5s; */
-}
+    transition: 0.5s; 
+} */
 
 .card-in:hover h1 {
     top: 0px;
