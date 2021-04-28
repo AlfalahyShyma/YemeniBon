@@ -74,15 +74,15 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
     
 
 
-// Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
-//     return view('Admin.home');
-// });
-// Route::get('/content', function () {
-//     return view('content');
-// });
-// Route::get('/contact', function () {
-//     return view('contact');
-// });
+Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
+    return view('Admin.home');
+});
+Route::get('/content', function () {
+    return view('content');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
 
 Route::get('/', [UserHomeController::class, 'index']);
 Route::get('/details/{id}', [UserHomeController::class, 'details']);
