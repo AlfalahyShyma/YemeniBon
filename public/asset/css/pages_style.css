@@ -377,6 +377,7 @@ html::-webkit-scrollbar {
 @media (max-width: 576px) {
 }
 
+
 .pub-show-description {
     margin-top: 50px;
     color: #693713;
@@ -395,9 +396,29 @@ html::-webkit-scrollbar {
     transition: 0.7s;
     z-index: 10;
     margin-left: 500px;
-    margin-top: -130px;
+    margin-top: -90px;
 }
 
+/* .pub-show-content span{
+    color: #868686;
+    font-size: 14px;
+    margin-left: 500px;
+    margin-top: 190px;
+} */
+
+.pub-show-content p{
+    /* margin-top: -150px; */
+    display:inline;
+    padding-right: 150px;
+    /* padding-top: 10px; */
+    color: #693713;
+    font-size: 25px;
+    line-height: 30px;
+    font-family: QUESHA;
+    border-radius: 10px;
+    transition: 0.7s;
+
+}
 
 .pub-show-body {
     display: flex;
