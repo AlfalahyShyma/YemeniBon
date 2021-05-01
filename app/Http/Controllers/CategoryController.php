@@ -52,7 +52,9 @@ class CategoryController extends Controller
         // ]);
 
 
-        $request->validate(['name'=>'required|unique:categories','name_ar'=>'required|unique:categories','status'=>'required']);
+        $request->validate(['name'=>'required|unique:categories|min:5|max:255',
+        'name_ar'=>'required|unique:categories|min:5|max:255',
+        'status'=>'required']);
         Category::create($request->all());
         $category = new Category();
         $category->name = $request->input('name');
@@ -65,7 +67,7 @@ class CategoryController extends Controller
       
 
           // return view('categories.create');
-           return redirect('/admin/categories/index')->with('completed', 'content has been updated');  
+           return redirect('/admin/categories/index')->with('completed', 'content has been add');  
 
     }
 
@@ -140,7 +142,7 @@ class CategoryController extends Controller
 
 
          $category->delete();
-         return redirect('/admin/categories/index')->with('success','Category deleted successfully');
+         return redirect('/admin/categories/index')->with('completed','Category deleted successfully');
     }
 
     ##################################################

@@ -39,26 +39,35 @@ class InterviewController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate(['name'=>'required|unique:interviews','img'=>'required|mimes:jpg,png,jpeg']);
+        $request->validate(['name'=>'required|unique:interviews',
+        'name_ar'=>'required|unique:interviews|min:10|max:50',
+        'desc'=>'required|min:5',
+        'desc_ar'=>'required|min:5',
+        'interviewer'=>'required|min:5',
+        'interviewer_ar'=>'required|min:5',
+        'interview'=>'required|min:5',
+        'interview_ar'=>'required|min:5',
+        'voice'=>'required|min:5',
+        'image'=>'required|mimes:jpg,png,jpeg',
+        ]);
         $interview = new Interview();
 
-        $name = preg_replace('/(0)\.(\d+) (\d+)/', '$3$1$2', microtime()) . "." . $request->img->getClientOriginalExtension();
-        $path= $request->img->move(public_path('images'), $name);
+        $name = preg_replace('/(0)\.(\d+) (\d+)/', '$3$1$2', microtime()) . "." . $request->image->getClientOriginalExtension();
+        $path= $request->image->move(public_path('images'), $name);
         $interview->img =$name;
         $interview->name = $request->input('name');
         $interview->name_ar = $request->input('name_ar');
         $interview->date = $request->input('date'); 
         $interview->interviewer = $request->input('interviewer');
         $interview->interviewer_ar = $request->input('interviewer_ar');
-        $interview->img = $request->input('img');   
         $interview->interview = $request->input('interview');   
         $interview->interview_ar = $request->input('interview_ar');   
-        $interview->voice = $request->input('voice');   
+        $interview->voice = $request->input('voice');  
         $interview->desc = $request->input('desc');   
         $interview->desc_ar = $request->input('desc_ar');   
         $interview->category_id = $request->input('category_id');
         $interview->save();
-        return redirect('/admin/interviews/index')->with('completed', 'interview has been updated');  
+        return redirect('/admin/interviews/index')->with('completed', 'interview has been add');  
 
    
     }
@@ -98,12 +107,19 @@ class InterviewController extends Controller
     public function update(Request $request, $interview_id)
     {
         $request->validate([
-            'name' => 'required',
-            'desc' => 'required',
-            'name_ar' => 'required',
-            'desc_ar' => 'required',
+            'name'=>'unique:interviews',
+            'name_ar'=>'unique:interviews|min:10|max:50',
+            'desc'=>'min:5',
+            'desc_ar'=>'min:5',
+            'interviewer'=>'min:5',
+            'interviewer_ar'=>'min:5',
+            'interview'=>'min:5',
+            'interview_ar'=>'min:5',
+            'voice'=>'min:5',
+            'image'=>'mimes:jpg,png,jpeg',
          ]);
-
+         $name = preg_replace('/(0)\.(\d+) (\d+)/', '$3$1$2', microtime()) . "." . $request->image->getClientOriginalExtension();
+         $path= $request->image->move(public_path('images'), $name);
          $interview= Interview::whereId($interview_id)->update([
              'img'=> $name,
             'name' => $request->input('name'),
@@ -113,8 +129,8 @@ class InterviewController extends Controller
             'interviewer_ar' => $request->input('interviewer_ar'),   
             'interview' => $request->input('interview'),   
             'interview_ar' => $request->input('interview_ar'),   
-            'img' => $request->input('img'),   
-            'voice' => $request->input('voice'),   
+            'voice' => $request->input('voice'), 
+           
             'desc' => $request->input('desc'),   
             'desc_ar' => $request->input('desc_ar'),   
             'category_id'=>$request->input('category_id'),   
@@ -133,9 +149,9 @@ class InterviewController extends Controller
      */
     public function destroy($id)
     {
-        $interview= Interview::find($interview);
-        $interviews->delete();
-        return redirect('/admin/interviews/index')->with('success','content deleted successfully');     
+        $interview= Interview::find($id);
+        $interview->delete();
+        return redirect('/admin/interviews/index')->with('completed','content deleted successfully');     
         
     }
 }

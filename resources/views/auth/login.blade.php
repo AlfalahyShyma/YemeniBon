@@ -35,9 +35,6 @@
 
             <div class="container-login100-form-btn">
                
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
-                    {{ __('Creat Account') }}
-                </a>
 
                 <x-jet-button class="login100-form-btn">
                     {{ __('Login') }}

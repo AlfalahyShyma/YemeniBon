@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\AboutUs;
+use App\Models\AboutContent;
+use App\Models\AboutTrainee;
 
 use Illuminate\Http\Request;
-
+use DB;
 class AboutUsControllr extends Controller
 {
     /**
@@ -15,8 +17,10 @@ class AboutUsControllr extends Controller
      */
     public function index()
     {
-        $abouts = AboutUs::all();
-        return view('about.index',['abouts' => $abouts]);  
+        $abouts = AboutUs::orderByDesc('created_at')->get();
+        $about_trainees=DB::table('about_trainees')->get();
+        $contenet=DB::table('about_contents')->get();
+        return view('about.index',['abouts' => $abouts,'contenet'=>$contenet,'about_trainees'=>$about_trainees]);  
            
     }
 
@@ -57,40 +61,60 @@ class AboutUsControllr extends Controller
            }
    
            $images = json_encode($fileNames);
-           $about->multi_image =$images;
+        //    $about->multi_image =$images;
 
 
-        $about->initiative_ar_desc = $request->input('initiative_ar_desc');  
-        $about->initiative_desc = $request->input('initiative_desc');
+        // $about->initiative_ar_desc = $request->input('initiative_ar_desc');  
+        // $about->initiative_desc = $request->input('initiative_desc');
         
-        $about->Training_desc = $request->input('Training_desc');
-        $about->Training_ar_desc = $request->input('Training_ar_desc');
+        // $about->Training_desc = $request->input('Training_desc');
+        // $about->Training_ar_desc = $request->input('Training_ar_desc');
        
-        $about->objectives_ar_desc = $request->input('objectives_ar_desc');  
-        $about->objectives_desc = $request->input('objectives_desc');  
-        $about->Trainers = $request->input('Trainers');  
-        $about->Trainers_ar = $request->input('Trainers_ar');  
-        $about->Trainers_name = $request->input('Trainers_name');  
-        $about->Trainers_name_ar = $request->input('Trainers_name_ar');  
-        $about->Trainers_job = $request->input('Trainers_job');  
-        $about->Trainers_job_ar = $request->input('Trainers_job_ar');  
-
-        $about->Trainees = $request->input('Trainees');
-        $about->Trainees_ar = $request->input('Trainees_ar');
-        $about->Trainees_name = $request->input('Trainees_name');
-        $about->Trainees_name_ar = $request->input('Trainees_name_ar');
-        $about->Trainees_job = $request->input('Trainees_job');
-        $about->Trainees_job_ar = $request->input('Trainees_job_ar');
-
-    
-
+        // $about->objectives_ar_desc = $request->input('objectives_ar_desc');  
+        // $about->objectives_desc = $request->input('objectives_desc');  
+        // $about->save();
+        $productId = DB::table('ABOUT_US')->insertGetId(
+            [ 'multi_image' => $images,
+            'initiative_ar_desc'=>$request->input('initiative_ar_desc'),
+            'initiative_desc'=>$request->input('initiative_desc'),
+            'Training_desc'=> $request->input('Training_desc'),
+            'Training_ar_desc'=> $request->input('Training_ar_desc'),
+            'objectives_ar_desc'=> $request->input('objectives_ar_desc'),
+            'objectives_desc'=> $request->input('objectives_desc'),
+            ]
+        );
         
-        // Store $images image in DATABASE from HERE 
-        $about->save();
-      
 
-          // return view('categories.create');
-           return redirect('/admin/about/index')->with('completed', 'content has been add');  
+        for($i=0;$i<count($request->input('Trainers'));$i++)
+       { 
+        //    dd($productId);
+        $about_content = new AboutContent();
+
+        $about_content->about_id =$productId;  
+        $about_content->Trainers = $request->input('Trainers')[$i];  
+        $about_content->Trainers_ar = $request->input('Trainers_ar')[$i];  
+        $about_content->Trainers_name = $request->input('Trainers_name')[$i];  
+        $about_content->Trainers_name_ar = $request->input('Trainers_name_ar')[$i];  
+        $about_content->Trainers_job = $request->input('Trainers_job')[$i];  
+        $about_content->Trainers_job_ar =$request->input('Trainers_job_ar')[$i];  
+        $about_content->save();
+    }
+    for($i=0;$i<count($request->input('Trainees'));$i++)
+    { 
+        //    dd($productId);
+
+        $about_trainees = new AboutTrainee(); 
+        $about_trainees->about_id=$productId;  
+        $about_trainees->Trainees = $request->input('Trainees')[$i];
+        $about_trainees->Trainees_ar = $request->input('Trainees_ar')[$i];
+        $about_trainees->Trainees_name = $request->input('Trainees_name')[$i];
+        $about_trainees->Trainees_name_ar = $request->input('Trainees_name_ar')[$i];
+        $about_trainees->Trainees_job =$request->input('Trainees_job')[$i];
+        $about_trainees->Trainees_job_ar =$request->input('Trainees_job_ar')[$i];
+        $about_trainees->save();
+    }
+    
+           return redirect('/about/index')->with('secucess',__('client.secucess'));
     }
 
     /**
@@ -99,9 +123,12 @@ class AboutUsControllr extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showAbout()
     {
-        //
+        $abouts =AboutUs::orderByDesc('created_at')->get();
+        $contenet=DB::table('about_content')->where('about_id',$abouts->id)->get();
+
+        return view('client.about',['abouts' => $abouts,'contenet'=>$contenet]);  
     }
 
     /**
@@ -205,9 +232,12 @@ class AboutUsControllr extends Controller
     public function destroy($about_id)
     {
         $about=AboutUs::find($about_id);
+        $content=AboutContent::where('about_id',$about_id)->get();
+        $AboutTrainee=AboutTrainee::where('about_id',$about_id)->get();
 
-
+         
         $about->delete();
+       
         return redirect('/admin/about/index')->with('success','content deleted successfully');     
         }  
 }

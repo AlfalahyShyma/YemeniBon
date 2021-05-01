@@ -12,7 +12,8 @@
 
         <div class="swiper-slide">
             <div class="swiper-slide__inner" style="background-image:url('https://ayxgj9k9n.cloudimg.io/width/5/x/https://user-images.githubusercontent.com/10026019/70386467-792ce280-19d3-11ea-8524-3199138b4c7b.jpeg')">
-                <img class="swiper-slide__image swiper-lazy" data-src="{{ asset('images/1617826490028459200.jpg') }}">
+                              <img class="swiper-slide__image swiper-lazy" data-src="{{ asset('images/'.$banner->image) }}">
+
                 <div class="swiper-slide__content">
                     <h1 class="slider-title">{{$banner->title}}</h1>
                     <p>{{$banner->desc}}</p>

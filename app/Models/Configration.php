@@ -10,5 +10,10 @@ class Configration extends Model
 {
     use HasFactory;
     use Loggable;
-
+    protected $fillable =[
+       
+        'icon',
+        'socialmedia',
+       
+    ];
 }
