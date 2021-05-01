@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 
-<section id="main-content">
+<section id=" ">
       <section class="wrapper" >
         <div class="row">
         <div class="col-lg-12 main-chart">
@@ -41,7 +41,7 @@
 <div class="form-group m-5">
   <label class="control-label m-3" for="type">{{__('catatype.add_category_label')}}</label>  
   <div class="">
-  <input name="type" placeholder="Type" class="col-md-5 form-control mx-5" style="font-size:15px;" required type="text">
+  <input name="type" placeholder="Type"  value="{{ old('type') }}" id="type" class="col-md-5 form-control mx-5" style="font-size:15px;" required type="text">
   </div>
 </div>
 </div>
@@ -54,7 +54,7 @@
 <div class="form-group m-5">
   <label class="control-label m-3" for="type_ar">{{__('catatype.add_category_label_ar')}}</label>  
   <div class="">
-  <input name="type_ar" placeholder="Type Arabic" class="col-md-5 form-control mx-5" style="font-size:15px;" required type="text">
+  <input name="type_ar" placeholder="Type Arabic" value="{{ old('type_ar') }}"  id="type_ar" class="col-md-5 form-control mx-5" style="font-size:15px;" required type="text">
   </div>
 </div>
 </div>

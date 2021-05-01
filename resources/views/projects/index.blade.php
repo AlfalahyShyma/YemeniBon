@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<section id="main-content">
+<section id=" ">
       <section class="wrapper" >
         <div class="row">
         <div class="col-lg-12 main-chart">
@@ -27,7 +27,7 @@
 </div>
     </div>
     <div class="row">
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12  " style="overflow: scroll;">
 
     <table class="table table-responsive text-center"  style=" width:100%;">
         <tr style="background-color:whitesmoke;" >

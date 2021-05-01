@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<section id="main-content">
+<section id=" ">
       <section class="wrapper" >
         <div class="row">
         <div class="col-lg-12 main-chart">

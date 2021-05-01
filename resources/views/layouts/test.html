@@ -1,21 +1,21 @@
 @extends('layouts.master')
 @section('content')
-<section >
+<section id="main-content">
     <section class="wrapper">
         <div class="row">
             <div class="col-lg-12 main-chart">
                 <div class="row" style="">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h1 class="pageheader-title"><b class="logo">{{__('project.title')}} <span
-                                        style="color:#5E3C23;">{{__('project.title_2')}} </span>
-                                    {{__('sidebar.about')}}</b> </h1>
+                            <h1 class="pageheader-title"><b class="logo">{{__('about.title')}} <span
+                                        style="color:#5E3C23;">{{__('about.title_2')}} </span>
+                                    {{__('about.title_3')}}</b> </h1>
 
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#"
-                                                class="haver">{{__('sidebar.about')}}</a></li>
+                                                class="haver">{{__('about.title_3')}}</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">
                                             {{__('about.link_title_2')}}</li>
                                     </ol>
@@ -27,14 +27,14 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                         <a class="btn btn-success" style="margin-bottom:0.3%; color:white; font-size:15px;"
-                            href="/about/create">{{__('about.add_new_btn')}}</a>
+                            href="/admin/abouts/create">{{__('about.add_new_btn')}}</a>
 
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 " style="overflow-x:auto;">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
 
-                        <table class="table table-responsive text-center table-striped" style=" width:100%;">
+                        <table class="table table-responsive text-center" style=" width:100%;">
                             <tr style="background-color:whitesmoke;">
                                 <th class="text-center" width="10px">{{__('about.Id')}}</th>
                                 <th class="text-center" width="200px">{{__('about.title_index')}}</th>
@@ -81,100 +81,120 @@
                                 <td>{{ $about->objectives_desc}}</td>
                                 <td>{{ $about->objectives_ar_desc }}</td>
                                 <td>
-                                    @foreach ($contenet as $_Trainers)
-                                    @if($about->id==$_Trainers->about_id)
-                                    {{ $_Trainers->Trainers }}<br><br><br><br>
-                                    @endif
+                                    @foreach (json_decode($about->Trainers) as $_Trainers)
+                                    {{ $_Trainers }}<br>
                                     @endforeach
                                 </td>
                                 <td>
-                                    @foreach ($contenet as $_Trainers_ar)
-                                    @if($about->id==$_Trainers_ar->about_id)
-
-                                    {{ $_Trainers_ar->Trainers_ar }}<br><br><br><br>
-                                    @endif
-
-                                    @endforeach 
-                                </td>
+                                    @foreach (json_decode($about->Trainers_ar) as $_Trainers_ar)
+                                    {{ $_Trainers_ar }}<br>
+                                    @endforeach </td>
 
 
 
 
                                 <td>
-                                    @foreach ($contenet as $_Trainers_name)
-                                    @if($about->id==$_Trainers_name->about_id)
-
-                                    {{ $_Trainers_name->Trainers_name }}<br><br><br><br>
-                                    @endif
+                                    @foreach (json_decode($about->Trainers_name) as $_Trainers_name)
+                                    {{ $_Trainers_name }}<br>
                                     @endforeach
                                 </td>
                                 <td>
-                                    @foreach ($contenet as $_Trainers_name_ar)
-                                    @if($about->id==$_Trainers_name_ar->about_id)
-
-                                    {{ $_Trainers_name_ar->Trainers_name_ar }}<br><br><br><br>
-                                    @endif
+                                    @foreach (json_decode($about->Trainers_name_ar) as $_Trainers_name_ar)
+                                    {{ $_Trainers_name_ar }}<br>
                                     @endforeach </td>
 
 
                                 <td>
-                                    @foreach ($contenet as $_Trainers_job)
-                                    @if($about->id==$_Trainers_job->about_id)
-                                    {{ $_Trainers_job->Trainers_job}}<br><br><br><br>
-                                    @endif
+                                    @foreach (json_decode($about->Trainers_job) as $_Trainers_job)
+                                    {{ $_Trainers_job}}<br>
                                     @endforeach
                                 </td>
                                 <td>
-                                    @foreach ($contenet as $_Trainers_job_ar)
-                                    @if($about->id==$_Trainers_job_ar->about_id)
-                                    {{ $_Trainers_job_ar->Trainers_job_ar}}<br><br><br><br>
-                                    @endif
+                                    @foreach (json_decode($about->Trainers_job_ar) as $_Trainers_job_ar)
+                                    {{ $_Trainers_job_ar}}<br>
+                                    @endforeach </td>
+
+                                <td>
+                                    @foreach (json_decode($about->Trainers) as $_Trainers)
+                                    {{ $_Trainers }}<br>
+                                    @endforeach
+                                </td>
+                                <td>
+                                    @foreach (json_decode($about->Trainers_ar) as $_Trainers_ar)
+                                    {{ $_Trainers_ar }}<br>
+                                    @endforeach </td>
+
+
+
+
+                                <td>
+                                    @foreach (json_decode($about->Trainers_name) as $_Trainers_name)
+                                    {{ $_Trainers_name }}<br>
+                                    @endforeach
+                                </td>
+                                <td>
+                                    @foreach (json_decode($about->Trainers_name_ar) as $_Trainers_name_ar)
+                                    {{ $_Trainers_name_ar }}<br>
                                     @endforeach </td>
 
 
                                 <td>
-                                    @foreach ($about_trainees as $_Trainers_job_ar)
-                                    @if($about->id==$_Trainers_job_ar->about_id)
-                                    {{ $_Trainers_job_ar->Trainees}}<br><br><br><br>
-                                    @endif
+                                    @foreach (json_decode($about->Trainers_job) as $_Trainers_job)
+                                    {{ $_Trainers_job}}<br>
                                     @endforeach
                                 </td>
                                 <td>
-                                    @foreach ($about_trainees as $_Trainers_job_ar)
-                                    @if($about->id==$_Trainers_job_ar->about_id)
-                                    {{ $_Trainers_job_ar->Trainees_ar}}<br><br><br><br>
-                                    @endif
-                                    @endforeach
-                                    
-                                     </td>
+                                    @foreach (json_decode($about->Trainers_job_ar) as $_Trainers_job_ar)
+                                    {{ $_Trainers_job_ar}}<br>
+                                    @endforeach </td>
+
+
+
+
 
 
                                 <td>
-                                    @foreach ($about_trainees as $_Trainers_job_ar)
-                                    @if($about->id==$_Trainers_job_ar->about_id)
-                                    {{ $_Trainers_job_ar->Trainees_name}}<br><br><br><br>
-                                    @endif
+                                    @foreach (json_decode($about->Trainers) as $_Trainers)
+                                    {{ $_Trainers }}<br>
                                     @endforeach
                                 </td>
                                 <td>
-                                    @foreach ($about_trainees as $_Trainers_job_ar)
-                                    @if($about->id==$_Trainers_job_ar->about_id)
-                                    {{ $_Trainers_job_ar->Trainees_name_ar}}<br><br><br><br>
-                                    @endif
+                                    @foreach (json_decode($about->Trainers_ar) as $_Trainers_ar)
+                                    {{ $_Trainers_ar }}<br>
+                                    @endforeach </td>
+
+
+
+
+                                <td>
+                                    @foreach (json_decode($about->Trainees) as $_Trainees)
+                                    {{ $_Trainees }}<br>
+                                    @endforeach
+                                </td>
+                                <td>
+                                    @foreach (json_decode($about->Trainees_ar) as $_Trainees_ar)
+                                    {{ $_Trainees_ar }}<br>
+                                    @endforeach </td>
+
+
+                                <td>
+                                    @foreach (json_decode($about->Trainees_name) as $_Trainees_name)
+                                    {{ $_Trainees_name}}<br>
+                                    @endforeach
+                                </td>
+                                <td>
+                                    @foreach (json_decode($about->Trainees_name_ar) as $_Trainees_name_ar)
+                                    {{ $_Trainees_name_ar}}<br>
                                     @endforeach </td>
 
                                 <td>
-                                    @foreach ($about_trainees as $_Trainers_job_ar)
-                                    @if($about->id==$_Trainers_job_ar->about_id)
-                                    {{ $_Trainers_job_ar->Trainees_job}}<br><br><br><br>
-                                    @endif
+                                    @foreach (json_decode($about->Trainees_job) as $_Trainees_job)
+                                    {{ $_Trainees_job}}<br>
                                     @endforeach
                                 </td>
                                 <td>
-                                    @foreach ($about_trainees as $_Trainers_job_ar)
-                                    @if($about->id==$_Trainers_job_ar->about_id)
-                                    {{ $_Trainers_job_ar->Trainees_job_ar}}<br><br><br><br>
-                                    @endif
+                                    @foreach (json_decode($about->Trainees_job_ar) as $_Trainees_job_ar)
+                                    {{ $_Trainees_job_ar}}<br>
                                     @endforeach </td>
 
 
@@ -191,8 +211,12 @@
                                 <td>
                                     <form action="/admin/abouts/destroy/{{$about->id}}" method="POST">
 
+                                        @csrf
 
-                                      
+                                        @method('PUT')
+                                        <a class="btn btn-primary" href="/admin/abouts/edit/{{$about->id}}"
+                                            style="font-size:12px;">{{__('about.edit_bt')}}</a>
+
                                         @csrf
                                         @method('DELETE')
 

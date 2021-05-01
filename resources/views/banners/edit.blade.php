@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<section id="main-content">
+<section id=" ">
       <section class="wrapper" >
         <div class="row">
         <div class="col-lg-12 main-chart">
@@ -37,16 +37,23 @@
         @method('PUT')
         <!-- Text input-->
 
-        <div class="row ">
-<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-6 m-5">
-<div class="form-group">
-<!-- <input type="file" name="image" value="{{$banner->image }}" class="col-md-4 form-control input-md mx-3" onchange="readURL(this);" style="font-size:15px;"  accept="image/*"  type="text">
-<img id="blah" src="http://placehold.it/180" alt="your image" width="100px" /> -->
-<input type="file" name="image" value="{{$banner->image }}" class="col-md-4 form-control input-md mx-3"   id="gallery-logo-add" style="font-size:15px;"  accept="image/*" required type="text">
-<div class="gallery2"></div>
-</div>
+        
+<div class="image-upload-container">
+  <div class="image-upload-one">
+    <div class="center">
+      <div class="form-input">
+        <label for="file-ip-1">
+          <img id="file-ip-1-preview" src="{{ asset('images/'.$banner->image) }}">
+          <button type="button" class="imgRemove" onclick="myImgRemove(1)"></button>
+        </label>
+        <input type="file"  name="image" id="file-ip-1" accept="image/*" onchange="showPreview(event, 1);">
+      </div>
+      <small class="small">Use the &#8634; icon to reset the image</small>
+    </div>
   </div>
-</div>
+ 
+
+  
 <div class="row ">
 <div class="col-xl-5 col-lg-4 col-md-4 col-sm-4 col-4 m-5">
 <div class="form-group">
@@ -81,41 +88,6 @@
  </div>
  </div>
 
-<!-- Button -->
-<!-- <div class="form-group ml-8 m-5" style="margin-top:1%;">
-
-        <div class="form-group ml-7">
-
-  <div class="row">
-  <div class="col-12">
-  <input type="file" name="image1" value="{{$banner->image }}" class="col-md-4 form-control input-md mx-3" style="font-size:15px;"  accept="image/*" type="text">
-  </div>
-  </div>
-</div>
-<div class="row ">
-<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 m-5">
-
-<div class="form-group">
-  <input  name="title" value="{{$banner->title }}" placeholder="Image Title" class="col-md-4 form-control input-md mx-3" style="font-size:15px;"  required type="text">
- </div>
- </div>
- <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 m-5">
-
-<div class="form-group">
-  <input  name="desc" value="{{$banner->desc }}" placeholder="Image Description" class="col-md-8 form-control input-md mx-3" style="font-size:15px;"  required type="text">
- </div>
- </div>
- </div>
-<div class="row">
-<div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5 m-5">
-
-<div class="form-group">
-  <input  name="link" value="{{$banner->link }}" placeholder="Image Link" class="col-md-8 form-control input-md mx-3" style="font-size:15px;"  required type="text">
- </div>
- </div>
- </div> -->
-
-<!-- Button -->
 <div class="form-group ml-8 m-5" style="margin-top:1%;">
   <div class="form-actions col-12">
     <button type="submit"  class="btn btn-primary col-3 mx-auto btn-color" style="color:white; font-size:14px;">{{__('Banner.edit_btn')}}</button>
@@ -127,34 +99,25 @@
         <!-- /row -->
       </section>
     </section>
+   
     <script>
-$(function() {
-    // Multiple images preview in browser
-    var imagesPreview = function(input, placeToInsertImagePreview) {
-
-        if (input.files) {
-            var filesAmount = input.files.length;
-
-            for (i = 0; i < filesAmount; i++) {
-                var reader = new FileReader();
-
-                reader.onload = function(event) {
-                    $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
-                }
-
-                reader.readAsDataURL(input.files[i]);
-            }
+      var number = 1;
+      do {
+        function showPreview(event, number){
+          if(event.target.files.length > 0){
+            let src = URL.createObjectURL(event.target.files[0]);
+            let preview = document.getElementById("file-ip-"+number+"-preview");
+            preview.src = src;
+            preview.style.display = "block";
+          } 
         }
-
-    };
-
-    $('#gallery-photo-add').on('change', function() {
-        imagesPreview(this, 'div.gallery');
-    });
-    $('#gallery-logo-add').on('change', function() {
-        imagesPreview(this, 'div.gallery2');
-    });
-});</script>
-    <script src="{{asset('lib/common-scripts.js')}}"></script>
-
+        function myImgRemove(number) {
+            document.getElementById("file-ip-"+number+"-preview").src = "https://i.ibb.co/ZVFsg37/default.png";
+            document.getElementById("file-ip-"+number).value = null;
+          }
+        number++;
+      }
+      while (number < 5);
+      
+      </script>
 @endsection

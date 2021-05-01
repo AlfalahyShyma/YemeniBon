@@ -1,10 +1,10 @@
 @extends('layouts.master')
 @section('content')
-<section id="main-content " style="width:100%; margin-left:4%;">
+<section id="  " style="width:100%; margin-left:4%;">
       <section class="wrapper" >
         <div class="row">
         <div class="col-lg-12 main-chart" style="width:100%;" >
-        <section id="main-content" style="width:100%;">
+        <section id=" " style="width:100%;">
       <section class="wrapper" style="width:100%;">
         <div class="row">
         <div class="col-lg-12 main-chart">

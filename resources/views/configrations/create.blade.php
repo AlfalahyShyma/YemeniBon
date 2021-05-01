@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 
-<section id="main-content">
+<section id=" ">
       <section class="wrapper" >
         <div class="row">
         <div class="col-lg-12 main-chart">
@@ -32,75 +32,40 @@
             </ul>
         </div>
     @endif
-    <form class="form-card" action="/admin/configrations/store" method="POST" >
+    <form class="form-card" action="/admin/configrations/store" method="POST" enctype="multipart/form-data">
             @csrf
+            
+ <div class="image-upload-container">
+    <div class="image-upload-one">
+      <div class="center">
+        <div class="form-input">
+          <label for="file-ip-1">
+            <img id="file-ip-1-preview" src="https://i.ibb.co/ZVFsg37/default.png">
+            <button type="button" class="imgRemove" onclick="myImgRemove(1)"></button>
+          </label>
+          <input type="file"  name="icon" id="file-ip-1" accept="image/*" onchange="showPreview(event, 1);">
+        </div>
+        <small class="small">Use the &#8634; icon to reset the image</small>
+      </div>
+    </div>
 <div >
 <div class="text-left m-5 py-5"> <h2 class="mb-4"><b> {{__('config.smt')}}  </b> </h2><div>
 <!-- Text input-->
 <div class="row mb-4 mt-5 py-1">
 <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
-
 <div class="form-group">
-<input  name="facebook" placeholder="facebook link" class="col-md-4 form-control input-md mx-3" style="font-size:15px;"  required type="text">
+<input  name="socialmedia" placeholder="socialmedia link" value="{{ old('socialmedia') }}" class="col-md-4 form-control input-md mx-3" style="font-size:15px;"  required type="text">
  </div>
  </div> 
- <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
+ 
 
-<div class="form-group">
-<input name="twitter" placeholder="twitter link" class="col-md-4 form-control mx-3" style="font-size:15px;" required type="text">
- </div>
- </div> 
-  </div> 
-
-  <div class="row mb-4 mt-5 py-1">
-<div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
-
-<div class="form-group">
-<input  name="instagram" placeholder="instagram link" class="col-md-4 form-control input-md mx-3" style="font-size:15px;"  required type="text">
- </div>
- </div> 
- <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
-
-<div class="form-group">
-<input  name="youtub" placeholder="youtub link" class="col-md-4 form-control input-md mx-3" style="font-size:15px;"  required type="text">
- </div>
- </div> 
-  </div> 
-
-
+  </div>
+  </div>
+</div> 
 
 </div>
 
-<div class="text-left"> <h2 class="mb-4 mt-5 py-5"><b> {{__('config.cinf')}}  </b> </h2><div>
-<!-- Text input-->
-<div class="row mb-4 mt-5">
-<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 
-<div class="form-group">
-<input  name="address" placeholder="address" class="col-md-4 form-control input-md mx-3" style="font-size:15px;"  required type="text">
- </div>
- </div> 
- <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-
-<div class="form-group">
-<input  name="address_ar" placeholder="address Arabic" class="col-md-4 form-control input-md mx-3" style="font-size:15px;"  required type="text">
- </div>
- </div> 
- </div> 
- <div class="row mb-4 mt-5">
- <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-
-<div class="form-group">
-<input  name="email" placeholder="email" type="email" class="col-md-4 form-control input-md mx-3" style="font-size:15px;"  required type="text">
- </div>
- </div> 
- <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-
-<div class="form-group">
-<input  name="phone" placeholder="phone number" class="col-md-3 form-control input-md mx-3" style="font-size:15px;"  required type="text">
- </div>
- </div> 
-  </div> 
 
 
 
@@ -118,6 +83,25 @@
         <!-- /row -->
       </section>
     </section>
-    <script src="{{asset('lib/common-scripts.js')}}"></script>
-
+   
+    <script>
+        var number = 1;
+        do {
+          function showPreview(event, number){
+            if(event.target.files.length > 0){
+              let src = URL.createObjectURL(event.target.files[0]);
+              let preview = document.getElementById("file-ip-"+number+"-preview");
+              preview.src = src;
+              preview.style.display = "block";
+            } 
+          }
+          function myImgRemove(number) {
+              document.getElementById("file-ip-"+number+"-preview").src = "https://i.ibb.co/ZVFsg37/default.png";
+              document.getElementById("file-ip-"+number).value = null;
+            }
+          number++;
+        }
+        while (number < 5);
+        
+        </script>
 @endsection

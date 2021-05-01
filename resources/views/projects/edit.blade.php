@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<section id="main-content">
+<section id=" ">
       <section class="wrapper" >
         <div class="row">
         <div class="col-lg-12 main-chart">
@@ -49,7 +49,7 @@
   <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5 m-5 ">
 <div class="form-group">
 <label class="control-label m-3" for="image">{{__('project.img_edit')}}</label>  
-<input type="file" name="multi_image[]" value="{{$project->multi_image }}" id="gallery-photo-add" accept="image/*" multiple="multiple" class="form-control input-md mx-3">
+<input type="file" name="multi_image[]" value="{{$project->multi_image }}"  max-uploads=6 id="gallery-photo-add" accept="image/*" multiple="multiple" class="form-control input-md mx-3">
 <div class="gallery"></div>
  </div>
   </div>

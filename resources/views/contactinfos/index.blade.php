@@ -22,51 +22,55 @@
 </div>
 <div class="row" >
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-<a class="btn btn-success" style="margin-bottom:0.3%; color:white; font-size:14px;" href="/admin/configrations/create">{{__('config.add_new_btn')}} </a>
+<a class="btn btn-success" style="margin-bottom:0.3%; color:white; font-size:14px;" href="/admin/contactinfos/create">{{__('config.add_new_btn')}} </a>
 
 </div>
     </div>
     <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
     <div class="text-left m-5 py-5"> <h2 class="mb-4"><b> {{__('config.smt')}}  </b> </h2><div>
-      <div class="contact-form">
-        @if(session()->has('completed'))
-        <div class=" alert alert-success">
-    {{ session()->get('completed') }}
-    </div>
-    @endif
+        <div class="contact-form">
+            @if(session()->has('completed'))
+            <div class=" alert alert-success">
+        {{ session()->get('completed') }}
+        </div>
+        @endif
     <table class="table table-responsive text-center"  style=" width:100%; font-size:14px;">
         <tr style="background-color:whitesmoke;" >
-            <th class="text-left" width="90px">{{__('config.Id')}}</th>
-            <th class="text-center"width="400px">Link</th>
-            <th class="text-center"width="100px">Icon</th>
+        <th class="text-left" width="90px">{{__('config.Id')}}</th>
+            <th class="text-center"width="200px">{{__('config.ad')}}</th>
+            <th class="text-center"width="200px">{{__('config.ad_ar')}}</th>
+            <th class="text-center"width="200px">{{__('config.ph')}}</th>
+            <th class="text-center"width="200px">{{__('config.email')}}</th>
             <th class="text-center" width="480px">{{__('config.Action')}}</th>
         </tr>
-        @foreach ($configrations as $configration )
+        @foreach ($contactinfos as $contactinfo )
             <tr>
-                <td class="text-center">{{ $configration->id  }}</td>
-                <td class="text-center">{{ $configration->socialmedia }}</td>
-                <td class="text-center"><img src="{{ asset('images/'.$configration->icon) }}" class="text-center" alt="img" title="" height="400px" width="400px"> </td>      
-                  <td> 
-                <form action="/admin/configrations/destroy/{{$configration->id}}" method="POST">
+            <td>{{ $contactinfo->id  }}</td>
+                <td>{{ $contactinfo->address }}</td>
+                <td>{{ $contactinfo->address_ar }}</td>
+                <td>{{ $contactinfo->phone }}</td>
+                <td>{{ $contactinfo->email }}</td>
+                 <td> 
+                <form action="/admin/contactinfos/destroy/{{$contactinfo->id}}" method="POST">
    
                 @csrf
 
 
                     @method('PUT')
-                    <a class="btn btn-sm btn-primary" href="/admin/configrations/edit/{{$configration->id}}" style="font-size:11px;">{{__('config.edit_bt')}}</a>
+                    <a class="btn btn-sm btn-primary" href="/admin/contactinfos/edit/{{$contactinfo->id}}" style="font-size:11px;">{{__('config.edit_bt')}}</a>
    
                     @csrf
                     @method('DELETE')
       
-                    <button type="submit" class="btn btn-sm  btn-danger delete-confirm" data-name="{{ $configration->id }}" name="delete" style="font-size:11px;">{{__('config.delete_btn')}}</button>
+                    <button type="submit" class="btn btn-sm  btn-danger delete-confirm" data-name="{{ $contactinfo->id }}" name="delete" style="font-size:11px;">{{__('config.delete_btn')}}</button>
                 </form>
                   </td> 
             </tr>
             @endforeach
     </table>
 
-    
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
             <script>
 

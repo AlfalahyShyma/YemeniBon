@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<section id="main-content">
+<section id=" ">
       <section class="wrapper" >
         <div class="row">
         <div class="col-lg-12 main-chart">
@@ -28,11 +28,16 @@
     </div>
     <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-
+        <div class="contact-form">
+            @if(session()->has('completed'))
+            <div class=" alert alert-success">
+        {{ session()->get('completed') }}
+        </div>
+        @endif
     <table class="table table-responsive text-center"  style=" width:100%;">
         <tr style="background-color:whitesmoke;" >
             <th class="text-center" width="10px">{{__('pdf.Id')}}</th>
-            <th class="text-center"width="200px">{{__('pdf.name_index')}}</th>
+            <th class="text-center"width="200px">{{__('pdf.name')}}</th>
             <th class="text-center"width="300px">{{__('pdf.date')}}</th>
             <th class="text-center"width="200px">{{__('pdf.publisher')}}</th>
             <th class="text-center"width="300px">{{__('pdf.pdf')}}</th>
@@ -58,7 +63,7 @@
                 <td>{{ $pdf->category_name }}</td>
                 
                   <td> 
-                <form action="/admin/pdfs/destroy/{{$pdf->id}}" method="POST">
+                <form action="/pdfs/destroy/{{$pdf->id}}" method="POST">
    
                 @csrf
 
@@ -66,7 +71,7 @@
 
 
                     @method('PUT')
-                    <a class="btn btn-primary" href="/admin/pdfs/edit/{{$pdf->id}}" style="font-size:12px;">{{__('pdf.edit_bt')}}</a>
+                    <a class="btn btn-primary" href="/pdfs/edit/{{$pdf->id}}" style="font-size:12px;">{{__('pdf.edit_bt')}}</a>
    
                     @csrf
                     @method('DELETE')

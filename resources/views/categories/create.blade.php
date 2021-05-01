@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 
-<section id="main-content">
+<section id=" ">
       <section class="wrapper" >
         <div class="row">
         <div class="col-lg-12 main-chart">
@@ -40,7 +40,7 @@
 <div class="form-group">
   <label class="control-label m-3" for="name">{{__('category.add_label_1')}}</label>  
   <div class="">
-  <input  name="name" placeholder="Name" class="col-md-5 form-control input-md mx-3" style="font-size:15px;"  required type="text">
+  <input  name="name" placeholder="Name" value="{{ old('name') }}" class="col-md-5 form-control input-md mx-3" style="font-size:15px;"  required type="text">
 
   </div>
 </div>
@@ -50,7 +50,7 @@
 <div class="form-group">
   <label class="control-label m-3" for="name_ar">{{__('category.add_label_1_ar')}}</label>  
   <div class="">
-  <input  name="name_ar" placeholder="Name(arabic)" class="col-md-5 form-control input-md mx-3" style="font-size:15px;"  required type="text">
+  <input  name="name_ar" placeholder="Name(arabic)"  value="{{ old('name_ar') }}" class="col-md-5 form-control input-md mx-3" style="font-size:15px;"  required type="text">
 
   </div>
 </div>
@@ -59,7 +59,7 @@
 <div class="row ">
 <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5 m-5">
  <div class="form-group">
-  <select class="form-control col-md-4 m-5 py-1" name="catatype_id" style="font-size:15px;margin-top:10%;">
+  <select class="form-control col-md-4 m-5 py-1" value="{{ old('catatype_id') }}"  name="catatype_id" style="font-size:15px;margin-top:10%;">
       @foreach($catatype as $cat)
       <option style="color:black;" value="{{ $cat->id }} ">{{$cat->type }}</option>
       @endforeach

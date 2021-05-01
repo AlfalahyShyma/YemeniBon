@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<section id="main-content">
+<section id=" ">
       <section class="wrapper" >
         <div class="row">
         <div class="col-lg-12 main-chart">
@@ -31,7 +31,7 @@
             </ul>
         </div>
     @endif
-    <form action="/admin/contents/update/{{$content->id}}" method="POST" enctype="multipart/form-data">
+    <form action="/interviews/update/{{$interview->id}}" method="POST" enctype="multipart/form-data">
 
         @csrf
         @method('PUT')
@@ -39,10 +39,20 @@
         <div class="row ">
 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-6 m-5">
 <div class="form-group">
-  <!-- <input type="file" name="image" class="col-md-4 form-control input-md mx-3"   id="gallery-logo-add" style="font-size:15px;"  accept="image/*" required > -->
-  <input  name="img" type="file" placeholder="interview Name"  value="{{$interview->img }}" id="gallery-logo-add" class="col-md-4 form-control input-md mx-3" style="font-size:15px;" accept="image/*" required required >
-
-<div class="gallery2"></div>
+  
+<div class="image-upload-container">
+  <div class="image-upload-one">
+    <div class="center">
+      <div class="form-input">
+        <label for="file-ip-1">
+          <img id="file-ip-1-preview" src="{{ asset('images/'.$interview->img) }}">
+          <button type="button" class="imgRemove" onclick="myImgRemove(1)"></button>
+        </label>
+        <input type="file"  name="image" id="file-ip-1" accept="image/*" onchange="showPreview(event, 1);">
+      </div>
+      <small class="small">Use the &#8634; icon to reset the image</small>
+    </div>
+  </div>
   </div>
   </div>
 </div>
@@ -98,7 +108,7 @@
 <div class="form-group" style="">
   <label class="control-label" for="interview" style="font-size:18px;">{{__('interview.add_label_1')}}</label>  </div>
   <div class="" style="">
-  <textarea name="interview"  value="{{$interview->interview }}" id="disc" cols="20" rows="10"> hello world</textarea>
+  <textarea name="interview"  value="{{$interview->interview }}" id="mytextarea" cols="20" rows="10"> hello world</textarea>
 
   </div>
 </div>
@@ -106,7 +116,7 @@
 <div class="form-group" >
   <label class="control-label" for="interview_ar" style="font-size:18px;">{{__('interview.add_label_1_ar')}}</label>  </div>
   <div class="" >
-  <textarea name="interview_ar"  value="{{$interview->interview_ar }}" id="disc2" cols="30" rows="10"> مرحبا ..لاضافه العربي</textarea>
+  <textarea name="interview_ar"  value="{{$interview->interview_ar }}" id="mytextarea_ar" cols="30" rows="10"> مرحبا ..لاضافه العربي</textarea>
   </div>
   </div>
   </div>
@@ -128,6 +138,7 @@
  </div>
  </div>
  </div>
+ 
  <div class="row ">
  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 m-5">
 <div class="form-group">
@@ -149,6 +160,25 @@
         <!-- /row -->
       </section>
     </section>
-    <script src="{{asset('lib/common-scripts.js')}}"></script>
 
+    <script>
+      var number = 1;
+      do {
+        function showPreview(event, number){
+          if(event.target.files.length > 0){
+            let src = URL.createObjectURL(event.target.files[0]);
+            let preview = document.getElementById("file-ip-"+number+"-preview");
+            preview.src = src;
+            preview.style.display = "block";
+          } 
+        }
+        function myImgRemove(number) {
+            document.getElementById("file-ip-"+number+"-preview").src = "https://i.ibb.co/ZVFsg37/default.png";
+            document.getElementById("file-ip-"+number).value = null;
+          }
+        number++;
+      }
+      while (number < 5);
+      
+      </script>
 @endsection
