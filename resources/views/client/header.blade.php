@@ -19,6 +19,7 @@
 
     <!-- Favicons -->
     <link href="{{asset('img/title.png')}} " rel="icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script>
         window.console = window.console || function(t) {};
     </script>

@@ -35,6 +35,7 @@
     </div>
 
 </footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>

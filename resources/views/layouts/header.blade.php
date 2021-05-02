@@ -29,6 +29,8 @@
  <link href="{{asset('css/style-responsive.css')}} " rel="stylesheet">
  <script src="{{asset('lib/chart-master/Chart.js')}}"></script>
  <link rel="stylesheet" href="{{asset('css/app.css')}}">
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
 

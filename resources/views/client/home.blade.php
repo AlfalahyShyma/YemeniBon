@@ -40,7 +40,7 @@
         <div class="project-container">
             <div class="text-center">
                 <!-- <h1 class="title">Flexbox Grid</h1> -->
-                <div class="filter-wrapper">
+                <div class="filter-wrapper" data-aos="zoom-in">
                     <div class="flex">
                         @if(Config::get('app.locale')=='en')
 
@@ -62,7 +62,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex" id="post-data">
+            <div class="flex" id="post-data" data-aos="fade-up">
                 @include('data')
 
 
@@ -75,7 +75,7 @@
         </div>
     </section>
     
-    <section id="quote-wrapper">
+    <section id="quote-wrapper" data-aos="zoom-in">
         <div class="quote">
             <blockquote id="quote-quote">
                 <span id="q-start">“</span><span class="q-quote">Foundation believes that this inspiration is important for your
@@ -86,7 +86,7 @@
     </section>
 
     <section id="diagram-wrapper">
-        <div class="diagram">
+        <div class="diagram" >
             <!-- style="max-width: 100vw;" -->
             <img src="{{asset('asset/img/btd2.png')}}" alt="" srcset="" class="image-zoom-available img-responsive">
         </div>
@@ -97,6 +97,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
    var id=0;
@@ -145,5 +146,9 @@ $("#post-data").html(' ');
             load(page,id);
 
     }
+    </script>
+
+    <script>
+        AOS.init();
     </script>
 @include('client/footer')
