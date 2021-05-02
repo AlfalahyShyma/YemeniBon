@@ -96,7 +96,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
 Route::get('/', [UserHomeController::class, 'index']);
 Route::get('/details/{id}', [UserHomeController::class, 'details']);
 Route::get('/publication', [PublicationController::class, 'index']);
-
+// Route::get('/pdfs', [PublicationController::class, 'details']);
+// Route::get('/articles', [PublicationController::class, 'details2']);
+// Route::get('/interview', [PublicationController::class, 'details3']);
 Route::get('/project-details', [ProjectDetailsController::class, 'index']);
 // Route::get('/client/home/{$id}', [HomeController::class, 'filtering']);
 Route::get('/projects/all', [HomeController::class, 'filteringall']);
@@ -123,8 +125,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard',[HomeControlle
 //Route::resource('/categories', CategoryController::class);
 //Route::apiResource('/categories', CategoryController::class);
 Route::prefix('admin')->group( function () {
-    // Route::post('/articles/store',[ArticleController::class,'save']);
-   
     Route::post('/categories/store',[CategoryController::class,'store']);
     Route::put('/categories/update/{id}',[CategoryController::class,'update']);
     Route::post('/catatypes/store',[CatatypeController::class,'store']);
@@ -216,19 +216,6 @@ Route::get('/contactinfos/create',[ ContactinfoController::class,'create']);
 Route::get('/contactinfos/edit/{id}',[ContactinfoController::class,'edit']);
 Route::get('/contactinfos/index',[ContactinfoController::class,'index']);
 Route::get('/contactinfos/show/{id}',[ContactinfoController::class,'show']);
-Route::get('/pdfs/index',[PdfController::class,'index']);
-Route::get('/interviews/index',[InterviewController::class,'index']);
-Route::get('/articles/index',[ArticleController::class,'index']);
-
-Route::get('/articles/create',[ ArticleController::class,'create']);
-Route::get('/articles/edit/{id}',[ArticleController::class,'edit']);
-Route::get('/articles/show/{id}',[ArticleController::class,'show']);
-
-
-
-Route::get('/interviews/create',[ InterviewController::class,'create']);
-Route::get('/interviews/edit/{id}',[InterviewController::class,'edit']);
-
 
 Route::get('/configrations/create',[ ConfigrationController::class,'create']);
 Route::get('/configrations/edit/{id}',[ConfigrationController::class,'edit']);
@@ -243,7 +230,31 @@ Route::get('/configrations/show/{id}',[ConfigrationController::class,'show']);
 // Route::get('users/create',[RegisterController::class ,'create']);
  
     //route to publication type
-   
+    Route::post('/pdfs/store',[PdfController::class,'store']);
+    Route::put('/pdfs/update/{id}',[PdfController::class,'update']);
+    Route::delete('/pdfs/destroy/{id}',[PdfController::class,'destroy'])->name('pdf.destroy');
+    Route::post('/articles/store',[ArticleController::class,'store']);
+    Route::put('/articles/update/{id}',[ArticleController::class,'update']);
+    Route::delete('/articles/destroy/{id}',[ArticleController::class,'destroy'])->name('articles.destroy');
+    Route::post('/interviews/store',[InterviewController::class,'store']);
+    Route::put('/interviews/update/{id}',[InterviewController::class,'update']);
+    Route::delete('/interviews/destroy/{id}',[InterviewController::class,'destroy'])->name('interviews.destroy');
+
+
+    Route::get('/pdfs/create',[ PdfController::class,'create']);
+Route::get('/pdfs/edit/{id}',[PdfController::class,'edit']);
+Route::get('/pdfs/index',[PdfController::class,'index']);
+Route::get('/pdfs/show/{id}',[PdfController::class,'show']);
+Route::get('/articles/create',[ ArticleController::class,'create']);
+Route::get('/articles/edit/{id}',[ArticleController::class,'edit']);
+Route::get('/articles/index',[ArticleController::class,'index']);
+Route::get('/articles/show/{id}',[ArticleController::class,'show']);
+Route::get('/interviews/create',[ InterviewController::class,'create']);
+Route::get('/interviews/edit/{id}',[InterviewController::class,'edit']);
+Route::get('/interviews/index',[InterviewController::class,'index']);
+Route::get('/interviews/show/{id}',[InterviewController::class,'show']);
+
+
 });
 
 });
@@ -284,20 +295,3 @@ Route::prefix('activ')->group( function () {
 // Route::view('/users-home','livewire.users');
 Route::view('/test','test');
 Route::post('/pdfs/store',[PdfController::class,'store']);
-Route::put('/pdfs/update/{id}',[PdfController::class,'update']);
-Route::post('/pdfs/store',[PdfController::class,'store']);
-Route::delete('/pdfs/destroy/{id}',[PdfController::class,'destroy']);
-Route::delete('/articles/destroy/{id}',[ArticleController::class,'destroy'])->name('articles.destroy');
-
-Route::get('/pdfs/create',[ PdfController::class,'create']);
-Route::get('/pdfs/edit/{id}',[PdfController::class,'edit']);
-Route::get('/pdfs/show/{id}',[PdfController::class,'show']);
-
-Route::get('/interviews/show/{id}',[InterviewController::class,'show']);
-Route::put('/interviews/update/{id}',[InterviewController::class,'update']);
-
-Route::delete('/interviews/destroy/{id}',[InterviewController::class,'destroy'])->name('interviews.destroy');
-Route::post('/interviews/store',[InterviewController::class,'store']);
-Route::post('/public/store',[ArticleController::class,'save']);
-Route::put('/articles/update/{id}',[ArticleController::class,'update']);
-Route::post('/public/store',[ArticleController::class,'save']);

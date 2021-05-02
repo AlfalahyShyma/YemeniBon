@@ -1,0 +1,293 @@
+.project-desc {
+    background-color: #ebe2cd;
+    padding-top: 5rem;
+    justify-content: center;
+}
+
+.proj-container {
+    /* padding: 0 19%; */
+    width: 100%;
+    max-width: 100%;
+    /* max-width: 90%; */
+    /* display: flex; */
+    /* background-color: #fff; */
+    /* border-radius: 5px; */
+    box-shadow: 0 0 0 0 rgb(0 0 0 / 10%);
+    overflow: hidden;
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* margin: auto; */
+    margin-bottom: 5rem;
+}
+
+.pro-image {
+    margin-right: 20rem;
+}
+
+.project-img {
+    position: relative;
+    /* right: 50rem;
+    top: 20rem; */
+    width: 22rem;
+    height: 22rem;
+    border: 1px dashed rgba(255, 255, 255, 0.507);
+    border-radius: 15px;
+    padding: 5px;
+    margin: auto;
+    background-color: white;
+}
+
+.pro-social {
+    margin-top: 4rem;
+    margin-right: 4rem;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+/* Start story show */
+
+.story-show {
+}
+.story-show-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.story-show-content {
+    width: 68%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.story-show .story-date {
+    margin-bottom: 10px;
+    color: #868686;
+    font-size: 14px;
+}
+.story-show .story-date i {
+    margin-left: 8px;
+}
+
+.story-show-description{
+    min-height: 23rem;
+}
+.story-show-aside {
+    width: 29%;
+    overflow: hidden;
+    position: relative;
+}
+.story-img {
+    width: 100%;
+    max-height: 260px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    padding: 0px 0 0 0px;
+    border-radius: 10px;
+}
+.story-img img {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    padding: 0px 0 0 0px;
+}
+.story-img::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--story-color);
+    position: absolute;
+    left: 0;
+    top: -6px;
+    z-index: 0;
+}
+@media (max-width: 991px) {
+    .story-show-content {
+        width: 100%;
+    }
+    .story-show-aside {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 576px) {
+}
+
+.story-show-description {
+    font-size: 18px;
+    line-height: 30px;
+    /* font-family: QUESHA; */
+    font-family: "Montserrat";
+    border-radius: 10px;
+}
+/* End Story Show */
+
+.business-card {
+    width: 100%;
+    height: auto;
+    /* background: #2D3035; */
+    /* background-color: #f1daa3; */
+    background-color: #d39b68;
+    border-radius: 10px;
+    position: relative;
+}
+
+.business-card-profile {
+    float: right;
+    background: #3d4045;
+    width: 100px;
+    height: 308px;
+}
+
+.business-card-pic {
+    width: 80px;
+    display: block;
+
+    padding: 3px;
+    background: #303236;
+    border-radius: 80px;
+    border: solid 7px #54575f;
+
+    margin: 0 auto;
+    margin-top: 50px;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+    filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+}
+
+.business-card-name,
+.business-card-title {
+    line-height: 0px;
+    text-align: center;
+    font-family: "dosis";
+    color: white;
+    font-size: 20px;
+}
+
+.business-card-name {
+    font-weight: bold;
+}
+
+.business-card-title {
+    color: #999999;
+    line-height: 5px;
+    font-size: 16px;
+}
+
+/* arrow thanks to : https://jsfiddle.net/josedvq/3HG6d/ */
+
+.business-card-arrow {
+    width: 0;
+    height: 0;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-right: 3%;
+    overflow: hidden;
+    position: absolute;
+    top: calc(50% - 80px);
+    right: 90px;
+}
+
+.business-card-arrow:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: -20px;
+    margin-right: -20px;
+
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid #3d4045;
+}
+
+/* -----------------
+  Details(right side)
+ ------------------- */
+.business-card-details {
+    /* float: right; */
+    font-family: "Montserrat";
+    color: #693713;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    width: 330px;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    margin-top: 25px;
+    margin-bottom: 8px;
+    padding: 0.2rem 2rem 0.2rem 2rem;
+}
+
+.business-card-details .fa {
+    color: #d9d9d9;
+    width: 20px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.business-card-link {
+    /* color: #2A7F9C; */
+    color: #693713;
+    text-decoration: none;
+}
+
+.clearfix {
+    overflow: auto;
+    zoom: 1;
+}
+
+
+/* Horizontal Scroll Start */
+
+.h-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 0rem;
+}
+
+.h-container {
+  padding: 0;
+  margin: 0;
+  margin-top: 3rem;
+  display: block;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  text-align: center;
+  scroll-behavior: smooth;
+  border-radius: 10px;
+}
+
+.h-container li {
+  position: sticky;
+  right: 0;
+  width: min(50vw, 300px);
+  display: inline-block;
+  text-align: center;
+  background-color: #fff;
+  color: #9b9dad;
+  padding-bottom: 0rem;
+  font-size: clamp(18px, 2.5vw, 22px);
+  box-shadow: -10px 0 0px 0 rgba(0, 0, 0, 0.25);
+  margin-right: -4px;
+}
+
+
+*::-webkit-scrollbar,
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  /* background-color: #fff; */
+  height: 13px;
+}
