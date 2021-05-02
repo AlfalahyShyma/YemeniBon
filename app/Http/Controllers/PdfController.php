@@ -39,7 +39,15 @@ class PdfController extends Controller
     public function store(Request $request)
     {
 
-        $request->validate(['name'=>'required|unique:pdfs']);
+        $request->validate(['name'=>'required|unique:pdfs',
+        'name_ar'=>'required|unique:articles|min:10|max:50',
+        'desc'=>'required|min:20',
+        'desc_ar'=>'required|min:20',
+        'download_url'=>'required|url',
+        'veiw_url'=>'required|url',
+        'image'=>'required|mimes:jpg,png,jpeg',
+        'pdf'=>'required'
+        ]);
         $pdf = new Pdf();
         if($request->hasfile('pdf'))
         {
@@ -49,10 +57,10 @@ class PdfController extends Controller
             $pdf->pdf =$name;
         
        }
-       if($request->hasfile('img'))
+       if($request->hasfile('image'))
        {
-        $name2 = preg_replace('/(0)\.(\d+) (\d+)/', '$3$1$2', microtime()) . "." . $request->img->getClientOriginalExtension();
-        $path2= $request->img->move(public_path('images'), $name2);
+        $name2 = preg_replace('/(0)\.(\d+) (\d+)/', '$3$1$2', microtime()) . "." . $request->image->getClientOriginalExtension();
+        $path2= $request->image->move(public_path('images'), $name2);
         $pdf->img =$name2;
        }
         $pdf->name = $request->input('name');
@@ -60,7 +68,6 @@ class PdfController extends Controller
         $pdf->date = $request->input('date'); 
         $pdf->publisher = $request->input('publisher');
         $pdf->publisher_ar = $request->input('publisher_ar');
-        $pdf->img = $request->input('img');   
         $pdf->desc = $request->input('desc');   
         $pdf->desc_ar = $request->input('desc_ar');   
         $pdf->veiw_url = $request->input('veiw_url');   
@@ -68,7 +75,7 @@ class PdfController extends Controller
        $pdf->category_id = $request->input('category_id');
 
         $pdf->save();
-        return redirect('/admin/pdfs/index')->with('completed', 'pdf has been updated');  
+        return redirect('/admin/pdfs/index')->with('completed', 'pdf has been add');  
 
         
 
@@ -109,13 +116,14 @@ class PdfController extends Controller
      */
     public function update(Request $request, $pdf_id)
     {
-        $request->validate([
-            'name' => 'required',
-            'desc' => 'required',
-            'name_ar' => 'required',
-            'desc_ar' => 'required',
-         ]);
-
+        $request->validate(['name'=>'unique:pdfs',
+        'name_ar'=>'unique:articles|min:10|max:50',
+        'desc'=>'min:20',
+        'desc_ar'=>'min:20',
+        'download_url'=>'url',
+        'veiw_url'=>'url',
+        'image'=>'mimes:jpg,png,jpeg',
+        ]);
         if($request->hasfile('pdf') && $request->hasfile('img'))
         {
           
@@ -174,9 +182,9 @@ class PdfController extends Controller
      */
     public function destroy($id)
     {
-        $pdf= Pdf::find($pdf);
+        $pdf= Pdf::find($id);
         $pdf->delete();
-        return redirect('/admin/pdfs/index')->with('success','content deleted successfully');     
+        return redirect('/admin/pdfs/index')->with('completed','content deleted successfully');     
        
     }
 }

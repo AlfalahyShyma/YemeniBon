@@ -2,53 +2,64 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>YemeniBon Dashboard</title>
 
-  <meta name="description" content="">
-  <meta name="author" content="Dashboard">
-  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>YemeniBon Dashboard</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> -->
 
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="{{asset(__('sidebar.css_file') )}}">
+    <!-- <link rel="stylesheet" href="{{asset(__('sidebar.css_file_en') )}}"> -->
 
-  <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-  <link rel="stylesheet" href="{{asset(__('sidebar.css_file') )}}">
-  <!-- <link rel="stylesheet" href="{{asset(__('sidebar.css_file_en') )}}"> -->
+    <!-- Scripts -->
+    <script src="{{ mix('js/app.js') }}" defer></script>
 
-<!-- Scripts -->
-<script src="{{ mix('js/app.js') }}" defer></script>
+    <!-- Favicons -->
+    <link href="{{asset('img/title.png')}} " rel="icon">
 
-  <!-- Favicons -->
-  <link href= "{{asset('img/title.png')}} " rel="icon">
+    <!-- Bootstrap core CSS -->
+    <link href="{{asset('lib/bootstrap/css/bootstrap.min.css')}} " rel="stylesheet">
+    <!--external css-->
 
-  <!-- Bootstrap core CSS -->
-  <link href= "{{asset('lib/bootstrap/css/bootstrap.min.css')}} " rel="stylesheet">
-  <!--external css-->
+    <link href="{{asset('lib/font-awesome/css/font-awesome.css')}} " rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/zabuto_calendar.css')}} ">
+    <link rel="stylesheet" type="text/css" href="{{asset('lib/gritter/css/jquery.gritter.css')}} " />
+    <!-- Custom styles for this template -->
+    <!-- <link href= "{{asset('css/style.css')}} " rel="stylesheet"> -->
+    <link href="{{asset('css/style-responsive.css')}} " rel="stylesheet">
+    <script src="{{asset('lib/chart-master/Chart.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/9u2s157ky8rkolywf0bev3ctozq7eqoii8frq84vla96spst/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+<script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/jaca90/pen/vZJZMx?depth=everything&order=popularity&page=10&q=statistics&show_forks=false" />
+
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'><link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+<link rel="stylesheet" href="{{asset('css/new_style.css')}}">
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script src='https://cdn.tiny.cloud/1/qkbq5pwxe3od1v11ql7vye8j3n3khkeglzvtvfx5nwx4c5fo/tinymce/5/tinymce.min.js' referrerpolicy="origin">
+  </script>
+
+
+
   
-  <link href= "{{asset('lib/font-awesome/css/font-awesome.css')}} " rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href= "{{asset('css/zabuto_calendar.css')}} ">
-  <link rel="stylesheet" type="text/css" href= "{{asset('lib/gritter/css/jquery.gritter.css')}} " />
-  <!-- Custom styles for this template -->
-  <!-- <link href= "{{asset('css/style.css')}} " rel="stylesheet"> -->
-  <link rel="stylesheet" href="{{asset('css/app.css')}}">
-  <link href= "{{asset('css/style-responsive.css')}} " rel="stylesheet">
-  <script src="{{asset('lib/chart-master/Chart.js')}}"></script>
-
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script> -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.tiny.cloud/1/9u2s157ky8rkolywf0bev3ctozq7eqoii8frq84vla96spst/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
   tinymce.init({
-selector: '#disc',
+selector: '#mytextarea_ar',
 language_url : '/langs/ar.js',
 height : "480",
 language: 'ar',
@@ -121,11 +132,11 @@ content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
 
 <script>
   tinymce.init({
-selector: '#disc2',
-language_url : '/langs/ar.js',
+selector: '#mytextarea',
+language_url : '/langs/en.js',
 height : "480",
-language: 'ar',
-directionality: 'rtl',
+language: 'en',
+directionality: 'ltr',
 plugins: 'tinydrive image advlist lists imagetools code table paste link emoticons searchreplace advlist checklist hr charmap directionality',
 toolbar: 'insertfile undo redo  image  | table | link | emoticons | styleselect | bold italic |  alignleft aligncenter alignright alignjustify  bullist numlist outdent indent forecolor backcolor ',
 toolbar_mode: 'floating',
@@ -191,284 +202,299 @@ content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
 
   
 </script>
+  </head>
 
-  <!-- =======================================================
-    Template Name: Dashio
-    Template  url: https://templatemag.com/dashio-bootstrap-admin-template/
-    Author: TemplateMag.com
-    License: https://templatemag.com/license/
-  ======================================================= -->
-<style>
-  .tagA{
-    color:red !important;
-  }
-  </style>
-</head>
-
-<body style="background-color:#fcf5efe7; ">
-
-  <section id="container">
-  <div class="">
-                                                            
-    <!-- **********************************************************************************************************************************************************
-        TOP BAR CONTENT & NOTIFICATIONS
-        *********************************************************************************************************************************************************** -->
-    <!--header start-->
-    <header class="header black-bg">
-      <div class="sidebar-toggle-box">
-        <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
-      </div>
-
-      <!--logo start-->
-      <!-- <a href="index.html" class="logo"><b style="color:white;">Yemeni<span style="color:#3B291D">Bon</span></b></a> -->
-      <!--logo end-->
+<body class="sidebar-is-reduced sidebar-is-expanded">
+  <header class="l-header">
+   
+    <div class="l-header__inner clearfix">
+     
+      
       <div class="nav notify-row" id="top_menu">
         <!--  notification start -->
         <ul class="nav top-menu">
 
-    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-        <li>
-            <a style="font-size:14px; height:4.7vh; border:0; line-height:20px;" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                {{ $properties['native'] }}
-            </a>
-        </li>
-    @endforeach
+            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+            <li>
+                <a style="font-size:14px; height:4.7vh; border:0; line-height:20px;" rel="alternate"
+                    hreflang="{{ $localeCode }}"
+                    href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                    {{ $properties['native'] }}
+                </a>
+            </li>
+            @endforeach
 
-          <!-- notification dropdown end -->
+            <!-- notification dropdown end -->
 
 
 
-         
+
         </ul>
         <!--  notification end -->
-      </div>
-
-
-
-      <div class="top-menu">
+    </div>
+    
+    <div class="top-menu">
         <ul class="nav pull-right top-menu">
-          <li>
-                               <!-- Authentication
-                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
-                            </a>
-                             
-                               <form method="POST" action="{{ route('logout') }}" class="logout">
-                                @csrf
+            <li>
+                <!-- Authentication
+                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::user()->name }}
+                </a>
+                 
+                   <form method="POST" action="{{ route('logout') }}" class="logout">
+                    @csrf
 
-                                <x-jet-dropdown-link href="{{ route('logout') }}" style="color:white;"
-                                         onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                    {{ __('Logout') }}
-                                </x-jet-dropdown-link>
-                            </form> -->
+                    <x-jet-dropdown-link href="{{ route('logout') }}" style="color:white;"
+                             onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                        {{ __('Logout') }}
+                    </x-jet-dropdown-link>
+                </form> -->
 
-            <!-- Settings Dropdown -->
+                <!-- Settings Dropdown -->
                 <div class="ml-3 relative">
                     <x-jet-dropdown align="right" width="48">
                         <x-slot name="trigger">
-                            @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                                <button class="flex border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out" >
-                                    <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
-                                </button>
-                            @else
-                                <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-5 my-5 border border-transparent  leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                                        {{ Auth::user()->name }}
-
-                                        <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                        </svg>
-                                    </button>
-                                </span>
-                            @endif
+                            
                         </x-slot>
 
                         <x-slot name="content">
-                     
+
                             <div class="border-t border-gray-100"></div>
 
                             <!-- Authentication -->
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
-
-                                <x-jet-dropdown-link class="py-5 text-center" style="font-size:16px;" href="{{ route('logout') }} "
-                                         onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                    {{ __('Logout') }}
-                                </x-jet-dropdown-link>
-                            </form>
+                            
+                           
                         </x-slot>
                     </x-jet-dropdown>
                 </div>
+    </div>
+    <form method="POST" action="{{ route('logout') }}">
+      @csrf
+
+      <div class="header-icons-group" href="{{ route('logout') }} "
+      onclick="event.preventDefault();
+             this.closest('form').submit();">
+            <div class="c-header-icon logout"><a ><i class="fa fa-power-off text-black"></i>Logout</a></div>
                 </div>
-
-
-        </li>
-        </ul>
+              </form>
+    </div>
+  </header>
+  <div class="l-sidebar">
+    <div class="logo">
+      <div class="logo__txt">
+        <p class="centered"><a href="profile.html"><img
+            src="{{asset('img/YemeniBon_Logo_Watercolor-01.png')}}" class="img-circle"
+            width="50"></a></p>
       </div>
-
-    </header>
-    <!--header end-->
-    <!-- **********************************************************************************************************************************************************
-        MAIN SIDEBAR MENU
-        *********************************************************************************************************************************************************** -->
-    <!--sidebar start-->
-    <aside>
-      <div id="sidebar" class="nav-collapse" style="background-color:#f2e0d4; color:white;font-size:16px;">
-        <!-- sidebar menu start-->
-        <ul class="sidebar-menu " id="nav-accordion">
-          <p class="centered"><a href="profile.html"><img src="{{asset('img/YemeniBon_Logo_Watercolor-01.png')}}" class="img-circle" width="50"></a></p>
-          <li class="mt-0 ">
-            <a class="tagA" href="{{asset('/dashboard')}}">
-              <i class="fa fa-dashboard"></i>
-              <span class="fonting"><b>{{__('sidebar.dashboard_page')}}</span>
-              </a>
-          </li>
-          <li class="sub-menu">
-            <a  class="tagA"href="{{asset('admin/banners/index')}}">
-              <i class="fa fa-picture-o color"></i>
-              <span class="color fonting">{{__('sidebar.Banner_page')}}</span>
-              </a>
-              </li>
-          <li class="sub-menu">
-            <a  class="tagA" href="{{asset('admin/catatypes/index')}}">
-              <i class="fa fa-list color"></i>
-              <span class="color fonting">{{__('sidebar.categorytype_page')}}</span>
-              </a>
-
-          </li>
-          </li>
-          <li class="sub-menu">
-            <a class="tagA" href="{{asset('admin/categories/index')}}">
-              <i class="fa fa-list-alt color"></i>
-              <span class="color fonting">{{__('sidebar.category_page')}}</span>
-              </a>
-
-              </li>
-          <li class="sub-menu ">
-            <a  class="tagA" href="{{asset('admin/projects/index')}}">
-              <i class="fa fa-desktop color"></i>
-              <span class="color fonting">{{__('sidebar.Projects_page')}}</span>
-              </a>
-          </li>
-          </li>
-          <li class="sub-menu ">
-            <a  class="tagA" href="{{asset('admin/articles/index')}}">
-              <i class="fa fa-tasks color"></i>
-              <span class="color fonting">{{__('sidebar.Article')}}</span>
-              </a>
-          </li>  
-          <li class="sub-menu ">
-            <a  class="tagA" href="{{asset('admin/interviews/index')}}">
-              <i class="fa fa-tasks color"></i>
-              <span class="color fonting">{{__('sidebar.Interview')}}</span>
-              </a>
-          </li> 
-           <li class="sub-menu ">
-            <a  class="tagA" href="{{asset('admin/pdfs/index')}}">
-              <i class="fa fa-tasks color"></i>
-              <span class="color fonting">{{__('sidebar.Pdf')}}</span>
-              </a>
-          </li>
-         
-          <li class="sub-menu ">
-            <a class="tagA"  href="{{asset('admin/users/index')}}">
-              <i class="fa fa-user color"></i>
-              <span class="color fonting">{{__('sidebar.Admin_Users_page')}} </span>
-              </a>
-          </li>
-          <li class="sub-menu ">
-            <a class="tagA" href="{{asset('admin/configrations/index')}}">
-              <i class="fa fa-cogs color"></i>
-              <span class="color fonting">{{__('sidebar.Configrations_page')}}</span></b>
-              </a>
-          </li>
-        </ul>
-        <!-- sidebar menu end-->
-      </div>
-    </aside>
-    <!--sidebar end-->
-    <!-- **********************************************************************************************************************************************************
-        MAIN CONTENT
-        *********************************************************************************************************************************************************** -->
-    <!--main content start-->
-    <section id="main-content">
-      <section class="wrapper">
-        <div class="row">
-          <div class="col-lg-12 main-chart m-5">
-@yield('content')
-           <!-- / calendar -->
-           </div>
-          <!-- /col-lg-3 -->
+    </div>
+    <div class="l-sidebar__content">
+      <nav class="c-menu js-menu">
+          
+        <ul class="u-list">
+          <li class="c-menu__item is-active" data-toggle="tooltip" title="Flights">
+            <div class="c-menu__item__inner"><i class="fa fa-dashboard"></i>
+             
+            <a class="tagA " href="{{asset('/dashboard')}}">
+                <div class="c-menu-item__title"><span class="c-menu-item__title">{{__('sidebar.dashboard_page')}}</span>
+                </div>
+                </a>
         </div>
-        <!-- /row -->
-      </section>
-    </section>
-    <!--main content end-->
-    <!--footer start-->
-    </section>
-    <footer class="site-footer">
-      <div class="text-center">
-        <p>
-        All Rights Reserved &copy; Copyrights <strong>YemeniBon</strong>. 
-        </p>
+          </li>
 
-        <a  href="#" class="go-top">
-          <i class="fa fa-angle-up"></i>
-          </a>
-      </div>
-    </footer>
-    <!--footer end-->
-    @push('scripts')
-
-  <!-- js placed at the end of the document so the pages load faster -->
-  <script src= "{{asset('lib/jquery/jquery.min.js')}}"></script>
-
-  <script src= "{{asset('lib/bootstrap/js/bootstrap.min.js')}} "></script>
-  <script class="include" type="text/javascript" src= "{{asset('lib/jquery.dcjqaccordion.2.7.js')}} "></script>
-  <script src= "{{asset('lib/jquery.scrollTo.min.js')}} "></script>
-  <script src= "{{asset('lib/jquery.nicescroll.js')}} " type="text/javascript"></script>
-  <script src= "{{asset('lib/jquery.sparkline.js')}} "></script>
-  <!--common script for all pages-->
-  <script src= "{{asset('lib/common-scripts.js')}} "></script>
-  <script type="text/javascript" src= "{{asset('lib/gritter/js/jquery.gritter.js')}} "></script>
-  <script type="text/javascript" src= "{{asset('lib/gritter-conf.js')}} "></script>
-  <!--script for this page-->
-  <script src= "{{asset('lib/zabuto_calendar.js')}} "></script>
-  <script src= "{{asset('js/app.js')}} "></script>
-  <script src= "{{asset('lib/sparkline-chart.js')}} "></script>
+          <li class="c-menu__item  has-submenu" data-toggle="tooltip" title="Flights">
+            <div class="c-menu__item__inner"><i class="fa fa-picture-o color"></i>
+             
+            <a class="tagA " href="{{asset('admin/banners/index')}}">
+                <div class="c-menu-item__title"><span class="c-menu-item__title">{{__('sidebar.Banner_page')}}</span>
+                </div>
+                </a>
+        </div>
+          </li>
 
 
 
+          <li class="c-menu__item has-submenu " data-toggle="tooltip" title="Flights">
+            <div class="c-menu__item__inner"><i class="fa fa-picture-o color"></i>
+             
+            <a class="tagA " href="{{asset('/about/index')}}">
+                <div class="c-menu-item__title"><span class="c-menu-item__title">{{__('sidebar.about')}}</span>
+                </div>
+                </a>
+        </div>
+          </li>
 
-  @endpush
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js'></script>
-  <script >
-  
-   const currentlocation=location.href;
- const menuItem=document.getElementsByClassName('tagA');
 
- const itemlength=menuItem.length;
- for(let i=0;i<itemlength;i++){
-   console.log(currentlocation);
-   if( menuItem[i]==currentlocation)
-   {
-    menuItem[i].className="active";
-   console.log(menuItem[i]);
-   }
- }
+          <li class="c-menu__item has-submenu " data-toggle="tooltip" title="Flights">
+            <div class="c-menu__item__inner"><i class="fa fa-list color"></i>
+             
+            <a class="tagA " href="{{asset('admin/catatypes/index')}}">
+                <div class="c-menu-item__title"><span class="c-menu-item__title">{{__('sidebar.categorytype_page')}}</span>
+                </div>
+                </a>
+        </div>
+          </li>
 
-// var activeNavItem =document.querySelectorAll('a');
-// var activeNavItem =$(document.querySelectorAll('a'));
+          <li class="c-menu__item  has-submenu" data-toggle="tooltip" title="Flights">
+            <div class="c-menu__item__inner"><i class="fa fa-list-alt color"></i>
+             
+            <a class="tagA " href="{{asset('admin/categories/index')}}">
+                <div class="c-menu-item__title"><span class="c-menu-item__title">{{__('sidebar.category_page')}}</span>
+                </div>
+                </a>
+        </div>
+          </li>
 
-// activeNavItem.click(function(){
-//   activeNavItem.removeClass('active');
-//   $(this).addClass('active');  
-// });
+          <li class="c-menu__item has-submenu " data-toggle="tooltip" title="Flights">
+            <div class="c-menu__item__inner"><i class="fa fa-desktop color"></i>
+             
+            <a class="tagA " href="{{asset('admin/projects/index')}}">
+                <div class="c-menu-item__title"><span class="c-menu-item__title">{{__('sidebar.Projects_page')}}</span>
+                </div>
+                </a>
+        </div>
+          </li>
 
-</script>
+          <li class="c-menu__item has-submenu " data-toggle="tooltip" title="Flights">
+            <div class="c-menu__item__inner"><i class="fa fa-tasks color"></i>
+             
+            <a class="tagA " href="{{asset('admin/articles/index')}}">
+                <div class="c-menu-item__title"><span class="c-menu-item__title">{{__('sidebar.Article')}}</span>
+                </div>
+                </a>
+        </div>
+          </li>
+
+          <li class="c-menu__item has-submenu " data-toggle="tooltip" title="Flights">
+            <div class="c-menu__item__inner"><i class="fa fa-tasks color"></i>
+             
+            <a class="tagA " href="{{asset('admin/interviews/index')}}">
+                <div class="c-menu-item__title"><span class="c-menu-item__title">{{__('sidebar.Interview')}}</span>
+                </div>
+                </a>
+        </div>
+          </li>
+
+          <li class="c-menu__item has-submenu " data-toggle="tooltip" title="Flights">
+            <div class="c-menu__item__inner"><i class="fa fa-tasks color"></i>
+             
+            <a class="tagA " href="{{asset('admin/Pdfs/index')}}">
+                <div class="c-menu-item__title"><span class="c-menu-item__title">{{__('sidebar.Pdf')}}</span>
+                </div>
+                </a>
+        </div>
+          </li>
+
+          <li class="c-menu__item has-submenu " data-toggle="tooltip" title="Flights">
+            <div class="c-menu__item__inner"><i class="fa fa-cogs color"></i>
+             
+            <a class="tagA " href="{{asset('admin/configrations/index')}}">
+                <div class="c-menu-item__title"><span class="c-menu-item__title">{{__('sidebar.Configrations_page')}}</span>
+                </div>
+                </a>
+        </div>
+          </li>
+
+          <li class="c-menu__item has-submenu " data-toggle="tooltip" title="Flights">
+            <div class="c-menu__item__inner"><i class="fa fa-cogs color"></i>
+             
+            <a class="tagA " href="{{asset('admin/contactinfos/index')}}">
+                <div class="c-menu-item__title"><span class="c-menu-item__title">{{__('sidebar.contactInfo')}}</span>
+                </div>
+                </a>
+        </div>
+          </li>
+
+          <li class="c-menu__item has-submenu " data-toggle="tooltip" title="Flights">
+            <div class="c-menu__item__inner"><i class="fa fa-user color"></i>
+             
+            <a class="tagA " href="{{asset('admin/users/index')}}">
+                <div class="c-menu-item__title"><span class="c-menu-item__title">{{__('sidebar.Admin_Users_page')}}</span>
+                </div>
+                </a>
+        </div>
+          </li>
+
+
+          
+         
+         
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
 </body>
+<main class="l-main">
+    <div class="content-wrapper content-wrapper--with-bg">
+      <div class="page-content">
+          @yield('content')
+  
+      </div>
+    </div>
+  </main>
 
-</html>
+@push('scripts')
+
+<script src="{{asset('lib/jquery/jquery.min.js')}}"></script>
+
+<script src="{{asset('lib/bootstrap/js/bootstrap.min.js')}} "></script>
+<script class="include" type="text/javascript" src="{{asset('lib/jquery.dcjqaccordion.2.7.js')}} "></script>
+<script src="{{asset('lib/jquery.scrollTo.min.js')}} "></script>
+<script src="{{asset('lib/jquery.nicescroll.js')}} " type="text/javascript"></script>
+<script src="{{asset('lib/jquery.sparkline.js')}} "></script>
+<script src="{{asset('lib/common-scripts.js')}} "></script>
+<script type="text/javascript" src="{{asset('lib/gritter/js/jquery.gritter.js')}} "></script>
+<script type="text/javascript" src="{{asset('lib/gritter-conf.js')}} "></script>
+<script src="{{asset('lib/zabuto_calendar.js')}} "></script>
+<script src="{{asset('js/app.js')}} "></script>
+<script src="{{asset('lib/sparkline-chart.js')}} "></script>
+
+<script src="{{asset('js/newJs.js')}} "></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js'></script>
+
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://use.fontawesome.com/2188c74ac9.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+<script>"use strict";
+var Dashboard = function () {
+	var global = {
+		tooltipOptions: {
+			placement: "right"
+		},
+		menuClass: ".c-menu"
+	};
+
+	var menuChangeActive = function menuChangeActive(el) {
+		var hasSubmenu = $(el).hasClass("has-submenu");
+		$(global.menuClass + " .is-active").removeClass("is-active");
+		$(el).addClass("is-active");
+
+		if (hasSubmenu) {
+			$(el).find("ul").slideDown();
+		}
+	};
+
+
+	return {
+		init: function init() {
+
+			$(".js-menu li").on("click", function (e) {
+				menuChangeActive(e.currentTarget);
+			});
+
+			$('[data-toggle="tooltip"]').tooltip(global.tooltipOptions);
+		}
+	};
+}();
+
+Dashboard.init();
+//# sourceURL=pen.js
+</script>
+@endpush
+
+</body></html>

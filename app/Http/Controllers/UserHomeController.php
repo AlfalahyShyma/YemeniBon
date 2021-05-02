@@ -27,16 +27,16 @@ class UserHomeController extends Controller
         if($request->id>0)
         $projects = Project::join('categories', 'categories.id', '=', 'projects.category_id')
         ->select('projects.id','projects.title','projects.title_ar','projects.desc','projects.desc_ar','projects.ldesc','projects.ldesc_ar','projects.face_link','projects.twit_link','projects.insta_link','projects.image','projects.multi_image','projects.owner','projects.owner_ar','projects.address','projects.address_ar','projects.phone','projects.email','projects.website','projects.shift_h','categories.name as category_name')
-       ->where( 'projects.category_id',$request->id)->paginate(4);
+       ->where( 'projects.category_id',$request->id)->paginate(8);
         else
         $projects = Project::join('categories', 'categories.id', '=', 'projects.category_id')
         ->select('projects.id','projects.title','projects.title_ar','projects.desc','projects.desc_ar','projects.ldesc','projects.ldesc_ar','projects.face_link','projects.twit_link','projects.insta_link','projects.image','projects.multi_image','projects.owner','projects.owner_ar','projects.address','projects.address_ar','projects.phone','projects.email','projects.website','projects.shift_h','categories.name as category_name')
-       ->paginate(4);  
+       ->paginate(8);  
       }
     else{
         $projects = Project::join('categories', 'categories.id', '=', 'projects.category_id')
         ->select('projects.id','projects.title','projects.title_ar','projects.desc','projects.desc_ar','projects.ldesc','projects.ldesc_ar','projects.face_link','projects.twit_link','projects.insta_link','projects.image','projects.multi_image','projects.owner','projects.owner_ar','projects.address','projects.address_ar','projects.phone','projects.email','projects.website','projects.shift_h','categories.name as category_name')
-       ->paginate(4);
+       ->paginate(8);
         }
     if($request->ajax()){
         $view=view('data',compact(['projects','banners','categories']))->render();

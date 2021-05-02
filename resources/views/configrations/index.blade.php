@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-        <section id="main-content" style="width:93%;">
+        <section id=" " style="width:93%;">
       <section class="wrapper" style="width:100%;">
         <div class="row">
         <div class="col-lg-12 main-chart">
@@ -28,31 +28,25 @@
     </div>
     <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-
+    <div class="text-left m-5 py-5"> <h2 class="mb-4"><b> {{__('config.smt')}}  </b> </h2><div>
+      <div class="contact-form">
+        @if(session()->has('completed'))
+        <div class=" alert alert-success">
+    {{ session()->get('completed') }}
+    </div>
+    @endif
     <table class="table table-responsive text-center"  style=" width:100%; font-size:14px;">
         <tr style="background-color:whitesmoke;" >
             <th class="text-left" width="90px">{{__('config.Id')}}</th>
-            <th class="text-center"width="200px">{{__('config.face')}}</th>
-            <th class="text-center"width="200px">{{__('config.twit')}}</th>
-            <th class="text-center"width="200px">{{__('config.insta')}}</th>
-            <th class="text-center"width="200px">{{__('config.youtub')}}</th>
-            <th class="text-center"width="200px">{{__('config.ad')}}</th>
-            <th class="text-center"width="200px">{{__('config.ad_ar')}}</th>
-            <th class="text-center"width="200px">{{__('config.ph')}}</th>
-            <th class="text-center"width="200px">{{__('config.email')}}</th>
+            <th class="text-center"width="400px">Link</th>
+            <th class="text-center"width="100px">Icon</th>
             <th class="text-center" width="480px">{{__('config.Action')}}</th>
         </tr>
         @foreach ($configrations as $configration )
             <tr>
-                <td>{{ $configration->id  }}</td>
-                <td>{{ $configration->facebook }}</td>
-                <td>{{ $configration->twitter }}</td>
-                <td>{{ $configration->instagram }}</td>
-                <td>{{ $configration->youtub }}</td>
-                <td>{{ $configration->address }}</td>
-                <td>{{ $configration->address_ar }}</td>
-                <td>{{ $configration->phone }}</td>
-                <td>{{ $configration->email }}</td>
+                <td class="text-center">{{ $configration->id  }}</td>
+                <td class="text-center">{{ $configration->socialmedia }}</td>
+                <td class="text-center"><img src="{{ asset('images/'.$configration->icon) }}" class="text-center" alt="img" title="" height="400px" width="400px"> </td>      
                   <td> 
                 <form action="/admin/configrations/destroy/{{$configration->id}}" method="POST">
    
@@ -60,7 +54,7 @@
 
 
                     @method('PUT')
-                    <a class="btn btn-sm btn-primary" href="/admin/configrations/edit/{{$configration->id}}" style="font-size:11px; margin-bottom:5px;">{{__('config.edit_bt')}}</a>
+                    <a class="btn btn-sm btn-primary" href="/admin/configrations/edit/{{$configration->id}}" style="font-size:11px;">{{__('config.edit_bt')}}</a>
    
                     @csrf
                     @method('DELETE')
@@ -71,6 +65,8 @@
             </tr>
             @endforeach
     </table>
+
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
             <script>
 

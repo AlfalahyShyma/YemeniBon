@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 
-<section id="main-content">
+<section id=" ">
       <section class="wrapper" >
         <div class="row">
         <div class="col-lg-12 main-chart">
@@ -29,7 +29,12 @@
     </div>
     <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-
+        <div class="contact-form">
+            @if(session()->has('completed'))
+            <div class=" alert alert-success">
+        {{ session()->get('completed') }}
+        </div>
+        @endif
     <table class="table table-responsive text-center"  style=" width:100%;">
         <tr style="background-color:whitesmoke;" >
             <th class="text-center" width="10px">{{__('category.Id')}}</th>
@@ -64,18 +69,30 @@
                     @endif</td>
 
                   <td> 
+                    @if($category->id==1||$category->id==2||$category->id==3||$category->id==4||$category->id==5||$category->id==6)
+
                 <form action="/admin/categories/destroy/{{$category->id}}" method="POST">
    
                 @csrf
                     @method('PUT')
                     <a class="btn btn-primary" href="/admin/categories/edit/{{$category->id}}" style="font-size:12px;">{{__('category.edit_bt')}}</a>
    
-                    @csrf
-                    @method('DELETE')
-      
-                    <button type="submit" class="btn btn-danger delete-confirm" data-name="{{ $category->name }}" name="delete" style="font-size:12px;">{{__('category.delete_btn')}}</button>
-
+                
                 </form>
+                @else
+                <form action="/admin/categories/destroy/{{$category->id}}" method="POST">
+   
+                    @csrf
+                        @method('PUT')
+                        <a class="btn btn-primary" href="/admin/categories/edit/{{$category->id}}" style="font-size:12px;">{{__('category.edit_bt')}}</a>
+       
+                        @csrf
+                        @method('DELETE')
+          
+                        <button type="submit" class="btn btn-danger delete-confirm" data-name="{{ $category->name }}" name="delete" style="font-size:12px;">{{__('category.delete_btn')}}</button>
+    
+                    </form>
+                    @endif
                   </td> 
             </tr>
 

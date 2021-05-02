@@ -48,13 +48,13 @@
             <div class="navbar-collapse navbar-right navbar-main-collapse collapse menu" aria-expanded="false">
                 <ul class="nav navbar-nav">
                     <li><a class="page-scroll active" href="/homepage">{{__('client.home')}}</a></li>
-                    <li><a class="page-scroll" href="publication">{{__('client.pub')}}</a></li>
+                    <li><a class="page-scroll" href="/publication">{{__('client.pub')}}</a></li>
                     <!-- <li><a class="page-scroll" href="#work">World of Coffee</a></li> -->
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{__('client.w_o_c')}}</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">{{__('client.c_t')}}</a></li>
-                            <li><a href="#">{{__('client.c_to')}}</a></li>
+                            <li><a href="/type">{{__('client.c_t')}}</a></li>
+                            <li><a href="/tools">{{__('client.c_to')}}</a></li>
                             <li><a href="#">{{__('client.c_m')}}</a></li>
                         </ul>
                     </li>

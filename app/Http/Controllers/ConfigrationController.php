@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Configration;
-
+use DB;
 class ConfigrationController extends Controller
 {
     /**
@@ -14,7 +14,9 @@ class ConfigrationController extends Controller
      */
     public function index()
     {
-        $configrations = configration::select('configrations.id','configrations.facebook','configrations.twitter','configrations.instagram','configrations.youtub','configrations.address','configrations.address_ar','configrations.phone','configrations.email')->get();
+        $configrations = configration::select('configrations.id','configrations.socialmedia','configrations.icon',
+        // 'configrations.address','configrations.address_ar','configrations.phone','configrations.email'
+        )->get();
         return view('configrations.index',['configrations' => $configrations]);
      }
 
@@ -37,23 +39,26 @@ class ConfigrationController extends Controller
     public function store(Request $request)
     {
 
-        $request->validate(['facebook'=>'required','twitter'=>'required','instagram'=>'required','youtub'=>'required','address'=>'required','phone'=>'required|regex:/^([0-9\s\-\+\(\)]*)$/|digits:9','email'=>'required|email']);
-        // configration::create($request->all());
+        $request->validate(['socialmedia'=>'required|url',
+        'icon'=>'required|mimes:jpg,png,jpeg']);
+        configration::create($request->all());
         $configration = new configration();
-        $configration->facebook = $request->input('facebook');
-        $configration->twitter = $request->input('twitter');  
-        $configration->instagram = $request->input('instagram');
-        $configration->youtub = $request->input('youtub');
-        $configration->address = $request->input('address');
-        $configration->address_ar = $request->input('address_ar');
-        $configration->phone = $request->input('phone');
-        $configration->email = $request->input('email');
+        if($request->hasfile('icon') )  
+        {
+        $name = preg_replace('/(0)\.(\d+) (\d+)/', '$3$1$2', microtime()) . "." . $request->icon->getClientOriginalExtension();
+        $configration= $request->icon->move(public_path('images'), $name);
+        configration::create(
+            [
+                "icon"=>$name,
+                "socialmedia"=>$request->input('socialmedia')
+            ]
+        );
+        DB::commit();
+       
 
-        $configration->save();
-      
+        }
 
-          // return view('configrations.create');
-           return redirect('/admin/configrations/index')->with('completed', 'content has been updated');  
+           return redirect('/admin/configrations/index')->with('completed', 'content has been add');  
     }
 
     /**
@@ -89,28 +94,27 @@ class ConfigrationController extends Controller
     public function update(Request $request, $configration_id)
     {
         $request->validate([
-            'facebook' => 'required',
-            'twitter' => 'required',
-            'instagram' => 'required',
-            'youtub' => 'required',
-            'address' => 'required',
-            'address_ar' => 'required',
-            'phone' => 'required',
-            'email' => 'required',
-  
+            'socialmedia' => 'url',
+]);
 
-         ]);
-         $configration= configration::whereId($configration_id)->update([
-            'facebook'=>$request->input('facebook'),
-            'twitter'=>$request->input('twitter'),
-            'instagram'=>$request->input('instagram'),
-            'youtub'=>$request->input('youtub'),
-            'address'=>$request->input('address'),
-            'address_ar'=>$request->input('address_ar'),
-            'phone'=>$request->input('phone'),
-            'email'=>$request->input('email')
+         if($request->hasfile('icon') )  
+        {
+        $name = preg_replace('/(0)\.(\d+) (\d+)/', '$3$1$2', microtime()) . "." . $request->icon->getClientOriginalExtension();
+        $configration= $request->icon->move(public_path('images'), $name);
+          $configration= configration::whereId($configration_id)->update([
+            'icon'=> $name,
+            'socialmedia'=>$request->input('socialmedia'),
+
+             ]);
+         }
+         else
+         {
+             $configration= configration::whereId($configration_id)->update([
+            'socialmedia'=>$request->input('socialmedia'),
+        
 
             ]);
+        }
           
              return redirect('/admin/configrations/index')->with('completed', 'configration has been updated');
     
@@ -129,6 +133,6 @@ class ConfigrationController extends Controller
 
 
          $configration->delete();
-         return redirect('/admin/configrations/index')->with('success','configration deleted successfully');
+         return redirect('/admin/configrations/index')->with('completed','configration deleted successfully');
     }    
 }

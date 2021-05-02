@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<section id="main-content">
+<section id=" ">
       <section class="wrapper" >
         <div class="row">
         <div class="col-lg-12 main-chart">
@@ -28,17 +28,23 @@
     </div>
     <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-
+        <div class="contact-form">
+            @if(session()->has('completed'))
+            <div class=" alert alert-success">
+        {{ session()->get('completed') }}
+        </div>
+        @endif
     <table class="table table-responsive text-center"  style=" width:100%;">
         <tr style="background-color:whitesmoke;" >
             <th class="text-center" width="10px">{{__('article.Id')}}</th>
-            <th class="text-center"width="200px">{{__('article.name_index')}}</th>
+            <th class="text-center"width="200px">{{__('article.name')}}</th>
             <th class="text-center"width="300px">{{__('article.date')}}</th>
             <th class="text-center"width="300px">{{__('article.article')}}</th>
-            <th class="text-center"width="200px">{{__('article.articleer')}}</th>
-            <th class="text-center"width="150px">{{__('article.voice')}}</th>
+            <th class="text-center"width="200px">{{__('article.publisher')}}</th>
             <th class="text-center"width="100px">{{__('article.img')}} </th>
             <th class="text-center"width="100px">{{__('article.desc')}} </th>
+            <th class="text-center"width="100px">{{__('article.source_url')}} </th>
+            <th class="text-center"width="100px">{{__('article.category_name')}} </th>
             <th class="text-center" width="280px">{{__('article.Action')}}</th>
         </tr>
         @foreach ($articles as $article )
@@ -47,11 +53,11 @@
                 <td>{{ $article->name }}</td>
                 <td>{{ $article->date }}</td>
                 <td>{!! $article->article !!}</td>
-                <td>{{ $article->articleer }}</td>
+                <td>{{ $article->publisher }}</td>
                 <!-- <td>{!! $article->article !!}</td> -->
-                <td>{{ $article->voice }}</td>
                 <td>{{ $article->img }}</td>
                 <td>{{ $article->desc }}</td>
+                <td>{{ $article->source_url }}</td>
                 <!-- <td>{!! $article->data_ar !!}</td> -->
                 <td>{{ $article->category_name }}</td>
                 

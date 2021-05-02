@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 
-<section id="main-content">
+<section id=" ">
       <section class="wrapper" >
         <div class="row">
         <div class="col-lg-12 main-chart">
@@ -29,7 +29,11 @@
     </div>
     <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-
+      @if(session()->has('completed'))
+      <div class=" alert alert-success">
+{{ session()->get('completed') }}
+</div>
+@endif
     <table class="table table-responsive text-center"  style=" width:100%;">
         <tr style="background-color:whitesmoke;" >
             <th class="text-center"width="10px" >{{__('catatype.Id')}}</th>
@@ -44,6 +48,16 @@
                 <td>{{ $catatype->type_ar }}</td>
 
                   <td> 
+                    @if($catatype->id==1||$catatype->id==2||$catatype->id==3)
+                    <form action="/admin/catatypes/destroy/{{$catatype->id}}" method="POST">
+   
+                      @csrf
+                          @method('PUT')
+                          <a class="btn btn-primary" href="/admin/catatypes/edit/{{$catatype->id}}" style="font-size:12px;">{{__('catatype.edit_bt')}}</a>
+         
+                         
+                      </form>
+                    @else
                 <form action="/admin/catatypes/destroy/{{$catatype->id}}" method="POST">
    
                 @csrf
@@ -52,10 +66,11 @@
    
                     @csrf
                     @method('DELETE')
-      
+    
                     <button type="submit" class="btn btn-danger delete-confirm" data-name="{{ $catatype->type }}" name="delete" style="font-size:12px;">{{__('catatype.delete_btn')}}</button>
 
                 </form>
+                @endif
                   </td> 
             </tr>
 

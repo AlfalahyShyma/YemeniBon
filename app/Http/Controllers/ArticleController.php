@@ -15,7 +15,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::join('categories', 'categories.id', '=', 'articles.category_id')
-        ->select('articles.id','articles.article_name','articles.name_ar','articles.date', 'articles.publisher','articles.publisher_ar','articles.article','articles.article_ar','articles.qoute','articles.qoute_ar','articles.image','articles.source_url','articles.desc','articles.desc_ar','categories.updated_at', 'categories.name as category_name' )
+        ->select('articles.id','articles.article_name','articles.name_ar','articles.date', 'articles.publisher','articles.publisher_ar','articles.article','articles.article_ar','articles.image','articles.source_url','articles.desc','articles.desc_ar','categories.updated_at', 'categories.name as category_name' )
         ->orderBy('articles.updated_at','DESC')
         ->where('articles.category_id', '=', '5')
         ->get();
@@ -39,50 +39,46 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function save(Request $request)
     {
-        // $request->validate(['name'=>'required|unique:articles','image'=>'required|mimes:jpg,png,jpeg']);
+        // $request->validate(['article'=>'required|min:10|max:50',
+        // 'article_ar'=>'required|min:10|max:50',
+        // 'publisher'=>'required|unique:articles|min:10|max:50',
+        // 'publisher_ar'=>'required|unique:articles|min:10|max:50',
+        // 'name'=>'required|unique:articles|min:10|max:50',
+        // 'name_ar'=>'required|unique:articles|min:10|max:50',
+        // 'desc'=>'required',
+        // 'desc_ar'=>'required',
+        // 'source_url'=>'required|url',
+        // 'image'=>'required|mimes:jpg,png,jpeg',
+        // ]);
+        // dd($_SERVER);
+        echo "hr";
         $article = new Article();
         if($request->hasfile('image'))
         {
         $name = preg_replace('/(0)\.(\d+) (\d+)/', '$3$1$2', microtime()) . "." . $request->image->getClientOriginalExtension();
         $path= $request->image->move(public_path('images'), $name);
         $article->image =$name;
-        $article->article_name = $request->input('article_name');
+
+
+
+        $article->article_name = $request->input('name');
         $article->name_ar = $request->input('name_ar');
         $article->date = $request->input('date'); 
         $article->publisher = $request->input('publisher');
         $article->publisher_ar = $request->input('publisher_ar');
-        $article->image = $request->input('image');   
         $article->article = $request->input('article');   
         $article->article_ar = $request->input('article_ar');   
-        $article->qoute = $request->input('qoute');   
-        $article->qoute_ar = $request->input('qoute_ar');   
+ 
         $article->desc = $request->input('desc');   
         $article->desc_ar = $request->input('desc_ar');   
         $article->source_url = $request->input('source_url');   
        $article->category_id = $request->input('category_id');
         }
-        // dd($name);
-
-        $article->article_name = $request->input('article_name');
-        $article->name_ar = $request->input('name_ar');
-        $article->date = $request->input('date'); 
-        $article->publisher = $request->input('publisher');
-        $article->publisher_ar = $request->input('publisher_ar');
-        $article->image = $request->input('image');   
-        $article->article = $request->input('article');   
-        $article->article_ar = $request->input('article_ar');   
-        $article->qoute = $request->input('qoute');   
-        $article->qoute_ar = $request->input('qoute_ar');   
-        $article->desc = $request->input('desc');   
-        $article->desc_ar = $request->input('desc_ar');   
-        $article->source_url = $request->input('source_url');   
-       $article->category_id = $request->input('category_id');
-
+       
         $article->save();
-// dd($request);
-        return redirect('/admin/articles/index')->with('completed', 'article has been updated');  
+        return redirect('/admin/articles/index')->with('completed', 'article has been add');  
 
             }
 
@@ -139,8 +135,7 @@ class ArticleController extends Controller
             'date' => $request->input('date'),
             'article' => $request->input('article'),
             'article_ar' => $request->input('article_ar'),   
-            'qoute' => $request->input('qoute'),   
-            'qoute_ar' => $request->input('qoute_ar'),   
+   
             'publisher' => $request->input('publisher'),
             'publisher_ar' => $request->input('publisher_ar'),
             'img' => $request->input('img'),   
@@ -165,7 +160,7 @@ class ArticleController extends Controller
     {
         $article= Article::find($article);
         $article->delete();
-        return redirect('/admin/articles/index')->with('success','content deleted successfully');     
+        return redirect('/admin/articles/index')->with('completed','content deleted successfully');     
         
     }
 }

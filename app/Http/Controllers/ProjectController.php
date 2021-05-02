@@ -21,18 +21,6 @@ class ProjectController extends Controller
            
     }
 
-    public function pdf(){
-        return view('client.publication.pdfs');
-    }
-
-    public function interview(){
-        return view('client.publication.interview');
-    }
-
-    public function article(){
-        return view('client.publication.articles');
-    }
-
     /**
      * Show the form for creating a new resource.
      *

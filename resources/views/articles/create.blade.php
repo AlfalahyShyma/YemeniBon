@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<section id="main-content">
+<section >
       <section class="wrapper" >
         <div class="row">
         <div class="col-lg-12 main-chart">
@@ -31,16 +31,27 @@
             </ul>
         </div>
     @endif
-    <form class="form-card" action="/admin/articles/store" method="POST" enctype="multipart/form-data">
+    <form class="form-card" action="/public/store" method="POST" enctype="multipart/form-data">
             @csrf
 
 <!-- Text input-->
 <div class="row ">
 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-6 m-5">
-<div class="form-group">
-  <!-- <input type="file" name="image" class="col-md-4 form-control input-md mx-3"   id="gallery-logo-add" style="font-size:15px;"  accept="image/*" required > -->
-  <input  name="image" type="file" placeholder="article Name"  id="gallery-logo-add" class="col-md-4 form-control input-md mx-3" style="font-size:15px;" accept="image/*" required  >
-<div class="gallery2"></div>
+
+  <div class="image-upload-container">
+    <div class="image-upload-one">
+      <div class="center">
+        <div class="form-input">
+          <label for="file-ip-1">
+            <img id="file-ip-1-preview" src="https://i.ibb.co/ZVFsg37/default.png">
+            <button type="button" class="imgRemove" onclick="myImgRemove(1)"></button>
+          </label>
+          <input type="file"  name="image" id="file-ip-1" accept="image/*" onchange="showPreview(event, 1);">
+        </div>
+        <small class="small">Use the &#8634; icon to reset the image</small>
+      </div>
+    </div>
+
   </div>
   </div>
 </div>
@@ -48,7 +59,7 @@
 <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5 m-5">
 
 <div class="form-group">
-  <input  name="article_name" placeholder="article Name" class="col-md-4 form-control input-md mx-3" style="font-size:15px;"  required type="text">
+  <input  name="name" placeholder="article Name" class="col-md-4 form-control input-md mx-3" style="font-size:15px;"  required type="text">
  </div>
  </div>
 
@@ -77,14 +88,14 @@
   </div>
 </div>
 <div class="row ">
-<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-6 ">
+<div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5 m-5 ">
 
 <div class="form-group">
   <input  name="desc" placeholder="article description" class="col-md-4 form-control input-md mx-3" style="font-size:15px;"  required type="text">
  </div>
  </div>
 
- <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-6 ">
+ <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5 m-5">
 
 <div class="form-group">
   <input  name="desc_ar" placeholder="article Arabic description" class="col-md-4 form-control input-md mx-3" style="font-size:15px;"  required type="text">
@@ -96,7 +107,7 @@
 <div class="form-group" style="">
   <label class="control-label" for="article" style="font-size:18px;">{{__('article.add_label_1')}}</label>  </div>
   <div class="" style="">
-  <textarea name="article" id="disc" cols="20" rows="10"> hello world</textarea>
+  <textarea name="article" id="mytextarea" cols="20" rows="10"> hello world</textarea>
 
   </div>
 </div>
@@ -104,7 +115,7 @@
 <div class="form-group" >
   <label class="control-label" for="article_ar" style="font-size:18px;">{{__('article.add_label_1_ar')}}</label>  </div>
   <div class="" >
-  <textarea name="article_ar" id="disc2" cols="30" rows="10"> مرحبا ..لاضافه العربي</textarea>
+  <textarea name="article_ar" id="mytextarea_ar" cols="30" rows="10"> مرحبا ..لاضافه العربي</textarea>
   </div>
   </div>
   </div>
@@ -125,18 +136,7 @@
  </div>
  </div>
  </div>
- <div class="row ">
- <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5 m-5">
-<div class="form-group">
-  <input  name="qoute" placeholder="article qoute" class="col-md-4 form-control input-md mx-3" style="font-size:15px;"  required type="text">
- </div>
- </div>
- <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5 m-5">
-<div class="form-group">
-  <input  name="qoute_ar" placeholder="article arabic qoute" class="col-md-4 form-control input-md mx-3" style="font-size:15px;"  required type="text">
- </div>
- </div>
- </div>
+
  <div class="row ">
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 m-5">
 <div class="form-group">
@@ -162,34 +162,25 @@
       </section>
     </section>
     <script>
-$(function() {
-    var imagesPreview = function(input, placeToInsertImagePreview) {
-
-        if (input.files) {
-            var filesAmount = input.files.length;
-
-            for (i = 0; i < filesAmount; i++) {
-                var reader = new FileReader();
-
-                reader.onload = function(event) {
-                    $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
-                }
-
-                reader.readAsDataURL(input.files[i]);
-            }
+      var number = 1;
+      do {
+        function showPreview(event, number){
+          if(event.target.files.length > 0){
+            let src = URL.createObjectURL(event.target.files[0]);
+            let preview = document.getElementById("file-ip-"+number+"-preview");
+            preview.src = src;
+            preview.style.display = "block";
+          } 
         }
-
-    };
-
-    $('#gallery-photo-add').on('change', function() {
-        imagesPreview(this, 'div.gallery');
-    });
-    $('#gallery-logo-add').on('change', function() {
-        imagesPreview(this, 'div.gallery2');
-    });
-});</script>
-    <script src="{{asset('lib/common-scripts.js')}}"></script>
-
+        function myImgRemove(number) {
+            document.getElementById("file-ip-"+number+"-preview").src = "https://i.ibb.co/ZVFsg37/default.png";
+            document.getElementById("file-ip-"+number).value = null;
+          }
+        number++;
+      }
+      while (number < 5);
+      
+      </script>
 @endsection
 
 

@@ -19,18 +19,7 @@ class AboutUs extends Model
       
         'objectives_ar_desc',
         'objectives_desc',
-        'Trainers_ar',
-        'Trainers',
-        'Trainers_name_ar',
-        'Trainers_name',
-        'Trainers_job_ar',
-        'Trainers_job',
-        'Trainees_ar',
-        'Trainees',
-        'Trainees_name_ar',
-        'Trainees_name',
-        'Trainees_job_ar',
-        'Trainees_job',
+        
 
     ];
 }

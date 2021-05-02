@@ -4,7 +4,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\StaticPageController;
 use App\Http\Controllers\ContentController;
-use App\Http\Controllers\ConfigrationController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\client\ContactusController;
 use App\Http\Controllers\HomeController;
@@ -12,6 +11,7 @@ use App\Http\Controllers\UserHomeController;
 use App\Http\Controllers\CatatypeController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\AboutUsControllr;
+use App\Http\Controllers\PublicationController;
 use App\Http\Controllers\client\ContactController;
 use App\Models\Banner;
 use App\Models\Category;
@@ -20,7 +20,8 @@ use App\Http\Controllers\PdfController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\InterviewController;
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\ConfigrationController;
+use App\Http\Controllers\ContactinfoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,7 +32,7 @@ use Illuminate\Http\Request;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [UserHomeController::class, 'index']);
+// Route::get('/', [UserHomeController::class, 'index']);
 
 
 
@@ -64,36 +65,48 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
 ], function()
 {
     Route::get('/about', function () {
-        $abouts =\App\Models\AboutUs::all();
-        return view('client.about',['abouts' => $abouts]);  
+        $abouts =\App\Models\AboutUs::orderByDesc('id')->first()->get();
+        $abouting =\App\Models\AboutUs::orderByDesc('id')->first();
+        $contenet=DB::table('about_contents')->where('about_id',$abouting->id)->get();
+        $about_trainees=DB::table('about_trainees')->where('about_id',$abouting->id)->get();
+        
+
+        return view('client.about',['abouts' => $abouts,'contenet'=>$contenet,'about_trainees'=>$about_trainees]);  
 });
     // Route::view('/about', 'client.about');
     Route::get('/publication', [PublicationController::class, 'index']);
+    Route::get('/details/pdf/{id}', [PublicationController::class, 'details']);
+    Route::get('/details/articles/{id}', [PublicationController::class, 'details2']);
+    Route::get('/details/interview/{id}', [PublicationController::class, 'details3']);
     Route::get('/contact', [ContactController::class, 'index']);
     Route::get('/send',[ContactController::class,"sendMail"]);
     
 
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
-    return view('Admin.home');
-});
-Route::get('/content', function () {
-    return view('content');
-});
-Route::get('/contact', function () {
-    return view('contact');
-});
+// Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
+//     return view('Admin.home');
+// });
+// Route::get('/content', function () {
+//     return view('content');
+// });
+// Route::get('/contact', function () {
+//     return view('contact');
+// });
 
 Route::get('/', [UserHomeController::class, 'index']);
 Route::get('/details/{id}', [UserHomeController::class, 'details']);
 Route::get('/publication', [PublicationController::class, 'index']);
-Route::get('/pdfs', [PublicationController::class, 'pdf']);
-Route::get('/articles', [PublicationController::class, 'article']);
-Route::get('/interview', [PublicationController::class, 'interview']);
+
 Route::get('/project-details', [ProjectDetailsController::class, 'index']);
 // Route::get('/client/home/{$id}', [HomeController::class, 'filtering']);
 Route::get('/projects/all', [HomeController::class, 'filteringall']);
 Route::get('/projects/{id}', [HomeController::class, 'filtering']);
+Route::get('/type',function(){
+    return view('client.types');
+});
+Route::get('/tools',function(){
+    return view('client.tools');
+});
 // Route::middleware(['auth:sanctum', 'verified'])->get('/',[HomeController::class,'index']);
 
 // Route::get('/staticpage', function () {
@@ -110,6 +123,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard',[HomeControlle
 //Route::resource('/categories', CategoryController::class);
 //Route::apiResource('/categories', CategoryController::class);
 Route::prefix('admin')->group( function () {
+    // Route::post('/articles/store',[ArticleController::class,'save']);
+   
     Route::post('/categories/store',[CategoryController::class,'store']);
     Route::put('/categories/update/{id}',[CategoryController::class,'update']);
     Route::post('/catatypes/store',[CatatypeController::class,'store']);
@@ -123,6 +138,12 @@ Route::prefix('admin')->group( function () {
     Route::post('/users/store',[UserController::class,'store']);
     Route::post('/configrations/store',[ ConfigrationController::class,'store']);
     Route::put('/configrations/update/{id}',[ConfigrationController::class,'update']);
+     //contact_info 
+   Route::post('/contactinfos/store',[ContactinfoController::class,'store']);
+   Route::put('/contactinfos/update/{id}',[ContactinfoController::class,'update']);
+   Route::delete('/contactinfos/destroy/{id}',[ContactinfoController::class,'destroy'])->name('contactinfos.destroy');
+   Route::delete('/configrations/destroy/{id}',[ConfigrationController::class,'destroy'])->name('configrations.destroy');
+
     Route::post('/banners/store',[ BannerController::class,'store']);
     Route::put('/banners/update/{id}',[BannerController::class,'update']);
     Route::post('/contents/store',[ContentController::class,'store']);
@@ -134,7 +155,6 @@ Route::prefix('admin')->group( function () {
     Route::delete('/projects/destroy/{id}',[ProjectController::class,'destroy'])->name('projects.destroy');
     Route::delete('/abouts/destroy/{id}',[AboutUsControllr::class,'destroy'])->name('projects.destroy');
     Route::delete('/contents/destroy/{id}',[ContentController::class,'destroy'])->name('contents.destroy');
-    Route::delete('/configrations/destroy/{id}',[ConfigrationController::class,'destroy'])->name('configrations.destroy');
 
    
 
@@ -145,6 +165,12 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
 'middleware' => [ 'localeViewPath','localeSessionRedirect', 'localizationRedirect'  ]
 ], function()
 {
+        
+ Route::get('/about/create',[AboutUsControllr::class,'create']);
+ Route::get('/about/index',[AboutUsControllr::class,'index']);
+ Route::get('/about/show/{id}',[AboutUsControllr::class,'show']);
+ Route::get('/about/edit/{id}',[AboutUsControllr::class,'edit']);
+
 
     Route::get('/homepage', [UserHomeController::class, 'index']);
     Route::get('/details/{id}', [UserHomeController::class, 'details']);
@@ -172,11 +198,6 @@ Route::prefix('admin')->group( function () {
  Route::get('/projects/show/{id}',[ProjectController::class,'show']);
  Route::get('/projects/edit/{id}',[ProjectController::class,'edit']);
 
- Route::get('/about/create',[AboutUsControllr::class,'create']);
- Route::get('/about/index',[AboutUsControllr::class,'index']);
- Route::get('/about/show/{id}',[AboutUsControllr::class,'show']);
- Route::get('/about/edit/{id}',[AboutUsControllr::class,'edit']);
-
  Route::get('/contents/create',[ContentController::class,'create']);
  Route::get('/contents/edit/{id}',[ContentController::class,'edit']);
  Route::get('/contents/index',[ContentController::class,'index']);
@@ -190,11 +211,29 @@ Route::prefix('admin')->group( function () {
  Route::delete('/users/destroy/{id}',[UserController::class,'destroy'])->name('users.destroy');
  Route::get('/users/show/{id}',[UserController::class,'show']);
  Route::put('/users/update/{id}',[UserController::class,'update']);
+//contact_info
+Route::get('/contactinfos/create',[ ContactinfoController::class,'create']);
+Route::get('/contactinfos/edit/{id}',[ContactinfoController::class,'edit']);
+Route::get('/contactinfos/index',[ContactinfoController::class,'index']);
+Route::get('/contactinfos/show/{id}',[ContactinfoController::class,'show']);
+Route::get('/pdfs/index',[PdfController::class,'index']);
+Route::get('/interviews/index',[InterviewController::class,'index']);
+Route::get('/articles/index',[ArticleController::class,'index']);
 
- Route::get('/configrations/create',[ ConfigrationController::class,'create']);
- Route::get('/configrations/edit/{id}',[ConfigrationController::class,'edit']);
- Route::get('/configrations/index',[ConfigrationController::class,'index']);
- Route::get('/configrations/show/{id}',[ConfigrationController::class,'show']);
+Route::get('/articles/create',[ ArticleController::class,'create']);
+Route::get('/articles/edit/{id}',[ArticleController::class,'edit']);
+Route::get('/articles/show/{id}',[ArticleController::class,'show']);
+
+
+
+Route::get('/interviews/create',[ InterviewController::class,'create']);
+Route::get('/interviews/edit/{id}',[InterviewController::class,'edit']);
+
+
+Route::get('/configrations/create',[ ConfigrationController::class,'create']);
+Route::get('/configrations/edit/{id}',[ConfigrationController::class,'edit']);
+Route::get('/configrations/index',[ConfigrationController::class,'index']);
+Route::get('/configrations/show/{id}',[ConfigrationController::class,'show']);
 
  Route::get('/banners/create',[ BannerController::class,'create']);
  Route::get('/banners/edit/{id}',[BannerController::class,'edit']);
@@ -204,31 +243,7 @@ Route::prefix('admin')->group( function () {
 // Route::get('users/create',[RegisterController::class ,'create']);
  
     //route to publication type
-    Route::post('/pdfs/store',[PdfController::class,'store']);
-    Route::put('/pdfs/update/{id}',[PdfController::class,'update']);
-    Route::delete('/pdfs/destroy/{id}',[PdfController::class,'destroy'])->name('pdf.destroy');
-    Route::post('/articles/store',[ArticleController::class,'store']);
-    Route::put('/articles/update/{id}',[ArticleController::class,'update']);
-    Route::delete('/articles/destroy/{id}',[ArticleController::class,'destroy'])->name('articles.destroy');
-    Route::post('/interviews/store',[InterviewController::class,'store']);
-    Route::put('/interviews/update/{id}',[InterviewController::class,'update']);
-    Route::delete('/interviews/destroy/{id}',[InterviewController::class,'destroy'])->name('interviews.destroy');
-
-
-    Route::get('/pdfs/create',[ PdfController::class,'create']);
-Route::get('/pdfs/edit/{id}',[PdfController::class,'edit']);
-Route::get('/pdfs/index',[PdfController::class,'index']);
-Route::get('/pdfs/show/{id}',[PdfController::class,'show']);
-Route::get('/articles/create',[ ArticleController::class,'create']);
-Route::get('/articles/edit/{id}',[ArticleController::class,'edit']);
-Route::get('/articles/index',[ArticleController::class,'index']);
-Route::get('/articles/show/{id}',[ArticleController::class,'show']);
-Route::get('/interviews/create',[ InterviewController::class,'create']);
-Route::get('/interviews/edit/{id}',[InterviewController::class,'edit']);
-Route::get('/interviews/index',[InterviewController::class,'index']);
-Route::get('/interviews/show/{id}',[InterviewController::class,'show']);
-
-
+   
 });
 
 });
@@ -267,16 +282,22 @@ Route::prefix('activ')->group( function () {
 // });
 
 // Route::view('/users-home','livewire.users');
-Route::view('/users','livewire.users');
+Route::view('/test','test');
+Route::post('/pdfs/store',[PdfController::class,'store']);
+Route::put('/pdfs/update/{id}',[PdfController::class,'update']);
+Route::post('/pdfs/store',[PdfController::class,'store']);
+Route::delete('/pdfs/destroy/{id}',[PdfController::class,'destroy']);
+Route::delete('/articles/destroy/{id}',[ArticleController::class,'destroy'])->name('articles.destroy');
 
-Route::get('/about', function () {
-            $abouts =\App\Models\AboutUs::all();
-            return view('client.about',['abouts' => $abouts]);  
-    });
-        // Route::view('/about', 'client.about');
-        Route::get('/publication', [PublicationController::class, 'index']);
-        Route::get('/contact', [ContactController::class, 'index']);
-        Route::get('/send',[ContactController::class,"sendMail"]);
-        
-Route::get('/', [UserHomeController::class, 'index']);
-Route::get('/details/{id}', [UserHomeController::class, 'details']);
+Route::get('/pdfs/create',[ PdfController::class,'create']);
+Route::get('/pdfs/edit/{id}',[PdfController::class,'edit']);
+Route::get('/pdfs/show/{id}',[PdfController::class,'show']);
+
+Route::get('/interviews/show/{id}',[InterviewController::class,'show']);
+Route::put('/interviews/update/{id}',[InterviewController::class,'update']);
+
+Route::delete('/interviews/destroy/{id}',[InterviewController::class,'destroy'])->name('interviews.destroy');
+Route::post('/interviews/store',[InterviewController::class,'store']);
+Route::post('/public/store',[ArticleController::class,'save']);
+Route::put('/articles/update/{id}',[ArticleController::class,'update']);
+Route::post('/public/store',[ArticleController::class,'save']);

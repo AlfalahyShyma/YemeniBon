@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 
-<section id="main-content">
+<section id=" ">
       <section class="wrapper" >
         <div class="row">
         <div class="col-lg-12 main-chart">
@@ -29,7 +29,12 @@
     </div>
     <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-
+      <div class="contact-form">
+        @if(session()->has('completed'))
+        <div class=" alert alert-success">
+{{ session()->get('completed') }}
+</div>
+@endif
     <table class="table table-responsive text-center"  style=" width:100%;">
         <tr style="background-color:whitesmoke;" >
             <th class="text-center" width="10px">{{__('Banner.Id')}}</th>

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<section id="main-content">
+<section id=" ">
       <section class="wrapper" >
         <div class="row">
         <div class="col-lg-12 main-chart">
@@ -27,19 +27,24 @@
 </div>
     </div>
     <div class="row">
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-
-    <table class="table table-responsive text-center"  style=" width:100%;">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12  table-responsive" style="overflow: scroll;">
+        <div class="contact-form">
+            @if(session()->has('completed'))
+            <div class=" alert alert-success">
+        {{ session()->get('completed') }}
+        </div>
+        @endif
+    <table class="table table-responsive text-center" >
         <tr style="background-color:whitesmoke;" >
             <th class="text-center" width="10px">{{__('interview.Id')}}</th>
-            <th class="text-center"width="200px">{{__('interview.name_index')}}</th>
+            <th class="text-center"width="200px">{{__('interview.name')}}</th>
             <th class="text-center"width="300px">{{__('interview.date')}}</th>
             <th class="text-center"width="200px">{{__('interview.interviewer')}}</th>
             <th class="text-center"width="300px">{{__('interview.interview')}}</th>
             <th class="text-center"width="100px">{{__('interview.img')}} </th>
             <th class="text-center"width="100px">{{__('interview.desc')}} </th>
             <th class="text-center"width="100px">{{__('interview.voice')}} </th>
-            <th class="text-center"width="100px">{{__('interview.category')}} </th>
+            <th class="text-center"width="100px">{{__('interview.category_name')}} </th>
             <th class="text-center" width="280px">{{__('interview.Action')}}</th>
         </tr>
         @foreach ($interviews as $interview )
@@ -56,7 +61,7 @@
                 <td>{{ $interview->category_name }}</td>
                 
                   <td> 
-                <form action="/admin/interviews/destroy/{{$interview->id}}" method="POST">
+                <form action="/interviews/destroy/{{$interview->id}}" method="POST">
    
                 @csrf
 

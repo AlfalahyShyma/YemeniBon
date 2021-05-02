@@ -14,25 +14,18 @@
 <br>
 <section class="publication-desc">
     <div class="pub-container">
-        <section id="main-content">
+        <section id=" ">
 
             <div class="pub-show">
                 <div class="container">
-                <!-- <div class="pub-img-title">
-                    <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
-                    <h2>Title</h2> 
-                            </div>-->
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
+               @foreach($pdfs as $pdf)
                     <div class="pub-show-body">
                     
                         <div class="pub-show-aside">
 
                             <div class="pub-img">
-                                <img loading="auto" srcset="{{asset('asset/img/download.jfif')}}">
+                                <img loading="auto" srcset="{{asset('images/'.$pdf->img)}}">
+
                             </div>
 
                            
@@ -41,32 +34,61 @@
 
 
                         <div class="pub-show-content">
-                            <!-- <h1 class="story-title">Vision Media Production Company</h1>
-                            <div class="story-date">
-                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                <span>05 March 2021</span>
-                            </div> -->
+                          
                             <div class="pub-img-title">
                                 <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
-                                <h2>Title</h2>
+
+                                @if(Config::get('app.locale')=='en')
+                                <h2>{{$pdf->name}}</h2>
+            @else
+            <h2>{{$pdf->name_ar}}</h2>
+            @endif
+                               
                             </div>
                             <div class="pub-show-description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Veniam eius dolore quaerat assumenda dolorem aut sapiente 
-                                    eum maiores modi a nemo eligendi illo nihil, laboriosam 
-                                    laudantium! Animi perspiciatis iste quia.</p>
+                                <p>
+                                    @if(Config::get('app.locale')=='en')
+                                    {{$pdf->desc}}
+            @else
+            {{$pdf->desc_ar}}
+            @endif
+                                    
+                                </p>
+                                    
                             </div>
-                            <a href="#" class="show-btn">
+                            <div class="pub-show-description">
+                                <p>
+                                  
+                                    {{$pdf->date}}
+                                </p>
+                                    
+                           
+                                <p>
+                                    @if(Config::get('app.locale')=='en')
+                                    {{$pdf->publisher}}
+            @else
+            {{$pdf->publisher_ar}}
+            @endif
+                                   
+                                </p>
+                                    
+                            </div>
+                            
                                 <div>Preview</div>
                             </a>
                             <a href="#" class="show-btn">
                                 <div>Download</div>
                             </a>
+                            <div class="layer">
+                            <img loading="auto" srcset="{{asset('asset/img/coffee_bean2.png')}}">
+                            </div>
+                            
                         </div>
                     </div>
 
 
                 </div>
+                @endforeach
                 <br>
 <br>
 <br>

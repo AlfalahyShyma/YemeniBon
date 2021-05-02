@@ -39,12 +39,13 @@ class CatatypeController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate(['type'=>'required|unique:catatypes']);
+        $request->validate(['type'=>'required|unique:catatypes|min:8|max:255',
+        'type_ar'=>'required|unique:catatypes|min:8|max:255']);
         $catatype = new Catatype();
         $catatype->type = $request->input('type'); 
         $catatype->type_ar = $request->input('type_ar');         
         $catatype->save();
-                 return redirect('/admin/catatypes/index')->with('completed', 'content has been updated');  
+                 return redirect('/admin/catatypes/index')->with('completed', 'content has been add');  
     }
 
     /**
@@ -79,11 +80,9 @@ class CatatypeController extends Controller
      */
     public function update(Request $request, $catatype_id)
     {
-        $request->validate([
-            'type' => 'required',
-            'type_ar' => 'required',
-         ]);
-
+        $request->validate(['type'=>'required|unique:catatypes|min:8|max:255',
+        'type_ar'=>'required|unique:catatypes|min:8|max:255']);
+        
        $catatype= Catatype::whereId($catatype_id)->update([
         'type'=>$request->input('type'),
         'type_ar'=>$request->input('type_ar'),
@@ -103,6 +102,6 @@ class CatatypeController extends Controller
 
 
         $catatype->delete();
-        return redirect('/admin/catatypes/index')->with('success','catatype deleted successfully');    
+        return redirect('/admin/catatypes/index')->with('completed','catatype deleted successfully');    
           }
 }
