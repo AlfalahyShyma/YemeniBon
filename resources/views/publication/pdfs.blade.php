@@ -27,7 +27,7 @@
                      @foreach($pdfs as $pdf)
                     <div class="pub-show-body">
                     
-                        <div class="pub-show-aside">
+                        <div class="pub-show-aside" data-aos="zoom-out-down" data-aos-duration="2000">
 
                             <div class="pub-img">
                                 <img loading="auto" srcset="{{asset('images/'.$pdf->img)}}">
@@ -39,7 +39,7 @@
 
 
                         <div class="pub-show-content">
-                            <div class="pub-img-title">
+                            <div class="pub-img-title" data-aos="zoom-out-down" data-aos-duration="2000">
                                 <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
                                 @if(Config::get('app.locale')=='en')
                                 <h2>{{$pdf->name}}</h2>
@@ -48,7 +48,7 @@
             @endif
                                 
                             </div>
-                            <div class="pub-show-description">
+                            <div class="pub-show-description" data-aos="zoom-in" data-aos-duration="3000">
                                 <p>@if(Config::get('app.locale')=='en')
                                     {{$pdf->desc}}
             @else
@@ -59,13 +59,13 @@
 
         <br>
 
-            <p>
+            <p data-aos="zoom-in" data-aos-duration="2000">
                                   
                 {{$pdf->date}}
             </p>
                 
        
-            <p>
+            <p data-aos="zoom-in" data-aos-duration="3000">
                 @if(Config::get('app.locale')=='en')
                 {{$pdf->publisher}}
 @else

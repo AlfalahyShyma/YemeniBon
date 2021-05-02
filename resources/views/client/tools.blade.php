@@ -48,7 +48,7 @@ w@include('client/header')
 
 
                         <div class="pub-show-content">
-                            <!-- <h1 class="story-title">Vision Media Production Company</h1>
+                            <!--- <h1 class="story-title">Vision Media Production Company</h1>
                             <div class="story-date">
                                 <i class="fa fa-calendar" aria-hidden="true"></i>
                                 <span>05 March 2021</span>

@@ -34,9 +34,9 @@
 
                     <div class="pub-show-body">
                     
-                        <div class="pub-show-aside">
+                        <div class="pub-show-aside" data-aos="zoom-out-down" data-aos-duration="2000">
 
-                            <div class="pub-img">
+                            <div class="pub-img" >
                                 <img loading="auto" srcset="{{asset('images/'.$Articles->image)}}">
                             </div>
 
@@ -49,7 +49,7 @@
 
                         <div class="pub-show-content">
                           
-                            <div class="pub-img-title">
+                            <div class="pub-img-title" data-aos="zoom-out-down" data-aos-duration="2000">
                                 <img loading="auto" src="{{asset('asset/img/140-01.png')}}">
                                 <h2>
                                     @if(Config::get('app.locale')=='en')
@@ -59,7 +59,7 @@
                 @endif
                                 </h2>
                             </div>
-                            <div class="pub-show-description">
+                            <div class="pub-show-description" data-aos="zoom-in" data-aos-duration="3000">
                                 <p>
                                     @if(Config::get('app.locale')=='en')
                                     <h2>{{$Articles->desc}}</h2>
@@ -76,14 +76,14 @@
 
 
                             
-                            <p>
+                            <p data-aos="zoom-in" data-aos-duration="2000">
                                 @if(Config::get('app.locale')=='en')
                                 {{$Articles->publisher}}
             @else
             {{$Articles->publisher_ar}}
             @endif   
                             </p>
-                            <p>
+                            <p data-aos="zoom-in" data-aos-duration="3000">
                                 
                                 @if(Config::get('app.locale')=='en')
                                 {{$Articles->date}}
@@ -93,7 +93,7 @@
                             </p>
 
                             <br>
-                            <p>
+                            <p data-aos="zoom-in" data-aos-duration="3000">
                                 @if(Config::get('app.locale')=='en')
                                 {{$Articles->source_url}}
             @else

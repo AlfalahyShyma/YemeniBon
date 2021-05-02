@@ -29,7 +29,7 @@
                     
                         <div class="pub-show-aside">
 
-                            <div class="pub-img">
+                            <div class="pub-img" data-aos="zoom-out-down" data-aos-duration="2000">
                                 <img loading="auto" srcset="{{asset('images/'.$Interviews->img)}}">
                             </div>
 
@@ -42,7 +42,7 @@
 
                         <div class="pub-show-content">
                          
-                            <div class="pub-img-title">
+                            <div class="pub-img-title" data-aos="fade-left" data-aos-duration="2000">
                                 <img loading="auto" src="{{asset('asset/img/140-01.png')}}">
                                 <h2>
                                     @if(Config::get('app.locale')=='en')
@@ -52,7 +52,7 @@
                 @endif
                                 </h2>
                             </div>
-                            <div class="pub-show-description">
+                            <div class="pub-show-description" data-aos="zoom-in" data-aos-duration="3000">
                                 <p>@if(Config::get('app.locale')=='en')
                                     {{$Interviews->desc}}
                 @else
@@ -64,7 +64,7 @@
 
                            
 
-    <blockquote class="blockquote">
+    <blockquote class="blockquote" data-aos="fade-down-right" data-aos-duration="3000">
         <span id="q-inter-start">“</span><p>
             @if(Config::get('app.locale')=='en')
             {{$Interviews->interview}}
@@ -75,17 +75,17 @@
 
 
                             
-                            <p> @if(Config::get('app.locale')=='en')
+                            <p data-aos="zoom-in" data-aos-duration="2000"> @if(Config::get('app.locale')=='en')
                                 {{$Interviews->interviewer}}
                     @else
                     {{$Interviews->interviewer_ar}}
                     @endif  </p>
-                            <p> @if(Config::get('app.locale')=='en')
+                            <p data-aos="zoom-in" data-aos-duration="3000"> @if(Config::get('app.locale')=='en')
                                 {{$Interviews->date}}
                     @else
                     {{$Interviews->date}}
                     @endif  </p>
-                                <audio class="_audio" controls>
+                                <audio class="_audio" controls data-aos="zoom-in" data-aos-duration="3000">
                                     <source src="{{asset('asset/audio/'.$Interviews->voice)}}" type="audio/mpeg">
                                 </audio>
 <br>
