@@ -2388,6 +2388,19 @@ publication section style
 /* responsive */
 
  /* Small devices (landscape phones, 576px and up) */
+ @media screen and (min-width: 350px) {
+    .publication-container {
+        margin: 0.2rem;
+        padding: 30px;
+        /* background-image: url("../img/coffee_bean2.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transition: 0.7s; */
+        
+    }
+
+   }
  @media screen and (min-width: 375px) {
     .publication-container {
         margin: 0.2rem;
@@ -2415,6 +2428,32 @@ publication section style
         
     }
 
+   }
+
+   @media screen and (min-width: 650px) {
+    .publication-container {
+        margin: 0.1rem;
+        padding: 50px;
+        /* background-image: url("../img/coffee_bean2.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transition: 0.7s; */
+        
+    }
+   }
+
+   @media screen and (min-width: 1920px) {
+    .publication-container {
+        margin: 7rem;
+        padding: 50px;
+        /* background-image: url("../img/coffee_bean2.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transition: 0.7s; */
+        
+    }
    }
 
  
