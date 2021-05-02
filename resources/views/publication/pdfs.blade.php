@@ -14,18 +14,23 @@
 <br>
 <section class="publication-desc">
     <div class="pub-container">
-        <section id=" ">
+        <section id="main-content">
 
             <div class="pub-show">
                 <div class="container">
-               @foreach($pdfs as $pdf)
+                
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                     @foreach($pdfs as $pdf)
                     <div class="pub-show-body">
                     
                         <div class="pub-show-aside">
 
                             <div class="pub-img">
                                 <img loading="auto" srcset="{{asset('images/'.$pdf->img)}}">
-
                             </div>
 
                            
@@ -34,62 +39,62 @@
 
 
                         <div class="pub-show-content">
-                          
                             <div class="pub-img-title">
                                 <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
-
                                 @if(Config::get('app.locale')=='en')
                                 <h2>{{$pdf->name}}</h2>
             @else
             <h2>{{$pdf->name_ar}}</h2>
             @endif
-                               
+                                
                             </div>
                             <div class="pub-show-description">
-                                <p>
-                                    @if(Config::get('app.locale')=='en')
+                                <p>@if(Config::get('app.locale')=='en')
                                     {{$pdf->desc}}
             @else
             {{$pdf->desc_ar}}
-            @endif
-                                    
-                                </p>
-                                    
-                            </div>
-                            <div class="pub-show-description">
-                                <p>
+            @endif</p>
+
+        </div>
+
+        <br>
+
+            <p>
                                   
-                                    {{$pdf->date}}
-                                </p>
-                                    
-                           
-                                <p>
-                                    @if(Config::get('app.locale')=='en')
-                                    {{$pdf->publisher}}
-            @else
-            {{$pdf->publisher_ar}}
-            @endif
-                                   
-                                </p>
-                                    
-                            </div>
+                {{$pdf->date}}
+            </p>
+                
+       
+            <p>
+                @if(Config::get('app.locale')=='en')
+                {{$pdf->publisher}}
+@else
+{{$pdf->publisher_ar}}
+@endif
+               
+            </p>
+                <br>
+                <br>
+                <br>                    
                             
-                                <div>Preview</div>
-                            </a>
-                            <a href="#" class="show-btn">
-                                <div>Download</div>
-                            </a>
-                            <div class="layer">
-                            <img loading="auto" srcset="{{asset('asset/img/coffee_bean2.png')}}">
-                            </div>
                             
+            <a href="#" class="show-btn" data-aos="zoom-in" data-aos-duration="2000">
+                Preview
+            </a>
+            
+            <a href="#" class="show-btn" data-aos="zoom-in" data-aos-duration="3000">
+                Download
+            </a>
+            <div class="layer" data-aos="fade-up-left" data-aos-duration="1000"> 
+                <img loading="auto" srcset="{{asset('asset/img/coffee_bean2.png')}}">
+                </div>
+                         
                         </div>
                     </div>
-
+                    @endforeach
 
                 </div>
-                @endforeach
-                <br>
+<br>
 <br>
 <br>
 <br>
@@ -97,7 +102,11 @@
 <br>
         </section>
     </div>
+</div>
 </section>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 @include('client/footer')

@@ -94,7 +94,7 @@
                                 
 
 
-                            <div class="layer">
+                            <div class="layer" data-aos="fade-up-left" data-aos-duration="1000">
                             <img loading="auto" srcset="{{asset('asset/img/coffee_bean2.png')}}">
                             </div>
 
@@ -110,6 +110,9 @@
         
     </div>
 </section>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 @include('client/footer')
