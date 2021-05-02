@@ -691,6 +691,57 @@ blockquote {
     padding: 0 0 0 0;
 }
 
+#content{
+    background-color: #ebe2cd;
+    }
+    
+    
+    .about-img-title img{
+        width: 700px;
+        align-content: center;
+       color: transparent;
+       background-repeat: no-repeat;
+       background-size: contain;
+       transition: 0.7s;
+       /* padding-left: 30%; */
+       margin-top: -20px;
+       z-index: 100;
+    }
+    .about-img-title h1{
+        color: white;
+        align-content: center;
+        font-family: BLACKROSE;
+        font-size: 6rem;
+       transition: 0.7s;
+       /* padding-left: 35%; */
+       margin-top: -100px;
+       z-index: 1000;
+    }
+    
+    .obj-img-title img{
+        width: 800px;
+        align-content: center;
+       color: transparent;
+       background-repeat: no-repeat;
+       background-size: contain;
+       transition: 0.7s;
+       /* padding-left: 30%; */
+       margin-top: -20px;
+       z-index: 100;
+    }
+    .obj-img-title h1{
+        color: white;
+        align-content: center;
+        font-family: BLACKROSE;
+        font-size: 5rem;
+       transition: 0.7s;
+       /* padding-left: 35%; */
+       margin-top: -100px;
+       z-index: 1000;
+    }
+    
+    
+
 /* responsive */
 
  /* Small devices (landscape phones, 576px and up) */
@@ -1733,55 +1784,6 @@ blockquote {
         line-height: 35px;
     }
 
-}
-
-#content{
-background-color: #ebe2cd;
-}
-
-
-.about-img-title img{
-    width: 700px;
-    align-content: center;
-   color: transparent;
-   background-repeat: no-repeat;
-   background-size: contain;
-   transition: 0.7s;
-   /* padding-left: 30%; */
-   margin-top: -20px;
-   z-index: 100;
-}
-.about-img-title h1{
-    color: white;
-    align-content: center;
-    font-family: BLACKROSE;
-    font-size: 6rem;
-   transition: 0.7s;
-   /* padding-left: 35%; */
-   margin-top: -100px;
-   z-index: 1000;
-}
-
-.obj-img-title img{
-    width: 800px;
-    align-content: center;
-   color: transparent;
-   background-repeat: no-repeat;
-   background-size: contain;
-   transition: 0.7s;
-   /* padding-left: 30%; */
-   margin-top: -20px;
-   z-index: 100;
-}
-.obj-img-title h1{
-    color: white;
-    align-content: center;
-    font-family: BLACKROSE;
-    font-size: 5rem;
-   transition: 0.7s;
-   /* padding-left: 35%; */
-   margin-top: -100px;
-   z-index: 1000;
 }
 
 
