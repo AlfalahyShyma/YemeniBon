@@ -16,11 +16,21 @@
         </p>
     </div>
 </header>
+<br>
+<br>
+<br>
+        <br>
+        
+
 @foreach($abouts as $about)
 <main>
     <div class="about-wrapper">
+        <div class="about-img-title" data-aos="zoom-out-down" data-aos-duration="2000">
+            <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
         <h1>{{__('about.title')}}</h1>
-        <p class="s1-desc">
+        </div>
+        <br>
+        <p class="s1-desc" data-aos="zoom-in" data-aos-duration="3000">
 
             @if(Config::get('app.locale')=='en')
           
@@ -33,13 +43,20 @@
 
         </p>
 
+        <br>
+        <br>
+
+        <div class="about-img-title" data-aos="zoom-out-down" data-aos-duration="2000">
+            <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
         <h1>{{__('about.title1')}}</h1>
-        <div class="training-video">
+        </div> 
+        <br>
+        <div class="training-video" >
             {{-- <video id="video_id" controls="false">
                 <source src="{{asset('asset/video/yemeni_coffee.mp4')}}" type="video/mp4;codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
             </video> --}}
         </div>
-        <p class="s2-desc ">
+        <p class="s2-desc " data-aos="zoom-in" data-aos-duration="3000">
 
             @if(Config::get('app.locale')=='en')
           
@@ -52,8 +69,16 @@
     
         </p>
 
+        <br>
+        <br>
+
+ <div class="obj-img-title" data-aos="zoom-out-down" data-aos-duration="2000">
+            <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
         <h1>{{__('about.title2')}}:</h1>
-        <div class="s3-desc">
+ </div>
+ <br>
+ <br>
+        <div class="s3-desc" data-aos="zoom-in" data-aos-duration="3000">
             @if(Config::get('app.locale')=='en')
           
             {{$about->objectives_desc}}
@@ -63,10 +88,17 @@
     
     @endif
         </div>
+        <br>
         <div class="s4-desc">
             <div class="teams-wrapper">
+                <div class="about-img-title" data-aos="zoom-out-down" data-aos-duration="2000">
+                    <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
                 <h1 class="team-title">{{__('about.Trainers')}}</h1>
-                <div class="testimonials">
+                </div>
+                <br>
+                <br>
+
+                <div class="testimonials" data-aos="zoom-in" data-aos-duration="3000">
                     @foreach($contenet as $contenets)
                     <blockquote class="testimonials__item testimonial">
                         <div class="testimonial__photo">
@@ -109,11 +141,16 @@
                 </div>
             </div>
         </div>
+        <br>
         <div class="s5-desc">
             <div class="trainee-wrapper">
+                <div class="about-img-title" data-aos="zoom-out-down" data-aos-duration="2000">
+                    <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
                 <h1 class="trainee-title">{{__('about.Trainees')}}</h1>
+                </div>
+                <br>
                 @foreach($about_trainees as $about_trainee)
-                <div class="t-quotes">
+                <div class="t-quotes" data-aos="zoom-in" data-aos-duration="3000">
                     <div class="one slide">
                         <blockquote class="t-b-quote">
                             <span class="leftq quotes">&ldquo;</span>
@@ -126,6 +163,7 @@
                                {{$about_trainee->Trainees_ar}}                  
                         
                                @endif
+                            </p>
                             </blockquote>
 
                         <h2>  
@@ -157,11 +195,17 @@
                
             </div>
         </div>
+
+        <br>
         <div class="s6-desc">
             <div class="gallery-wrapper">
+                <div class="about-img-title" data-aos="zoom-out-down" data-aos-duration="2000">
+                    <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
                 <h1 class="gallery-title">{{__('about.photo')}}</h1>
-
-                <div class="gallery">
+                </div>
+                <br>
+                
+                <div class="gallery" data-aos="fade-up" data-aos-duration="3000">
                     @foreach (json_decode($about->multi_image) as $image)
 
                     <div class="gallery-item">
@@ -174,4 +218,9 @@
     </div>
     @endforeach
 </main>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
 @include('client/footer')
