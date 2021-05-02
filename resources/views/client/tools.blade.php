@@ -34,7 +34,7 @@
                             <br>
                     <div class="pub-show-body">
                     
-                        <div class="pub-show-aside">
+                        <div class="pub-show-aside"  data-aos="fade-right" data-aos-duration="2000">
 
                             <div class="tool-img">
                                 <img loading="auto" srcset="{{asset('asset/img/tools/8.png')}}">
@@ -53,11 +53,11 @@
                                 <i class="fa fa-calendar" aria-hidden="true"></i>
                                 <span>05 March 2021</span>
                             </div> -->
-                            <div class="pub-img-title">
+                            <div class="pub-img-title" data-aos="zoom-out-down" data-aos-duration="2000">
                                 <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
                                 <h2>Espresso</h2>
                             </div>
-                            <div class="pub-show-description">
+                            <div class="pub-show-description" data-aos="zoom-in" data-aos-duration="3000">
                                 <p>Here’s the unfortunate truth: Skimping on a home espresso machine is like skydiving with a
                                     threadbare parachute—a precarious endeavor, barely tinged with optimism. We speak with the
                                     stains of many subpar espresso shots on our hands: It’s a finicky business. But once you have
@@ -97,11 +97,11 @@
                                 <i class="fa fa-calendar" aria-hidden="true"></i>
                                 <span>05 March 2021</span>
                             </div> -->
-                            <div class="pub-img-title">
+                            <div class="pub-img-title" data-aos="zoom-out-down" data-aos-duration="2000">
                                 <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
                                 <h2>Siphon</h2>
                             </div>
-                            <div class="pub-show-description">
+                            <div class="pub-show-description" data-aos="zoom-in" data-aos-duration="3000">
                                 <p>Siphon coffee was invented in the 1840s more or less simultaneously by a French housewife and
                                     Scottish marine engineer. It’s been refined many times, but a few principles hold true: It produces
                                     a delicate, tea-like cup of coffee; it can be quite persnickety; and it is, for our money, one of the
@@ -124,7 +124,7 @@
                             
                         </div>
 
-                        <div class="pub-show-aside">
+                        <div class="pub-show-aside" data-aos="fade-left" data-aos-duration="2000">
 
                             <div class="tool-img">
                                 <img loading="auto" srcset="{{asset('asset/img/tools/1.png')}}">
@@ -142,7 +142,7 @@
                     <br>    
                     <div class="pub-show-body">
                     
-                        <div class="pub-show-aside">
+                        <div class="pub-show-aside" data-aos="fade-right" data-aos-duration="2000">
 
                             <div class="tool-img">
                                 <img loading="auto" srcset="{{asset('asset/img/tools/11-01.png')}}">
@@ -161,11 +161,11 @@
                                 <i class="fa fa-calendar" aria-hidden="true"></i>
                                 <span>05 March 2021</span>
                             </div> -->
-                            <div class="pub-img-title">
+                            <div class="pub-img-title" data-aos="zoom-out-down" data-aos-duration="2000">
                                 <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
                                 <h2>Moka Pot</h2>
                             </div>
-                            <div class="pub-show-description">
+                            <div class="pub-show-description" data-aos="zoom-in" data-aos-duration="3000">
                                 <p>A tiny, Italian-made, eight-sided wonder, the Moka pot has been with us through our fair share of
                                     postage-stamp-sized kitchens and far-flung journeys. It’s experiencing a resurgence lately, which
                                     is no doubt due to its ability to produce a viscous, appropriately dense espresso with no electricity
@@ -206,11 +206,11 @@
                                 <i class="fa fa-calendar" aria-hidden="true"></i>
                                 <span>05 March 2021</span>
                             </div> -->
-                            <div class="pub-img-title">
+                            <div class="pub-img-title" data-aos="zoom-out-down" data-aos-duration="2000">
                                 <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
                                 <h2>Cold Drip</h2>
                             </div>
-                            <div class="pub-show-description">
+                            <div class="pub-show-description" data-aos="zoom-in" data-aos-duration="3000">
                                 <p>Coffee from a nel is thick, focused and incredibly sweet – texturally reminiscent of mulled wine.
                                     It’s quite moody and fragile, too: Water that’s too hot, a hurried pour or even an offhand remark
                                     might wither its complexity. To make it correctly requires a surgeon’s hand, a novelist’s resolve
@@ -234,7 +234,7 @@
                             
                         </div>
 
-                        <div class="pub-show-aside">
+                        <div class="pub-show-aside" data-aos="fade-left" data-aos-duration="2000">
 
                             <div class="tool-img">
                                 <img loading="auto" srcset="{{asset('asset/img/tools/10.png')}}">
@@ -254,7 +254,7 @@
                     <br>
                     <div class="pub-show-body">
                     
-                        <div class="pub-show-aside">
+                        <div class="pub-show-aside" data-aos="fade-right" data-aos-duration="2000">
 
                             <div class="tool-img">
                                 <img loading="auto" srcset="{{asset('asset/img/tools/9.png')}}">
@@ -273,11 +273,11 @@
                                 <i class="fa fa-calendar" aria-hidden="true"></i>
                                 <span>05 March 2021</span>
                             </div> -->
-                            <div class="pub-img-title">
+                            <div class="pub-img-title" data-aos="zoom-out-down" data-aos-duration="2000">
                                 <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
                                 <h2>Jizzwa</h2>
                             </div>
-                            <div class="pub-show-description">
+                            <div class="pub-show-description" data-aos="zoom-in" data-aos-duration="3000">
                                 <p>In the past, Yemenis used to drink their coffee in an easy and simple way, and with the passage of time it became a common tradition.
                                     Those who drink it from them in Yemen.
                                     Jizwa ", and jizwa in Arabic means
@@ -315,6 +315,10 @@
         
     </div>
 </section>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 
 @include('client/footer')

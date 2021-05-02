@@ -6,10 +6,18 @@
 </div>
 <!-- style="background-color: #e3c47a;" -->
 <header class="pages-header">
-    <div>
-        <!-- <img class="project-img" src="{{asset('asset/img/pro1.jpg')}}" alt="" srcset=""> -->
+    
+        <div>
+            <h1>
+                Publication
+            </h1>
+            <p>
+                Description....................
+            </p>
+            
+        </div>
         
-    </div>
+    
 </header>
 <br>
 <main id="content" class="main">

@@ -273,11 +273,11 @@
                                 <i class="fa fa-calendar" aria-hidden="true"></i>
                                 <span>05 March 2021</span>
                             </div> -->
-                            <div class="pub-img-title">
+                            <div class="pub-img-title" data-aos="zoom-in" data-aos-duration="1000">
                                 <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
                                 <h2>Jizzwa</h2>
                             </div>
-                            <div class="pub-show-description">
+                            <div class="pub-show-description" data-aos="zoom-in" data-aos-duration="3000">
                                 <p>In the past, Yemenis used to drink their coffee in an easy and simple way, and with the passage of time it became a common tradition.
                                     Those who drink it from them in Yemen.
                                     Jizwa ", and jizwa in Arabic means
@@ -315,6 +315,10 @@
         
     </div>
 </section>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 
 @include('client/footer')
