@@ -40,7 +40,7 @@
         <div class="project-container">
             <div class="text-center">
                 <!-- <h1 class="title">Flexbox Grid</h1> -->
-                <div class="filter-wrapper" data-aos="zoom-in">
+                <div class="filter-wrapper" data-aos="zoom-in" data-aos-duration="1000">
                     <div class="flex">
                         @if(Config::get('app.locale')=='en')
 
@@ -62,7 +62,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex" id="post-data" data-aos="fade-up">
+            <div class="flex" id="post-data" data-aos="fade-up" data-aos-duration="3000">
                 @include('data')
 
 
@@ -75,7 +75,7 @@
         </div>
     </section>
     
-    <section id="quote-wrapper" data-aos="zoom-in">
+    <section id="quote-wrapper" data-aos="zoom-in" data-aos-duration="2000">
         <div class="quote">
             <blockquote id="quote-quote">
                 <span id="q-start">“</span><span class="q-quote">Foundation believes that this inspiration is important for your

@@ -25,7 +25,7 @@
     
             <div class="flex"  id="publication">
 
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf" data-aos="fade-up" data-aos-duration="1000">
                     <div class="pubpanel">
                         <div class="cardpub-in">
                             <div class="layer-type">
@@ -41,7 +41,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf" data-aos="fade-up" data-aos-duration="2000">
                     <div class="pubpanel">
                         <div class="cardpub-in">
                             <div class="layer-type">
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf" data-aos="fade-up" data-aos-duration="3000">
                     <div class="pubpanel">
                         <div class="cardpub-in">
                             <div class="layer-type">
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf" data-aos="fade-up" data-aos-duration="3000">
                     <div class="pubpanel">
                         <div class="cardpub-in">
                             <div class="layer-type">
@@ -89,7 +89,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf" data-aos="fade-up" data-aos-duration="1000">
                     <div class="pubpanel">
                         <div class="cardpub-in">
                             <div class="layer-type">
@@ -105,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf" data-aos="fade-up" data-aos-duration="2000">
                     <div class="pubpanel">
                         <div class="cardpub-in">
                             <div class="layer-type">
@@ -122,7 +122,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf" data-aos="fade-up" data-aos-duration="3000">
                     <div class="pubpanel">
                         <div class="cardpub-in">
                             <div class="layer-type">
@@ -138,7 +138,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf" data-aos="fade-up" data-aos-duration="3000">
                     <div class="pubpanel">
                         <div class="cardpub-in">
                             <div class="layer-type">
@@ -154,7 +154,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf" data-aos="fade-up" data-aos-duration="1000">
                     <div class="pubpanel">
                         <div class="cardpub-in">
                             <div class="layer-type">
@@ -170,7 +170,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf" data-aos="fade-up" data-aos-duration="2000">
                     <div class="pubpanel">
                         <div class="cardpub-in">
                             <div class="layer-type">
@@ -186,7 +186,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf" data-aos="fade-up" data-aos-duration="3000">
                     <div class="pubpanel">
                         <div class="cardpub-in">
                             <div class="layer-type">
@@ -202,7 +202,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 scale-anm all pdf" data-aos="fade-up" data-aos-duration="3000">
                     <div class="pubpanel">
                         <div class="cardpub-in">
                             <div class="layer-type">
@@ -232,12 +232,15 @@
     <br>
     <br>
     <br>
-    
+
 
     
 </main>
 
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 
 
 @include('client/footer')
