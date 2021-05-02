@@ -1911,6 +1911,7 @@ publication section style
 .publication-container {
     margin: 2rem;
     padding: 80px;
+    background-color: #ebe2cd;
     /* background-image: url("../img/coffee_bean2.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -2175,9 +2176,10 @@ publication section style
 .content .publication-container .layer-pg{
     position: absolute;
     color: transparent;
-    background-image: url("../img/bg.png");
+    background-color: #ebe2cd;
+    /* background-image: url("../img/bg.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain; */
     transition: 0.7s;
     
     z-index: 100;
