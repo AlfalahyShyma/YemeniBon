@@ -296,20 +296,12 @@ html::-webkit-scrollbar {
   /* background-color: #fff; */
   height: 13px;
 }
-.publication-desc {
-    background-color: #ebe2cd;
-    padding-top: 5rem;
-    justify-content: center;
-}
 
 .pub-container {
     /* padding: 0 19%; */
     width: 100%;
     max-width: 100%;
-    /* max-width: 90%; */
-    /* display: flex; */
-    /* background-color: #fff; */
-    /* border-radius: 5px; */
+    background-color: #ebe2cd;
     box-shadow: 0 0 0 0 rgb(0 0 0 / 10%);
     overflow: hidden;
     /* display: grid; */
