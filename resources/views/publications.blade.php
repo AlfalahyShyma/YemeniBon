@@ -1,7 +1,7 @@
 @foreach ($article as $articles )
 
-<div class="flex"  id="publication">
-    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-4 scale-anm all pdf">
+
+    
         <div class="pubpanel">
             <div class="cardpub-in">
                 <div class="layer-type">
@@ -21,7 +21,8 @@
             </a>
         </div>
     </div>
-</div>
+
+
 
 
 
@@ -29,7 +30,7 @@
 
 @foreach ($pdf as $pdfs )
 
-<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 scale-anm all pdf">
+
     <div class="pubpanel">
         <div class="cardpub-in">
         <div class="layer-type">
@@ -49,14 +50,14 @@
             </a>
         </div>
     </div>
-</div>
+
 
 @endforeach 
 
 
 @foreach ($Interview as $Interviews )
 
-<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 scale-anm all pdf">
+
     <div class="pubpanel">
         <div class="cardpub-in">
         <div class="layer-type">
@@ -77,6 +78,6 @@
             </a>
         </div>
     </div>
-</div>
+
 
 @endforeach 
