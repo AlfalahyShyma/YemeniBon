@@ -7,6 +7,14 @@
     src: url("/asset/fonts/BLACKROSE.TTF");
 }
 @font-face {
+    /* font-family: kuffie;
+     src: url('/asset/fonts/kuffie.TTF'); */
+    /* font-family: vald; */
+    /* src: url('/asset/fonts/vald.TTF'); */
+    font-family: ArbFONTS-Mikhak-Bold;
+    src: url("/asset/fonts/ArbFONTS-Mikhak-Bold.ttf");
+}
+@font-face {
     font-family: QUESHA;
     src: url("/asset/fonts/QUESHA.TTF");
 }
@@ -59,6 +67,7 @@
     color: #e3c47a;
     margin: 0;
     line-height: -6;
+    font-family: ArbFONTS-Mikhak-Bold;
 }
 
 .swiper-slide p {
@@ -67,7 +76,7 @@
     color: white;
     /* color: #7c431b; */
     margin: 0;
-    font-family: QUESHA;
+    font-family: ArbFONTS-Mikhak-Bold;
 }
 .swiper-slide__image {
     position: absolute;
@@ -238,7 +247,7 @@
     background: none;
     padding: 0 20 0 20;
     margin: 30 0 0 0;
-    font-family: QUESHA;
+    font-family: ArbFONTS-Mikhak-Bold;
     color: #e3c47a;
     font-size: calc(1.2vh + 1.2vw);
 }
@@ -676,7 +685,7 @@ Quote section style
 .quote {
     position: relative;
     /* height: auto; */
-    font-family: QUESHA;
+    font-family: ArbFONTS-Mikhak-Bold;
     /* align-content: center;
     text-align: center; */
     align-self: center;
@@ -700,7 +709,7 @@ Quote section style
 }
 
 .quote b {
-    font-family: BLACKROSE;
+    font-family: ArbFONTS-Mikhak-Bold;
     margin-right: 125px;
 }
 
@@ -731,7 +740,7 @@ Quote section style
 }
 
 #q-start {
-    font-family: BLACKROSE;
+    font-family: ArbFONTS-Mikhak-Bold;
     color: #e3c37ada;
     font-size: 10rem;
     position: absolute;
@@ -740,7 +749,7 @@ Quote section style
     z-index: 0;
 }
 #q-end {
-    font-family: BLACKROSE;
+    font-family: ArbFONTS-Mikhak-Bold;
     color: #e3c37ada;
     position: absolute;
     font-size: 10rem;
@@ -839,7 +848,7 @@ Pages Header section style
 }
 
 .pages-header h1 {
-    font-family: BLACKROSE;
+    font-family: ArbFONTS-Mikhak-Bold;
     font-size: 12rem;
     color: #e3c47a;
     width: 100%;
@@ -1027,7 +1036,7 @@ form {
 }
 label {
     font-size: 2.4rem;
-    font-family: BLACKROSE;
+    font-family: ArbFONTS-Mikhak-Bold;
     font-weight: 600;
     color: #000;
 }
@@ -1035,7 +1044,7 @@ label {
 .form_container input[type="text"],
 .form_container input[type="email"],
 textarea {
-    font-family: "Montserrat"; 
+    font-family: ArbFONTS-Mikhak-Bold; 
     width: 100%;
     padding: 5px 10px;
     margin-bottom: 8px;
@@ -1060,7 +1069,7 @@ textarea.input {
     letter-spacing: 0.5px;
     outline: none;
     transition: 0.3s;
-    font-family: BLACKROSE;
+    font-family: ArbFONTS-Mikhak-Bold;
     font-size: 2.4rem;
     letter-spacing: 1;
 }
@@ -1097,7 +1106,7 @@ textarea.input {
 }
 
 .contact-info .title {
-    font-family: QUESHA;
+    font-family: ArbFONTS-Mikhak-Bold;
     font-weight: 600;
     color: #7c431b;
     font-size: 4rem;
@@ -1110,7 +1119,7 @@ textarea.input {
 
 .information {
     /* font-family: QUESHA; */
-    font-family: "Montserrat";
+    font-family: ArbFONTS-Mikhak-Bold;
     display: flex;
     color: #160a02;
     /* font-size: 2.4rem; */
@@ -1123,7 +1132,7 @@ textarea.input {
     padding: 2rem 0 0 0;
 }
 .social-media p {
-    font-family: QUESHA;
+    font-family: ArbFONTS-Mikhak-Bold;
     /* font-family: "Montserrat"; */
     font-size: 3rem;
     font-weight: 600;
@@ -1153,7 +1162,7 @@ textarea.input {
     width: 100%;
     padding: 0 5rem;
     background-color: #ebe2cd;
-    font-family: QUESHA;
+    font-family: ArbFONTS-Mikhak-Bold;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     justify-content: center;
@@ -1162,7 +1171,7 @@ textarea.input {
 }
 
 .about-wrapper h1 {
-    font-family: BLACKROSE;
+    font-family: ArbFONTS-Mikhak-Bold;
     font-size: 5.5rem;
     color: #4b2810;
 }
@@ -1673,11 +1682,13 @@ Remove or comment-out the code block below to see how the browser will fall-back
     justify-content: center;
     text-align: center;
     margin-right: 2rem;
+    direction: rtl;
 }
 
 .filter-wrapper a {
     color: #2b1302;
     margin-left: 25px;
+    direction: rtl;
 }
 
 .filter-wrapper a:hover {

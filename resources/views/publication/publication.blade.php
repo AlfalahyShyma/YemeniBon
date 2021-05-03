@@ -19,8 +19,9 @@
         
     
 </header>
-<br>
+
 <main id="content" class="main">
+    <br>
     <section id="publication-wrrapper" class="content">
 
         <div class="publication-container">
