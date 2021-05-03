@@ -62,7 +62,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="/type">{{__('client.c_t')}}</a></li>
                             <li><a href="/tools">{{__('client.c_to')}}</a></li>
-                            <li><a href="#">{{__('client.c_m')}}</a></li>
+                            <li><a href="/how-to">{{__('client.c_m')}}</a></li>
                         </ul>
                     </li>
                     <li><a class="page-scroll" href="/about">{{__('client.ab')}}</a></li>
