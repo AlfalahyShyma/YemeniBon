@@ -22,37 +22,16 @@
 <section class="project-desc">
     <div class="proj-container">
         <section id="main-content">
-
+            <br>
+            <br>
+            <br>
+            <br>
             <div class="story-show">
                 <div class="container">
-                    <div class="story-show-body">
-                        <div class="story-show-content">
-                            <!-- <h1 class="story-title">Vision Media Production Company</h1>
-                            <div class="story-date">
-                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                <span>05 March 2021</span>
-                            </div> -->
+                    <div class="pub-show-body">
+                        
 
-                            <div class="story-show-description">
-                                @if(Config::get('app.locale')=='en')
-                                 <p>{{$project->ldesc}}</p>
-                                 @elseif(Config::get('app.locale')=='ar')
-                                 <p>{{$project->desc_ar}}</p>
-                  
-                             @endif
-                            </div>
-                            <ul class="h-container">
-                               @foreach (json_decode($project->multi_image) as $image)
-                               <li> <img class="h-img" src="{{ asset('images/'.$image) }}" alt="cut citrus fruits. " /></li>
-                                 
-                           @endforeach
-                        </ul>
-                            <div class="share-buttons">
-                                <div class="sharethis-inline-share-buttons"></div>
-                            </div>
-                        </div>
-
-
+                    
                         <div class="story-show-aside">
 
                             <div class="story-img">
@@ -559,7 +538,40 @@
 
                             </div>
 
+                        </div> 
+                        
+
+                        <div class="pub-show-content">
+                            <!--- <h1 class="story-title">Vision Media Production Company</h1>
+                            <div class="story-date">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <span>05 March 2021</span>
+                            </div> -->
+                            <div class="pub-img-title">
+                                <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
+                                <h2>Title</h2>
+                            </div>
+                            <br>
+                            <div class="pub-show-description">
+                                @if(Config::get('app.locale')=='en')
+                                 <p>{{$project->ldesc}}</p>
+                                 @elseif(Config::get('app.locale')=='ar')
+                                 <p>{{$project->desc_ar}}</p>
+                  
+                             @endif
+                            </div>
+                            <ul class="h-container">
+                               @foreach (json_decode($project->multi_image) as $image)
+                               <li> <img class="h-img" src="{{ asset('images/'.$image) }}" alt="cut citrus fruits. " /></li>
+                                 
+                                @endforeach
+                            </ul>
+                            <div class="share-buttons">
+                                <div class="sharethis-inline-share-buttons"></div>
+                            </div>
                         </div>
+
+
 
                     </div>
                 </div>

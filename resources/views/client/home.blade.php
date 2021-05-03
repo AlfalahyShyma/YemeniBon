@@ -39,7 +39,7 @@
 
         <div class="project-container">
             <div class="text-center">
-                <!-- <h1 class="title">Flexbox Grid</h1> -->
+                <!--- <h1 class="title">Flexbox Grid</h1> -->
                 <div class="filter-wrapper" data-aos="zoom-in" data-aos-duration="1000">
                     <div class="flex">
                         @if(Config::get('app.locale')=='en')

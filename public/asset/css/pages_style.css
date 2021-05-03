@@ -78,6 +78,7 @@
     min-height: 23rem;
 }
 .story-show-aside {
+    margin-top: 5rem;
     width: 29%;
     overflow: hidden;
     position: relative;
@@ -134,10 +135,11 @@
 
 .business-card {
     width: 100%;
+    height: 100%;
     height: auto;
     /* background: #2D3035; */
     /* background-color: #f1daa3; */
-    background-color: #d39b68;
+    /* background-color: #d39b68; */
     border-radius: 10px;
     position: relative;
 }
@@ -222,7 +224,7 @@
     color: #693713;
     font-weight: 500;
     font-size: 13px;
-    line-height: 20px;
+    line-height: 60px;
     width: 330px;
     height: auto;
     display: inline-block;
