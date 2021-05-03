@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{asset('asset/css/main_style.css')}}" />
     <link rel="stylesheet" href="{{asset('asset/css/content_style.css')}}" />
     <link rel="stylesheet" href="{{asset('asset/css/pages_style.css')}}" />
+    <link rel="stylesheet" href="{{asset('asset/css/pre_style.css')}}" />
 
     <!-- Favicons -->
     <link href="{{asset('img/title.png')}} " rel="icon">

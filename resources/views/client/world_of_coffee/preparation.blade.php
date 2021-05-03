@@ -20,7 +20,116 @@
 
 <main id="main-content">
   <section class="ways">
-  
+
+  <div class="recipe-listing">
+    <div class="recipe-item">
+      <div class="redipe-item-inner">
+      <div class="photo" style="background-image: url(https://i2.wp.com/www.paintingwithwatercolors.com/wp-content/uploads/2012/10/Quick-Sketch-of-simple-Beach-Scene-with-instant-coffee.jpg)"></div>
+    <div class="description">
+    <div class="recipe-name">Recipe2</div>
+        <div class="recipe-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+      </div>
+    </div>
+</div>
+<div class="recipe-item">
+      <div class="redipe-item-inner">
+      <div class="photo" style="background-image: url(https://i2.wp.com/www.paintingwithwatercolors.com/wp-content/uploads/2012/10/Quick-Sketch-of-simple-Beach-Scene-with-instant-coffee.jpg)"></div>
+    <div class="description">
+    <div class="recipe-name">Recipe2</div>
+        <div class="recipe-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+      </div>
+    </div>
+</div>
+<div class="recipe-item">
+      <div class="redipe-item-inner">
+      <div class="photo" style="background-image: url(https://i2.wp.com/www.paintingwithwatercolors.com/wp-content/uploads/2012/10/Quick-Sketch-of-simple-Beach-Scene-with-instant-coffee.jpg)"></div>
+    <div class="description">
+    <div class="recipe-name">Recipe2</div>
+        <div class="recipe-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+      </div>
+    </div>
+</div>
+<div class="recipe-item">
+      <div class="redipe-item-inner">
+      <div class="photo" style="background-image: url(https://i2.wp.com/www.paintingwithwatercolors.com/wp-content/uploads/2012/10/Quick-Sketch-of-simple-Beach-Scene-with-instant-coffee.jpg)"></div>
+    <div class="description">
+    <div class="recipe-name">Recipe2</div>
+        <div class="recipe-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+      </div>
+    </div>
+</div>
+<div class="recipe-item">
+      <div class="redipe-item-inner">
+      <div class="photo" style="background-image: url(https://i2.wp.com/www.paintingwithwatercolors.com/wp-content/uploads/2012/10/Quick-Sketch-of-simple-Beach-Scene-with-instant-coffee.jpg)"></div>
+    <div class="description">
+    <div class="recipe-name">Recipe2</div>
+        <div class="recipe-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+      </div>
+    </div>
+</div>
+<div class="recipe-item">
+      <div class="redipe-item-inner">
+      <div class="photo" style="background-image: url(https://i2.wp.com/www.paintingwithwatercolors.com/wp-content/uploads/2012/10/Quick-Sketch-of-simple-Beach-Scene-with-instant-coffee.jpg)"></div>
+    <div class="description">
+    <div class="recipe-name">Recipe2</div>
+        <div class="recipe-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+      </div>
+    </div>
+</div>
+<div class="recipe-item">
+      <div class="redipe-item-inner">
+      <div class="photo" style="background-image: url(https://i2.wp.com/www.paintingwithwatercolors.com/wp-content/uploads/2012/10/Quick-Sketch-of-simple-Beach-Scene-with-instant-coffee.jpg)"></div>
+    <div class="description">
+    <div class="recipe-name">Recipe2</div>
+        <div class="recipe-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+      </div>
+    </div>
+</div>
+<div class="recipe-item">
+      <div class="redipe-item-inner">
+      <div class="photo" style="background-image: url(https://i2.wp.com/www.paintingwithwatercolors.com/wp-content/uploads/2012/10/Quick-Sketch-of-simple-Beach-Scene-with-instant-coffee.jpg)"></div>
+    <div class="description">
+    <div class="recipe-name">Recipe2</div>
+        <div class="recipe-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+      </div>
+    </div>
+</div>
+<div class="recipe-item">
+      <div class="redipe-item-inner">
+      <div class="photo" style="background-image: url(https://i2.wp.com/www.paintingwithwatercolors.com/wp-content/uploads/2012/10/Quick-Sketch-of-simple-Beach-Scene-with-instant-coffee.jpg)"></div>
+    <div class="description">
+    <div class="recipe-name">Recipe2</div>
+        <div class="recipe-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+      </div>
+    </div>
+</div>
   </section>
 </main>
 

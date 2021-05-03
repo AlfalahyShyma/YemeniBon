@@ -1,0 +1,80 @@
+#main-content {
+    background-color: #ebe2cd;
+    width: 100%;
+    padding: 0 5rem;
+    font-family: QUESHA;
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 1s 2s;
+}
+
+.recipe-listing {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+
+.recipe-listing .recipe-item {
+    width: 33.33%;
+    padding: 0.5rem;
+    height: auto;
+}
+
+.recipe-listing .recipe-item .redipe-item-inner {
+    padding: 0.5rem 0.5rem;
+    background-color: rgba(255, 255, 255, 0.473);
+    opacity: 0.9;
+    cursor: pointer;
+    border-radius: 3rem;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    border: 10px solid #ebe2cd;
+}
+
+.recipe-listing .recipe-item .redipe-item-inner:before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    top: 0;
+    left: -20%;
+    transform: skew(45deg);
+    transition: all 0.5s;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.2s;
+}
+
+.description {
+    padding: 1rem;
+    background: #fff;
+    position: relative;
+    border: 1px solid #ebe2cdad;
+    border-radius: 2rem;
+    z-index: 1;
+}
+
+.description .read-more {
+    text-align: right;
+}
+
+.description .read-more a {
+    color: rgb(97, 60, 12);
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
