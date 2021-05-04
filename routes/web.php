@@ -109,6 +109,9 @@ Route::get('/type',function(){
 Route::get('/tools',function(){
     return view('client.tools');
 });
+Route::get('/how-to',function(){
+    return view('client.world_of_coffee.preparation');
+});
 // Route::middleware(['auth:sanctum', 'verified'])->get('/',[HomeController::class,'index']);
 
 // Route::get('/staticpage', function () {

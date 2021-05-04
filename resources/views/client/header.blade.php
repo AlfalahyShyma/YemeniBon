@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{asset('asset/css/main_style.css')}}" />
     <link rel="stylesheet" href="{{asset('asset/css/content_style.css')}}" />
     <link rel="stylesheet" href="{{asset('asset/css/pages_style.css')}}" />
+    <link rel="stylesheet" href="{{asset('asset/css/pre_style.css')}}" />
 
     <!-- Favicons -->
     <link href="{{asset('img/title.png')}} " rel="icon">
@@ -62,7 +63,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="/type">{{__('client.c_t')}}</a></li>
                             <li><a href="/tools">{{__('client.c_to')}}</a></li>
-                            <li><a href="#">{{__('client.c_m')}}</a></li>
+                            <li><a href="/how-to">{{__('client.c_m')}}</a></li>
                         </ul>
                     </li>
                     <li><a class="page-scroll" href="/about">{{__('client.ab')}}</a></li>
