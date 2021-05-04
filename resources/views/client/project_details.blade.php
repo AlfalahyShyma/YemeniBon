@@ -36,9 +36,9 @@
 
                             <div class="story-img">
                                 @if(Config::get('app.locale')=='en')
-                                <img loading="auto" srcset="{{ asset('images/'.$project->image) }}" width="748">
+                                <img loading="auto" srcset="{{ asset('public/images/'.$project->image) }}" width="748">
                                 @elseif(Config::get('app.locale')=='ar')
-                                <img loading="auto" srcset="{{ asset('images/'.$project->image) }}" width="748">
+                                <img loading="auto" srcset="{{ asset('public/images/'.$project->image) }}" width="748">
                             @endif
                             </div>
 
@@ -554,18 +554,18 @@
                             <br>
                             <div class="pub-show-description">
                                 @if(Config::get('app.locale')=='en')
-                                 <p>{{$project->ldesc}}</p>
-                                 @elseif(Config::get('app.locale')=='ar')
-                                 <p>{{$project->desc_ar}}</p>
-                  
-                             @endif
+                                <p>{{$project->ldesc}}</p>
+                                @elseif(Config::get('app.locale')=='ar')
+                                <p>{{$project->desc_ar}}</p>
+                 
+                            @endif
                             </div>
                             <ul class="h-container">
-                               @foreach (json_decode($project->multi_image) as $image)
-                               <li> <img class="h-img" src="{{ asset('images/'.$image) }}" alt="cut citrus fruits. " /></li>
-                                 
-                                @endforeach
-                            </ul>
+                                @foreach (json_decode($project->multi_image) as $image)
+                                <li> <img class="h-img" src="{{ asset('public/images/'.$image) }}" alt="cut citrus fruits. " /></li>
+                                  
+                            @endforeach
+                         </ul>
                             <div class="share-buttons">
                                 <div class="sharethis-inline-share-buttons"></div>
                             </div>
