@@ -104,7 +104,7 @@ Route::get('/project-details', [ProjectDetailsController::class, 'index']);
 Route::get('/projects/all', [HomeController::class, 'filteringall']);
 Route::get('/projects/{id}', [HomeController::class, 'filtering']);
 Route::get('/type',function(){
-    return view('client.types');
+    return view('client.world_of_coffee.types');
 });
 Route::get('/tools',function(){
     return view('client.tools');

@@ -8,10 +8,10 @@
 <header class="pages-header">
     <div>
         <h1>
-            Tools
+            Tools1
         </h1>
         <p>
-            Description....................
+            Description of coffee's tools
         </p>
         
     </div>
