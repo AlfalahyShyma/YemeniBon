@@ -22,11 +22,11 @@
 
         <div class="copyright">
             <div class="copyright-desc"> © 2014 - 2021 ROWAD Foundation - Yemen - All Rights Reserved</div>
-            <div class="terms"> <a href="">Terms</a></div>
-            <div class="privacy"> <a href="">Privacy Policy</a></div>
+            <div class="terms"> <a href="/terms">Terms</a></div>
+            <div class="privacy"> <a href="/privacy-policy">Privacy Policy</a></div>
             <div class="coding">
                 <span>Developed With <i class="fa fa-heart" aria-hidden="true"></i> in : </span>
-                <a href="">
+                <a href="#">
                     <!-- <img src="https://rowad.org/imgs/venus.svg" alt=""> -->
                     Coding Academy
                 </a>
