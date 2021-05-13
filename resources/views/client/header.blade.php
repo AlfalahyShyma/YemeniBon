@@ -5,8 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yemeni Bon</title>
-  
 
+    <meta name="title" content="Yemeni Bon">
+    <meta name="description" content="This is a Yemeni website that specialled in coffee and shows tools, types, and preparation of coffee. Also show different coffee projects.">
+    <meta name="keywords" content="Coffee, Bon, Yemeni, Arabica, بن, البن اليمني, tools, types, how to, how to make, yemeni coffee, mocka, roaster, coffee maker, القهوة, robusta, liberica, cafe,  ‎Coffee bean,  ‎Coffee preparation ,  ‎Coffee roasting, coffee shop, coffee tree, شجرة البن">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
@@ -23,10 +29,7 @@
 
     {{-- animation --}}
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
     <script>
         window.console = window.console || function(t) {};
     </script>
@@ -68,13 +71,13 @@
                     </li>
                     <li><a class="page-scroll" href="/about">{{__('client.ab')}}</a></li>
                     <li><a class="page-scroll con" href="/contact">{{__('client.con')}}</a></li>
-                 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                     <li>
                         <a style="font-size:14px; height:4.7vh; border:0; line-height:20px;" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                             {{ $properties['native'] }}
                         </a>
                     </li>
-                @endforeach
+                    @endforeach
                 </ul>
 
                 <!-- <div class="searchbar">
