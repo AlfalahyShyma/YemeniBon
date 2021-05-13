@@ -26,7 +26,7 @@
 <main>
     <div class="about-wrapper">
         <div class="about-img-title" data-aos="zoom-out-down" data-aos-duration="2000">
-            <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
+            <img loading="lazy" srcset="{{asset('asset/img/140-01.png')}}">
         <h1>{{__('about.title')}}</h1>
         </div>
         <br>

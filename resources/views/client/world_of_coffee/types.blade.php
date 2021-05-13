@@ -13,6 +13,10 @@
         <p>
             Description of coffee's types.
         </p>
-
     </div>
 </header>
+
+<main>
+    <div class="about-wrapper">
+    </div>
+</main>

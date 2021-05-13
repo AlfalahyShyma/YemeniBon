@@ -484,6 +484,10 @@ body {
 width: 120px;
 }
 
+.footer a{
+    color:#ffffff;
+}
+
 .copyright {
     font-family: BLACKROSE;
     display: flex;
