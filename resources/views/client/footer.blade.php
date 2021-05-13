@@ -7,15 +7,15 @@
 
             <div class="footer-icons">
                 <div class="footer-icon">
-                    <img src="{{asset('asset/img/eu.png')}}" alt="logo1">
+                    <a href="#"><img src="{{asset('asset/img/eu.png')}}" alt="logo1"></a>
                 </div>
 
                 <div class="footer-icon">
-                    <img src="{{asset('asset/img/rowad.png')}}" alt="logo1">
+                    <a href="#"><img src="{{asset('asset/img/rowad.png')}}" alt="logo1"></a>
                 </div>
 
                 <div class="footer-icon">
-                    <img src="{{asset('asset/img/steps.png')}}" alt="logo1">
+                    <a href="#"><img src="{{asset('asset/img/steps.png')}}" alt="logo1"></a>
                 </div>
             </div>
         </div>
