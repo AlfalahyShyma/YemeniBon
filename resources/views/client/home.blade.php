@@ -245,7 +245,7 @@
     <section id="diagram-wrapper">
         <div class="diagram" >
             <!-- style="max-width: 100vw;" -->
-            <img src="{{asset('asset/img/btd2.png')}}" alt="" srcset="" class="image-zoom-available img-responsive">
+            <img loading="lazy" src="{{asset('asset/img/btd2.png')}}" alt="" srcset="" class="image-zoom-available img-responsive">
         </div>
     </section>
 </main>
