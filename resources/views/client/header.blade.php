@@ -61,9 +61,9 @@
                         <li><a href="/publication">Publication</a></li>
                         <li class="sub-menu"><a href="#">World of coffee</a>
                             <ul>
-                                <li><a href="#">Types</a></li>
-                                <li><a href="#">Tools</a></li>
-                                <li><a href="#">How To</a></li>
+                                <li><a href="/type">Types</a></li>
+                                <li><a href="/tools">Tools</a></li>
+                                <li><a href="/how-to">How To</a></li>
                             </ul>
                         </li>
                         <li><a href="/about">About</a></li>
