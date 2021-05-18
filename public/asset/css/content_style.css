@@ -3220,7 +3220,12 @@ publication section style
 
     .quote {
         left: -2rem;
+        width: 80%;
+        padding: 90px;
     }
+
+    
+    
    }
 
    @media screen and (min-width: 2020px) {
