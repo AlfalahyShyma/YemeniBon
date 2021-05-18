@@ -1,7 +1,7 @@
 /* ---------------------------------------------
  Height 100%
  --------------------------------------------- */
- 
+
 let settings = {
     'magnification': 3,
     'maskSize': 200
@@ -145,7 +145,7 @@ class Zoombini {
         this.drawMask();
     }
 }
- 
+
 
 
 
@@ -202,15 +202,30 @@ $('.navbar-collapse ul li a').click(function () {
 // });
 
 $(document).ready(function () {
-                $(".search-icon").click(function () {
-                  //$(".search-icon").toggleClass("active");
-                  $(this).find('.fa-search,.fa-times').toggleClass('fa-search').toggleClass('fa-times');
-                    $(".search-box").toggleClass("active");
-                });
+    $(".search-icon").click(function () {
+        $(".search-icon").toggleClass("active");
+        $(".search-box").toggleClass("active");
+        //   $(this).find('.fa-search,.fa-times').toggleClass('fa-search').toggleClass('fa-times');
+        //     $(".search-box").toggleClass("active");
+    });
 });
-            
 
 
+/**Sub Mneu */
+$(document).ready(function () {
+    $("ul li").click(function () {
+        $(this).siblings().removeClass("active");
+        $(this).toggleClass("active");
+    });
+});
+
+/**Show menu bar */
+$(document).ready(function () {
+    $(".toggle").click(function () {
+        $(".toggle").toggleClass("active");
+        $("header").toggleClass("active-menu");
+    });
+});
 (function () {
     //Image Credit - https://medium.com/
 
@@ -296,4 +311,3 @@ var cl = cloudinary.Cloudinary.new({
 });
 // Call
 cl.responsive();
-
