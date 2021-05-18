@@ -227,7 +227,7 @@
               
             </div>
            
-                    <button class="more" id="more">{{__('client.show_more')}}</button>
+                    {{-- <button class="more" id="more">{{__('client.show_more')}}</button> --}}
                
         </div>
     </section>
