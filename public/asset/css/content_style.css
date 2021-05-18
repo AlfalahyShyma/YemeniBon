@@ -2409,6 +2409,34 @@ publication section style
 }
 
 
+.layer img{
+    width: 150px;
+    height: 150px;
+    transition: 0.7s;
+    z-index: 1000;
+    margin-left: 1700px;
+    margin-top: -90rem;
+}
+
+.layer-2 img{
+    width: 150px;
+    height: 150px;
+    transition: 0.7s;
+    z-index: 1000;
+    margin-left: 100px;
+    margin-top: -50rem;
+}
+
+
+.layer-3 img{
+    width: 150px;
+    height: 150px;
+    transition: 0.7s;
+    z-index: 1000;
+    margin-left: 1700px;
+    margin-top: -20rem;
+}
+
 
 /* responsive */
 
