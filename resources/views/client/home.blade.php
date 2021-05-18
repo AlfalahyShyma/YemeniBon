@@ -142,6 +142,7 @@
                         </div>
                     </div>
                 </div>
+              
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                     <div class="panel">
                     <div class="card-in">
@@ -245,7 +246,7 @@
     <section id="diagram-wrapper">
         <div class="diagram" >
             <!-- style="max-width: 100vw;" -->
-            <img loading="lazy" src="{{asset('asset/img/btd2.png')}}" alt="" srcset="" class="image-zoom-available img-responsive">
+            <img loading="lazy" data-aos="zoom-in" data-aos-duration="1000" src="{{asset('asset/img/btd2.png')}}" alt="" srcset="" class="image-zoom-available img-responsive">
         </div>
     </section>
 </main>
