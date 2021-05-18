@@ -36,7 +36,7 @@
                     <span>Menu.</span>
                 </button>
                 <a href="#page-top" class="navbar-brand page-scroll" target="_blank">
-                    <span><img class="logo" src="{{asset('asset/img/logo.png')}}" alt="" srcset="" width="80" height="80"></span>
+                    <span><img class="logo" src="{{asset('asset/img/logo.png')}}" alt="" srcset="" width="100" height="100"></span>
                 </a>
             </div>
             <div class="navbar-collapse navbar-right navbar-main-collapse collapse" aria-expanded="false">

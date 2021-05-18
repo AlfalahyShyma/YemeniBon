@@ -232,8 +232,10 @@
                
         </div>
     </section>
-    
-    <section id="quote-wrapper" data-aos="zoom-in" data-aos-duration="2000">
+    <div class="layer">
+        <img loading="auto" srcset="{{asset('asset/img/coffee_bean2.png')}}" data-aos="fade-left" data-aos-duration="2000">
+        </div>
+    <section id="quote-wrapper" data-aos="zoom-in" data-aos-duration="1000">
         <div class="quote">
             <blockquote id="quote-quote">
                 <span id="q-start">“</span><span class="q-quote">Foundation believes that this inspiration is important for your
@@ -242,11 +244,17 @@
             <p><b>-Rowad Foundation</b></p>
         </div>
     </section>
+    <div class="layer-2">
+        <img loading="auto" srcset="{{asset('asset/img/coffee_bean2.png')}}" data-aos="fade-right" data-aos-duration="1000">
+        </div>
 
+        <div class="layer-3">
+            <img loading="auto" srcset="{{asset('asset/img/coffee_bean2.png')}}" data-aos="fade-left" data-aos-duration="1000">
+            </div>
     <section id="diagram-wrapper">
         <div class="diagram" >
             <!-- style="max-width: 100vw;" -->
-            <img loading="lazy" data-aos="zoom-in" data-aos-duration="1000" src="{{asset('asset/img/btd2.png')}}" alt="" srcset="" class="image-zoom-available img-responsive">
+            <img loading="lazy" data-aos="zoom-in" data-aos-duration="3000" src="{{asset('asset/img/btd2.png')}}" alt="" srcset="" class="image-zoom-available img-responsive">
         </div>
     </section>
 </main>
