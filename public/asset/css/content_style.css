@@ -2491,6 +2491,29 @@ publication section style
         left: -2rem;
     }
 
+    .layer img{
+        width: 100px;
+        height: 100px;
+         margin-left: 250px;
+         margin-top: -235rem;
+        
+     }
+     
+     .layer-2 img{
+        
+         width: 100px;
+         height: 100px;
+         margin-left: 10px;
+        margin-top: -54rem;
+     }
+     
+     .layer-3 img{
+         width: 100px;
+         height: 100px;
+         margin-left: 250px;
+        margin-top: -10rem;
+     }
+
    }
  @media screen and (min-width: 375px) {
     .col-xs-12 {
@@ -2541,6 +2564,29 @@ publication section style
         left: -2rem;
     }
 
+    .layer img{
+        width: 100px;
+        height: 100px;
+         margin-left: 270px;
+         margin-top: -240rem;
+        
+     }
+     
+     .layer-2 img{
+        
+         width: 100px;
+         height: 100px;
+         margin-left: 10px;
+        margin-top: -50rem;
+     }
+     
+     .layer-3 img{
+         width: 100px;
+         height: 100px;
+         margin-left: 270px;
+        margin-top: -10rem;
+     }
+
    }
 
    @media screen and (min-width: 414px) {
@@ -2582,6 +2628,28 @@ publication section style
     .quote {
         left: -2rem;
     }
+    .layer img{
+        width: 100px;
+        height: 100px;
+         margin-left: 310px;
+         margin-top: -240rem;
+        
+     }
+     
+     .layer-2 img{
+        
+         width: 100px;
+         height: 100px;
+         margin-left: 10px;
+        margin-top: -46rem;
+     }
+     
+     .layer-3 img{
+         width: 100px;
+         height: 100px;
+         margin-left: 310px;
+        margin-top: -10rem;
+     }
 
    }
 
@@ -2635,6 +2703,29 @@ publication section style
         left: -2rem;
     }
 
+    .layer img{
+        width: 100px;
+        height: 100px;
+         margin-left: 380px;
+         margin-top: -240rem;
+        
+     }
+     
+     .layer-2 img{
+        
+         width: 100px;
+         height: 100px;
+         margin-left: 10px;
+        margin-top: -43rem;
+     }
+     
+     .layer-3 img{
+         width: 100px;
+         height: 100px;
+         margin-left: 380px;
+        margin-top: -10rem;
+     }
+
    }
 
    @media screen and (min-width: 530px) {
@@ -2677,6 +2768,29 @@ publication section style
         left: -2rem;
     }
 
+    .layer img{
+        width: 100px;
+        height: 100px;
+         margin-left: 410px;
+         margin-top: -240rem;
+        
+     }
+     
+     .layer-2 img{
+        
+         width: 100px;
+         height: 100px;
+         margin-left: 10px;
+        margin-top: -43rem;
+     }
+     
+     .layer-3 img{
+         width: 100px;
+         height: 100px;
+         margin-left: 410px;
+        margin-top: -10rem;
+     }
+
    }
 
    @media screen and (min-width: 576px) {
@@ -2718,6 +2832,29 @@ publication section style
     .quote {
         left: -2rem;
     }
+
+    .layer img{
+        width: 100px;
+        height: 100px;
+         margin-left: 480px;
+         margin-top: -240rem;
+        
+     }
+     
+     .layer-2 img{
+        
+         width: 100px;
+         height: 100px;
+         margin-left: 10px;
+        margin-top: -40rem;
+     }
+     
+     .layer-3 img{
+         width: 100px;
+         height: 100px;
+         margin-left: 480px;
+        margin-top: -10rem;
+     }
    
 }
 
@@ -2761,6 +2898,29 @@ publication section style
     .quote {
         left: -2rem;
     }
+
+    .layer img{
+        width: 100px;
+        height: 100px;
+         margin-left: 520px;
+         margin-top: -240rem;
+        
+     }
+     
+     .layer-2 img{
+        
+         width: 100px;
+         height: 100px;
+         margin-left: 10px;
+        margin-top: -40rem;
+     }
+     
+     .layer-3 img{
+         width: 100px;
+         height: 100px;
+         margin-left: 520px;
+        margin-top: -10rem;
+     }
 
 }
 
@@ -2813,6 +2973,30 @@ publication section style
     .quote {
         left: -2rem;
     }
+
+    .layer img{
+        width: 100px;
+        height: 100px;
+         margin-left: 550px;
+         margin-top: -125rem;
+        
+     }
+     
+     .layer-2 img{
+        
+         width: 100px;
+         height: 100px;
+         margin-left: 10px;
+        margin-top: -40rem;
+     }
+     
+     .layer-3 img{
+         width: 100px;
+         height: 100px;
+         margin-left: 550px;
+        margin-top: -10rem;
+     }
+
    }
 
 
@@ -2861,6 +3045,29 @@ publication section style
         left: -2rem;
     }
 
+    .layer img{
+        width: 100px;
+        height: 100px;
+         margin-left: 650px;
+         margin-top: -125rem;
+        
+     }
+     
+     .layer-2 img{
+        
+         width: 100px;
+         height: 100px;
+         margin-left: 10px;
+        margin-top: -36rem;
+     }
+     
+     .layer-3 img{
+         width: 100px;
+         height: 100px;
+         margin-left: 650px;
+        margin-top: -10rem;
+     }
+
 }
 
 @media screen and (min-width: 868px) {
@@ -2904,6 +3111,29 @@ publication section style
     .quote {
         left: -2rem;
     }
+
+    .layer img{
+        width: 100px;
+        height: 100px;
+         margin-left: 730px;
+         margin-top: -125rem;
+        
+     }
+     
+     .layer-2 img{
+        
+         width: 100px;
+         height: 100px;
+         margin-left: 10px;
+        margin-top: -36rem;
+     }
+     
+     .layer-3 img{
+         width: 100px;
+         height: 100px;
+         margin-left: 730px;
+        margin-top: -10rem;
+     }
 
 }
 
@@ -2951,6 +3181,29 @@ publication section style
     .quote {
         left: -2rem;
     }
+
+    .layer img{
+        width: 100px;
+        height: 100px;
+         margin-left: 880px;
+         margin-top: -100rem;
+        
+     }
+     
+     .layer-2 img{
+        
+         width: 100px;
+         height: 100px;
+         margin-left: 10px;
+        margin-top: -36rem;
+     }
+     
+     .layer-3 img{
+         width: 100px;
+         height: 100px;
+         margin-left: 880px;
+        margin-top: -10rem;
+     }
 
 
 
@@ -3070,6 +3323,7 @@ publication section style
     .layer img{
        
         margin-left: 1190px;
+        margin-top: -70rem;
        
     }
     
