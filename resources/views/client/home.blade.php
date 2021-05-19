@@ -15,8 +15,8 @@
                               <img alt="slider-image" class="swiper-slide__image swiper-lazy" data-src="{{ asset('images/'.$banner->image) }}">
 
                 <div class="swiper-slide__content">
-                    <h1 class="slider-title">{{$banner->title}}</h1>
-                    <p>{{$banner->desc}}</p>
+                    <h1 class="slider-title">title</h1>
+                    <p>desc</p>
                     <a href="#" class="hero-btn">
                         <div>show details</div>
                     </a>
@@ -42,21 +42,21 @@
                 <!--- <h1 class="title">Flexbox Grid</h1> -->
                 <div class="filter-wrapper" data-aos="zoom-in" data-aos-duration="1000">
                     <div class="flex">
-                        @if(Config::get('app.locale')=='en')
+                        {{-- @if(Config::get('app.locale')=='en') --}}
 
                         <a onclick="cliced(0)" class=" tagA active-filter">All</a>
-                        @else
+                        {{-- @else --}}
                         <a onclick="cliced(0)" class="active-filter">الكل</a>
     
-                        @endif
+                        {{-- @endif
                         @foreach ($categories as $cat )
-                        @if(Config::get('app.locale')=='en')
-                    <a class="tagA test" onclick="cliced('{{ $cat->id}}')" id=""> {{$cat->name}}</a>
-                    @else
-                    <a class="tagA test" onclick="cliced('{{ $cat->id}}')" id=""> {{$cat->name_ar}}</a>
+                        @if(Config::get('app.locale')=='en') --}}
+                    <a class="tagA test" onclick="cliced('{{ $cat->id}}')" id=""> cat nam</a>
+                    {{-- @else --}}
+                    <a class="tagA test" onclick="cliced('{{ $cat->id}}')" id=""> cat arabic</a>
 
-                    @endif
-                        @endforeach
+                    {{-- @endif
+                        @endforeach --}}
 
                       
                     </div>
