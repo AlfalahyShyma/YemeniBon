@@ -163,6 +163,170 @@ nav a {
     color: #7c431b;
 }
 
+.v6-brewguides-promo {
+    margin-bottom: 60px;
+}
+
+.v6-brewguides-promo {
+    margin-bottom: 60px;
+}
+.v6-brewguides-promo .grid .inner-grid {
+    margin-left: 0;
+}
+.v6-brewguides-promo .grid .grid__item {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.v6-brewguides-promo .grid .hovershow {
+    width: 100%;
+    margin: 9.25em 0 0;
+}
+
+.v6-brewguides-promo .grid .grid__item .grid {
+    margin-top: 90px;
+}
+.v6-brewguides-promo .grid .hovershow {
+    margin: 1em 1em 0;
+}
+
+.section-pad {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.page-width {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.page-width::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.page-width {
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+@media only screen and (max-width: 749px) {
+    .page-width {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+}
+
+.page-width.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: -30px;
+}
+.grid::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media only screen and (max-width: 749px) {
+    .grid {
+        margin-left: -22px;
+    }
+}
+.grid__item {
+    float: left;
+    padding-left: 30px;
+    width: 100%;
+}
+@media only screen and (max-width: 749px) {
+    .grid__item {
+        padding-left: 22px;
+    }
+}
+.grid__item[class*="--push"] {
+    position: relative;
+}
+.v6-brewguides-promo .grid .inner-grid {
+    margin-left: 0;
+}
+
+.v6-brewguides-promo .grid .grid__item {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.v6-brewguides-promo .grid .hovershow {
+    width: 100%;
+    margin: 9.25em 0 0;
+}
+
+.v6-brewguides-promo .grid .grid__item .grid {
+    margin-top: 90px;
+}
+.v6-brewguides-promo .grid .hovershow {
+    margin: 1em 1em 0;
+}
+
+.v6-quad-promo .grid .grid__item.v6-quad-promo-block {
+    padding-top: 96%;
+}
+.padded-grids .grid__item.medium-up--one-half {
+    width: 96%;
+    height: 96%;
+}
+
+.v6-visit-promo .grid .grid__item img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.v6-rows-promo .grid .grid__item {
+    position: relative;
+    padding-top: 38.3%;
+    position: relative;
+}
+
+.v6-brewguides-promo .grid .inner-grid {
+    margin-left: 0;
+}
+
+.one-half {
+    width: 50%;
+}
+
+.medium-up--one-fifth {
+    width: 20%;
+}
+
+.v6-brewguides-promo .grid .hovershow {
+    width: 100%;
+    margin: 9.25em 0 0;
+}
+
+.v6-brewguides-promo .grid .hovershow {
+    margin: 1em 1em 0;
+}
+
+.hovershow {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: gray;
+    transition: all 0.3s ease;
+}
+.hovershow:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    cursor: pointer;
+}
+
 @media (max-width: 900px) {
     .menu ul {
         position: absolute;
@@ -441,8 +605,8 @@ nav a {
     } */
 
     .navbar-custom.top-nav-collapse menu li a,
-    .navbar-custom.top-nav-collapse .searchbar .icon > i ,
-    .navbar-custom.top-nav-collapse menu ul li ul li a{
+    .navbar-custom.top-nav-collapse .searchbar .icon > i,
+    .navbar-custom.top-nav-collapse menu ul li ul li a {
         /* color: rgb(15, 15, 15); */
         color: #7c431b;
     }
