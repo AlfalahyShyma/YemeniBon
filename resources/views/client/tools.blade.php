@@ -253,7 +253,7 @@
                         <div class="pub-show-aside" data-aos="fade-right" data-aos-duration="2000">
 
                             <div class="tool-img">
-                                <img loading="auto" srcset="{{asset('asset/img/tools/9.png')}}">
+                                <img loading="auto" srcset="{{asset('asset/img/tools/jazzwa.png')}}">
                             </div>
 
                             
