@@ -12,7 +12,7 @@
                 Publication
             </h1>
             <p>
-                Description....................
+                Description...
             </p>
             
         </div>
