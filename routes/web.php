@@ -44,17 +44,17 @@ Route::get('/load-more-project', function () {
     // Route::view('/about', 'client.about');
 
 
-    Route::get('/client/UserHome/{id}',[UserHomeController::class,'filtering']);
-    Route::get('/client/UserHome',[UserHomeController::class,'filteringall']);
+    // Route::get('/client/UserHome/{id}',[UserHomeController::class,'filtering']);
+    // Route::get('/client/UserHome',[UserHomeController::class,'filteringall']);
 
 
 // Route::get('/homepage', function () {
 //     return view('client.home');
 // });
 
-Route::get('/indexx',function(){
-    return view('client.home');
-});
+// Route::get('/indexx',function(){
+//     return view('client.home');
+// });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('Admin.home');

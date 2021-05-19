@@ -152,7 +152,7 @@
                 @foreach($about_trainees as $about_trainee)
                 <div class="t-quotes" data-aos="zoom-in" data-aos-duration="3000">
                     <div class="one slide">
-                        <blockquote class="t-b-quote">
+                        <blockquote class="t-b-quote ">
                             <span class="leftq quotes">&ldquo;</span>
                             <p>
                                 @if(Config::get('app.locale')=='en')
@@ -188,11 +188,7 @@
                         </h6>
                     </div>
                 </div>
-                @endforeach
-
-               
-
-               
+                @endforeach         
             </div>
         </div>
 
