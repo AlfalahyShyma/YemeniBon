@@ -35,11 +35,12 @@
                         <div class="story-show-aside">
 
                             <div class="story-img">
-                                @if(Config::get('app.locale')=='en')
+                                <img loading="auto" srcset="{{asset('asset/img/pro1.jpg')}}" width="748">
+                                {{-- @if(Config::get('app.locale')=='en')
                                 <img loading="auto" srcset="{{ asset('public/images/'.$project->image) }}" width="748">
                                 @elseif(Config::get('app.locale')=='ar')
                                 <img loading="auto" srcset="{{ asset('public/images/'.$project->image) }}" width="748">
-                            @endif
+                            @endif --}}
                             </div>
 
                             <div class="belong-to-project">
@@ -561,10 +562,14 @@
                             @endif
                             </div>
                             <ul class="h-container">
-                                @foreach (json_decode($project->multi_image) as $image)
-                                <li> <img class="h-img" src="{{ asset('public/images/'.$image) }}" alt="cut citrus fruits. " /></li>
-                                  
-                            @endforeach
+                                {{-- @foreach (json_decode($project->multi_image) as $image) --}}
+                                {{-- <li> <img class="h-img" src="{{ asset('public/images/'.$image) }}" alt="cut citrus fruits. " /></li> --}}
+                            {{-- @endforeach --}}
+                            <li> <img class="h-img" src="{{asset('asset/img/pro1.jpg')}}" alt="cut citrus fruits. " /></li>
+                                <li> <img class="h-img" src="{{asset('asset/img/pro1.jpg')}}" alt="cut citrus fruits. " /></li>
+                                <li> <img class="h-img" src="{{asset('asset/img/pro1.jpg')}}" alt="cut citrus fruits. " /></li>
+                                <li> <img class="h-img" src="{{asset('asset/img/pro1.jpg')}}" alt="cut citrus fruits. " /></li>
+                                <li> <img class="h-img" src="{{asset('asset/img/pro1.jpg')}}" alt="cut citrus fruits. " /></li>
                          </ul>
                             <div class="share-buttons">
                                 <div class="sharethis-inline-share-buttons"></div>

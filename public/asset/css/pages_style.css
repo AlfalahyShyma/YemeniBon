@@ -224,14 +224,15 @@
     color: #693713;
     font-weight: 500;
     font-size: 13px;
-    line-height: 60px;
+    line-height: 20px;
     width: 330px;
-    height: auto;
+    height: 100%;
     display: inline-block;
     overflow: hidden;
     margin-top: 25px;
     margin-bottom: 8px;
     padding: 0.2rem 2rem 0.2rem 2rem;
+    text-align: justify;
 }
 
 .business-card-details .fa {
@@ -267,10 +268,11 @@
   padding: 0;
   margin: 0;
   margin-top: 3rem;
-  display: block;
+  display: inline-block;
+  /* display: grid;
+  grid-template-columns: repeat(6, auto); */
   width: 100%;
-  overflow-y: hidden;
-  overflow-x: auto;
+  overflow: auto;
   white-space: nowrap;
   text-align: center;
   scroll-behavior: smooth;
@@ -278,7 +280,7 @@
 }
 
 .h-container li {
-  position: sticky;
+  /* position: sticky; */
   left: 0;
   width: min(50vw, 300px);
   display: inline-block;
