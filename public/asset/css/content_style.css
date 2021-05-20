@@ -1,16 +1,8 @@
 @font-face {
-    /* font-family: kuffie;
-     src: url('/asset/fonts/kuffie.TTF'); */
-    /* font-family: vald; */
-    /* src: url('/asset/fonts/vald.TTF'); */
     font-family: BLACKROSE;
     src: url("/asset/fonts/BLACKROSE.TTF");
 }
 @font-face {
-    /* font-family: kuffie;
-     src: url('/asset/fonts/kuffie.TTF'); */
-    /* font-family: vald; */
-    /* src: url('/asset/fonts/vald.TTF'); */
     font-family: ArbFONTS-Mikhak-Bold;
     src: url("/asset/fonts/ArbFONTS-Mikhak-Bold.ttf");
 }
@@ -222,15 +214,6 @@
 }
 
 /* Link Button Style */
-
-/* .btn,
-.btn::after {
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-} */
-
 .hero-btn,
 .hero-btn::after {
     -webkit-transition: all 0.3s;
@@ -798,7 +781,7 @@ Pages Header section style
     background-position: center center;
 }
 .page-bg {
-    background-image: url("../img/page-bg2.jpg");
+    background-image: url("../img/bg3.png");
 }
 .blur {
     opacity: 0;
@@ -814,7 +797,8 @@ Pages Header section style
     /* background-image: url('../img/1.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.534);
+    /* background-color: rgba(0, 0, 0, 0.534); */
+    background-color: rgba(0, 0, 0, 0);
 }
 .pages-header > div {
     max-width: 800px;
@@ -851,8 +835,10 @@ Pages Header section style
 .pages-header h1 {
     font-family: BLACKROSE;
     font-size: 12rem;
-    color: #e3c47a;
+    /* color: #e3c47a; */
+     color: #ebb842;
     width: 100%;
+    margin-top: 0;
 }
 
 .pages-header nav {

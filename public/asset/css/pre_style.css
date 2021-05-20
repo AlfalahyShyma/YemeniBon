@@ -11,6 +11,16 @@
     transition: opacity 1s 2s;
 }
 
+#details-content {
+    background-color: #ebe2cd;
+    width: 100%;
+    font-family: QUESHA;
+    font-size: 2.5rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    transition: opacity 1s 2s;
+}
+
 .recipe-listing {
     display: flex;
     flex-wrap: wrap;
@@ -79,3 +89,54 @@
     position: relative;
     text-decoration: none;
 }
+
+.details-section {
+    display: flex;
+    height: auto;
+    width: 100%;
+}
+.details-section .contenedor {
+    position: sticky;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+}
+.details-section .contenedor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details-section .cajaBx {
+    width: 50%;
+    padding: 60px;
+}
+.details-section .cajaBx h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.details-section .cajaBx p {
+    text-align: justify;
+    letter-spacing: 1px;
+}
+
+.c-transition__img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+
+.c-transition::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  /* background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/204808/ink-photo-frame.png"); */
+  background-image:url("../img/frame.png");
+  background-size: 100% 100%;
+  background-position: 50% 50%;
+}
+

@@ -26,61 +26,61 @@
         <div class="grid__item text-center" style="background: url(&quot;&quot;) center top / contain no-repeat transparent; min-height: 250px; user-select: auto;">
           <div class="grid inner-grid" style="user-select: auto;">
             <div class="grid__item one-half medium-up--one-fifth" style="user-select: auto;">
-              <a href="#" class="hover-pourover-text" style="user-select: auto;">
+              <a href="/how-to/details" class="hover-pourover-text" style="user-select: auto;">
                 <img src="{{asset('asset/img/ways/chemex.png')}}" style="width: 100%; user-select: auto;" class="hovershow">
               </a>
             </div>
 
             <div class="grid__item one-half medium-up--one-fifth" style="user-select: auto;">
-              <a href="#" class="hover-pourover-text" style="user-select: auto;">
+              <a href="/how-to/details" class="hover-pourover-text" style="user-select: auto;">
                 <img src="{{asset('asset/img/ways/french.png')}}" style="width: 100%; user-select: auto;" class="hovershow">
               </a>
             </div>
 
             <div class="grid__item one-half medium-up--one-fifth" style="user-select: auto;">
-              <a href="#" class="hover-pourover-text" style="user-select: auto;">
+              <a href="/how-to/details" class="hover-pourover-text" style="user-select: auto;">
                 <img src="{{asset('asset/img/ways/pourover.png')}}" style="width: 100%; user-select: auto;" class="hovershow">
               </a>
             </div>
 
             <div class="grid__item one-half medium-up--one-fifth" style="user-select: auto;">
-              <a href="#" class="hover-pourover-text" style="user-select: auto;">
+              <a href="/how-to/details" class="hover-pourover-text" style="user-select: auto;">
                 <img src="{{asset('asset/img/ways/coldbrew.png')}}" style="width: 100%; user-select: auto;" class="hovershow">
               </a>
             </div>
 
             <div class="grid__item one-half medium-up--one-fifth" style="user-select: auto;">
-              <a href="#" class="hover-pourover-text" style="user-select: auto;">
+              <a href="/how-to/details" class="hover-pourover-text" style="user-select: auto;">
                 <img src="{{asset('asset/img/ways/autodrip.png')}}" style="width: 100%; user-select: auto;" class="hovershow">
               </a>
             </div>
 
             <div class="grid__item one-half medium-up--one-fifth" style="user-select: auto;">
-              <a href="#" class="hover-pourover-text" style="user-select: auto;">
+              <a href="/how-to/details" class="hover-pourover-text" style="user-select: auto;">
                 <img src="{{asset('asset/img/ways/chemex.png')}}" style="width: 100%; user-select: auto;" class="hovershow">
               </a>
             </div>
 
             <div class="grid__item one-half medium-up--one-fifth" style="user-select: auto;">
-              <a href="#" class="hover-pourover-text" style="user-select: auto;">
+              <a href="/how-to/details" class="hover-pourover-text" style="user-select: auto;">
                 <img src="{{asset('asset/img/ways/french.png')}}" style="width: 100%; user-select: auto;" class="hovershow">
               </a>
             </div>
 
             <div class="grid__item one-half medium-up--one-fifth" style="user-select: auto;">
-              <a href="#" class="hover-pourover-text" style="user-select: auto;">
+              <a href="/how-to/details" class="hover-pourover-text" style="user-select: auto;">
                 <img src="{{asset('asset/img/ways/pourover.png')}}" style="width: 100%; user-select: auto;" class="hovershow">
               </a>
             </div>
 
             <div class="grid__item one-half medium-up--one-fifth" style="user-select: auto;">
-              <a href="#" class="hover-pourover-text" style="user-select: auto;">
+              <a href="/how-to/details" class="hover-pourover-text" style="user-select: auto;">
                 <img src="{{asset('asset/img/ways/coldbrew.png')}}" style="width: 100%; user-select: auto;" class="hovershow">
               </a>
             </div>
 
             <div class="grid__item one-half medium-up--one-fifth" style="user-select: auto;">
-              <a href="#" class="hover-pourover-text" style="user-select: auto;">
+              <a href="/how-to/details" class="hover-pourover-text" style="user-select: auto;">
                 <img src="{{asset('asset/img/ways/autodrip.png')}}" style="width: 100%; user-select: auto;" class="hovershow">
               </a>
             </div>
