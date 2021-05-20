@@ -35,6 +35,8 @@
             <p>
                 <b> 3.</b> Measure the ground coffee into the wet filter. Pour in enough water to wet the ground beans and drain into your cup or coffee pot, then pour in the rest of the water.
             </p>
+
+            
         </div>
     </section>
 </main>
