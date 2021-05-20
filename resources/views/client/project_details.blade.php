@@ -550,7 +550,7 @@
                             </div> -->
                             <div class="pub-img-title">
                                 <img loading="auto" srcset="{{asset('asset/img/140-01.png')}}">
-                                <h2>Title</h2>
+                                <h2>TitleTitleTitleTitleTitle</h2>
                             </div>
                             <br>
                             <div class="pub-show-description">
@@ -566,10 +566,10 @@
                                 {{-- <li> <img class="h-img" src="{{ asset('public/images/'.$image) }}" alt="cut citrus fruits. " /></li> --}}
                             {{-- @endforeach --}}
                             <li> <img class="h-img" src="{{asset('asset/img/pro1.jpg')}}" alt="cut citrus fruits. " /></li>
-                                <li> <img class="h-img" src="{{asset('asset/img/pro1.jpg')}}" alt="cut citrus fruits. " /></li>
-                                <li> <img class="h-img" src="{{asset('asset/img/pro1.jpg')}}" alt="cut citrus fruits. " /></li>
-                                <li> <img class="h-img" src="{{asset('asset/img/pro1.jpg')}}" alt="cut citrus fruits. " /></li>
-                                <li> <img class="h-img" src="{{asset('asset/img/pro1.jpg')}}" alt="cut citrus fruits. " /></li>
+                                <li> <img class="h-img" src="{{asset('asset/img/excelsa.jpg')}}" alt="cut citrus fruits. " /></li>
+                                <li> <img class="h-img" src="{{asset('asset/img/pro2.jpg')}}" alt="cut citrus fruits. " /></li>
+                                <li> <img class="h-img" src="{{asset('asset/img/pro3.jpg')}}" alt="cut citrus fruits. " /></li>
+                                <li> <img class="h-img" src="{{asset('asset/img/robusta.jpeg')}}" alt="cut citrus fruits. " /></li>
                          </ul>
                             <div class="share-buttons">
                                 <div class="sharethis-inline-share-buttons"></div>
