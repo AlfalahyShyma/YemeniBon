@@ -1439,18 +1439,30 @@ Remove or comment-out the code block below to see how the browser will fall-back
 }
 
 .t-b-quote {
-    margin: 0 30px;
-    padding: 30px;
+    margin: 0 200px;
+    padding: 300px;
     width: auto;
-    background-color: #e3c47a;
+    background-image: #e3c47a;
+    background-image: url(../img/quot-01.png);
+    background-repeat: no-repeat;
     color: #4b2810;
-    /* box-shadow: 0 5px 2px rgba(0,0,0,0.1); */
+    /* box-shadow: 0 5px 2px rgb(0 0 0 / 10%); */
     border-radius: 10px;
     position: relative;
     transition: background-color 0.6s linear;
 }
 
-.t-b-quote:after {
+.t-b-quote p {
+    margin-top: -5rem;
+ 
+   
+}
+
+.t-b-quote h2 {
+    text-align: right;
+}
+
+/* .t-b-quote:after {
     content: " ";
     height: 0;
     width: 0;
@@ -1461,7 +1473,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
     border-left-color: #e3c47a;
     border-width: 10px;
     left: 10%;
-}
+} */
 
 .trainee-title {
     margin-bottom: 0.3em;

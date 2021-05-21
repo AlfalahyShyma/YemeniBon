@@ -153,7 +153,7 @@
                 <div class="t-quotes" data-aos="zoom-in" data-aos-duration="3000">
                     <div class="one slide">
                         <blockquote class="t-b-quote ">
-                            <span class="leftq quotes">&ldquo;</span>
+                            {{-- <span class="leftq quotes">&ldquo;</span> --}}
                             <p>
                                 @if(Config::get('app.locale')=='en')
           
@@ -164,28 +164,29 @@
                         
                                @endif
                             </p>
+                            <h2>  
+                                @if(Config::get('app.locale')=='en')
+              
+                                {{$about_trainee->Trainees_name}}
+                        
+                        @elseif(Config::get('app.locale')=='ar')
+                               {{$about_trainee->Trainees_name_ar}}                  
+                        
+                               @endif 
+                            </h2>
+                            <h6>
+                                @if(Config::get('app.locale')=='en')
+              
+                                {{$about_trainee->Trainees_job}}
+                        
+                        @elseif(Config::get('app.locale')=='ar')
+                               {{$about_trainee->Trainees_job_ar}}                  
+                        
+                               @endif 
+                            </h6>
                             </blockquote>
 
-                        <h2>  
-                            @if(Config::get('app.locale')=='en')
-          
-                            {{$about_trainee->Trainees_name}}
-                    
-                    @elseif(Config::get('app.locale')=='ar')
-                           {{$about_trainee->Trainees_name_ar}}                  
-                    
-                           @endif 
-                        </h2>
-                        <h6>
-                            @if(Config::get('app.locale')=='en')
-          
-                            {{$about_trainee->Trainees_job}}
-                    
-                    @elseif(Config::get('app.locale')=='ar')
-                           {{$about_trainee->Trainees_job_ar}}                  
-                    
-                           @endif 
-                        </h6>
+                       
                     </div>
                 </div>
                 @endforeach         
