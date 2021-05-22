@@ -12,7 +12,7 @@
 
         <div class="swiper-slide">
             <div class="swiper-slide__inner" style="background-image:url('https://ayxgj9k9n.cloudimg.io/width/5/x/https://user-images.githubusercontent.com/10026019/70386467-792ce280-19d3-11ea-8524-3199138b4c7b.jpeg')">
-                              <img alt="slider-image" class="swiper-slide__image swiper-lazy" data-src="{{ asset('images/'.$banner->image) }}">
+                <img alt="slider-image" class="swiper-slide__image swiper-lazy" data-src="{{ asset('images/'.$banner->image) }}">
 
                 <div class="swiper-slide__content">
                     <h1 class="slider-title">{{$banner->title}}</h1>
@@ -47,172 +47,172 @@
                         <a onclick="cliced(0)" class=" tagA active-filter">All</a>
                         @else
                         <a onclick="cliced(0)" class="active-filter">الكل</a>
-    
+
                         @endif
                         @foreach ($categories as $cat )
                         @if(Config::get('app.locale')=='en')
-                    <a class="tagA test" onclick="cliced('{{ $cat->id}}')" id=""> {{$cat->name}}</a>
-                    @else
-                    <a class="tagA test" onclick="cliced('{{ $cat->id}}')" id=""> {{$cat->name_ar}}</a>
+                        <a class="tagA test" onclick="cliced('{{ $cat->id}}')" id=""> {{$cat->name}}</a>
+                        @else
+                        <a class="tagA test" onclick="cliced('{{ $cat->id}}')" id=""> {{$cat->name_ar}}</a>
 
-                    @endif
+                        @endif
                         @endforeach
 
-                      
+
                     </div>
                 </div>
             </div>
             <div class="flex" id="post-data" data-aos="fade-up" data-aos-duration="3000">
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                     <div class="panel">
-                    <div class="card-in">
-                        <img class="card-img-border" src="{{asset('asset/img/c1.png')}}" alt="" srcset="">
-                        <img class="card-img" src="{{asset('asset/img/pro1.jpg')}}" alt="" srcset="">
-                        
-                            
-                                <h1>title</h1>
-                            
-                 
-               
-                            <p>
-                                Description
-                            </p>
-                            <a href="#" class="show-pro-btn">
-                                <div>show details</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                    <div class="panel">
-                    <div class="card-in">
-                        <img class="card-img-border" src="{{asset('asset/img/c1.png')}}" alt="" srcset="">
-                        <img class="card-img" src="{{asset('asset/img/pro1.jpg')}}" alt="" srcset="">
-                        
-                            
-                                <h1>title</h1>
-                            
-                 
-               
-                            <p>
-                                Description
-                            </p>
-                            <a href="#" class="show-pro-btn">
-                                <div>show details</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                    <div class="panel">
-                    <div class="card-in">
-                        <img class="card-img-border" src="{{asset('asset/img/c1.png')}}" alt="" srcset="">
-                        <img class="card-img" src="{{asset('asset/img/pro1.jpg')}}" alt="" srcset="">
-                        
-                                <h1>title</h1>
-                            
-                 
-               
-                            <p>
-                                Description
-                            </p>
-                            <a href="#" class="show-pro-btn">
-                                <div>show details</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                    <div class="panel">
-                    <div class="card-in">
-                        <img class="card-img-border" src="{{asset('asset/img/c1.png')}}" alt="" srcset="">
-                        <img class="card-img" src="{{asset('asset/img/pro1.jpg')}}" alt="" srcset="">
-                        
-                            
-                                <h1>title</h1>
-                            
-                 
-               
-                            <p>
-                                Description
-                            </p>
-                            <a href="#" class="show-pro-btn">
-                                <div>show details</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-              
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                    <div class="panel">
-                    <div class="card-in">
-                        <img class="card-img-border" src="{{asset('asset/img/c1.png')}}" alt="" srcset="">
-                        <img class="card-img" src="{{asset('asset/img/pro1.jpg')}}" alt="" srcset="">
-                        
-                            
-                                <h1>title</h1>
-                            
-                 
-               
-                            <p>
-                                Description
-                            </p>
-                            <a href="#" class="show-pro-btn">
-                                <div>show details</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                    <div class="panel">
-                    <div class="card-in">
-                        <img class="card-img-border" src="{{asset('asset/img/c1.png')}}" alt="" srcset="">
-                        <img class="card-img" src="{{asset('asset/img/pro1.jpg')}}" alt="" srcset="">
-                        
-                            
-                                <h1>title</h1>
-                            
-                 
-               
-                            <p>
-                                Description
-                            </p>
-                            <a href="#" class="show-pro-btn">
-                                <div>show details</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                    <div class="panel">
-                    <div class="card-in">
-                        <img class="card-img-border" src="{{asset('asset/img/c1.png')}}" alt="" srcset="">
-                        <img class="card-img" src="{{asset('asset/img/pro1.jpg')}}" alt="" srcset="">
-                        
-                            
-                                <h1>title</h1>
-                            
-                 
-               
-                            <p>
-                                Description
-                            </p>
-                            <a href="#" class="show-pro-btn">
-                                <div>show details</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                    <div class="panel">
-                    <div class="card-in">
-                        <img class="card-img-border" src="{{asset('asset/img/c1.png')}}" alt="" srcset="">
+                        <div class="card-in">
+                            <img class="card-img-border" src="{{asset('asset/img/c1.png')}}" alt="" srcset="">
                             <img class="card-img" src="{{asset('asset/img/pro1.jpg')}}" alt="" srcset="">
-                            
-                                <h1>title</h1>
-                            
-                 
-               
+
+
+                            <h1>title</h1>
+
+
+
+                            <p>
+                                Description
+                            </p>
+                            <a href="#" class="show-pro-btn">
+                                <div>show details</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="panel">
+                        <div class="card-in">
+                            <img class="card-img-border" src="{{asset('asset/img/c1.png')}}" alt="" srcset="">
+                            <img class="card-img" src="{{asset('asset/img/pro1.jpg')}}" alt="" srcset="">
+
+
+                            <h1>title</h1>
+
+
+
+                            <p>
+                                Description
+                            </p>
+                            <a href="#" class="show-pro-btn">
+                                <div>show details</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="panel">
+                        <div class="card-in">
+                            <img class="card-img-border" src="{{asset('asset/img/c1.png')}}" alt="" srcset="">
+                            <img class="card-img" src="{{asset('asset/img/pro1.jpg')}}" alt="" srcset="">
+
+                            <h1>title</h1>
+
+
+
+                            <p>
+                                Description
+                            </p>
+                            <a href="#" class="show-pro-btn">
+                                <div>show details</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="panel">
+                        <div class="card-in">
+                            <img class="card-img-border" src="{{asset('asset/img/c1.png')}}" alt="" srcset="">
+                            <img class="card-img" src="{{asset('asset/img/pro1.jpg')}}" alt="" srcset="">
+
+
+                            <h1>title</h1>
+
+
+
+                            <p>
+                                Description
+                            </p>
+                            <a href="#" class="show-pro-btn">
+                                <div>show details</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="panel">
+                        <div class="card-in">
+                            <img class="card-img-border" src="{{asset('asset/img/c1.png')}}" alt="" srcset="">
+                            <img class="card-img" src="{{asset('asset/img/pro1.jpg')}}" alt="" srcset="">
+
+
+                            <h1>title</h1>
+
+
+
+                            <p>
+                                Description
+                            </p>
+                            <a href="#" class="show-pro-btn">
+                                <div>show details</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="panel">
+                        <div class="card-in">
+                            <img class="card-img-border" src="{{asset('asset/img/c1.png')}}" alt="" srcset="">
+                            <img class="card-img" src="{{asset('asset/img/pro1.jpg')}}" alt="" srcset="">
+
+
+                            <h1>title</h1>
+
+
+
+                            <p>
+                                Description
+                            </p>
+                            <a href="#" class="show-pro-btn">
+                                <div>show details</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="panel">
+                        <div class="card-in">
+                            <img class="card-img-border" src="{{asset('asset/img/c1.png')}}" alt="" srcset="">
+                            <img class="card-img" src="{{asset('asset/img/pro1.jpg')}}" alt="" srcset="">
+
+
+                            <h1>title</h1>
+
+
+
+                            <p>
+                                Description
+                            </p>
+                            <a href="#" class="show-pro-btn">
+                                <div>show details</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="panel">
+                        <div class="card-in">
+                            <img class="card-img-border" src="{{asset('asset/img/c1.png')}}" alt="" srcset="">
+                            <img class="card-img" src="{{asset('asset/img/pro1.jpg')}}" alt="" srcset="">
+
+                            <h1>title</h1>
+
+
+
                             <p>
                                 Description
                             </p>
@@ -225,16 +225,16 @@
 
 
 
-              
+
             </div>
-           
-                    {{-- <button class="more" id="more">{{__('client.show_more')}}</button> --}}
-               
+
+            {{-- <button class="more" id="more">{{__('client.show_more')}}</button> --}}
+
         </div>
     </section>
     <div class="layer">
         <img loading="auto" srcset="{{asset('asset/img/coffee_bean2.png')}}" data-aos="fade-left" data-aos-duration="2000">
-        </div>
+    </div>
     <section id="quote-wrapper" data-aos="zoom-in" data-aos-duration="1000">
         <div class="quote">
             <blockquote id="quote-quote">
@@ -246,13 +246,13 @@
     </section>
     <div class="layer-2">
         <img loading="auto" srcset="{{asset('asset/img/coffee_bean2.png')}}" data-aos="fade-right" data-aos-duration="1000">
-        </div>
+    </div>
 
-        <div class="layer-3">
-            <img loading="auto" srcset="{{asset('asset/img/coffee_bean2.png')}}" data-aos="fade-left" data-aos-duration="1000">
-            </div>
+    <div class="layer-3">
+        <img loading="auto" srcset="{{asset('asset/img/coffee_bean2.png')}}" data-aos="fade-left" data-aos-duration="1000">
+    </div>
     <section id="diagram-wrapper">
-        <div class="diagram" >
+        <div class="diagram">
             <!-- style="max-width: 100vw;" -->
             <img loading="lazy" data-aos="zoom-in" data-aos-duration="3000" src="{{asset('asset/img/btd2.png')}}" alt="" srcset="" class="image-zoom-available img-responsive">
         </div>
@@ -266,17 +266,17 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
-   var id=0;
+    var id = 0;
 
-    function load(page,id){
+    function load(page, id) {
         $.ajax({
-            url:"?page="+page+"&id="+id,
-            type:"get",
-          
-        }).done(function(data){
-            if(data.html==" "){
+            url: "?page=" + page + "&id=" + id,
+            type: "get",
+
+        }).done(function(data) {
+            if (data.html == " ") {
                 $(".ajax-load").html("No Data");
-                return ;
+                return;
             }
             $("#post-data").append(data.html);
         });
@@ -291,30 +291,30 @@
     //     }
     // });
 
-    var page=1;
-    $("#more").click(function(){
-            page++;
-            load(page,id);
+    var page = 1;
+    $("#more").click(function() {
+        page++;
+        load(page, id);
     });
 
-   function cliced(ids){
-    //    $('.tagA').removeClass('active-filter');
-    //    $(this).addClass('active-filter');
+    function cliced(ids) {
+        //    $('.tagA').removeClass('active-filter');
+        //    $(this).addClass('active-filter');
 
         console.log("test");
         // console.log($(this).class());
-//    var id=$(this).value();
-$("#post-data").html(' ');
-             page=1;
-             id=ids;
+        //    var id=$(this).value();
+        $("#post-data").html(' ');
+        page = 1;
+        id = ids;
         console.log(id);
 
-            load(page,id);
+        load(page, id);
 
     }
-    </script>
+</script>
 
-    <script>
-        AOS.init();
-    </script>
+<script>
+    AOS.init();
+</script>
 @include('client/footer')

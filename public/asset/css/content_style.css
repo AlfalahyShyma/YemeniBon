@@ -598,7 +598,7 @@ Project section style
     /* background: #D1B091;
     border: 1px solid #D1B091; */
     /* background-color: white; */
-  
+
     /* padding: 12px; */
     /* padding: 2px; */
     border-radius: 50px;
@@ -781,7 +781,12 @@ Pages Header section style
     background-position: center center;
 }
 .page-bg {
-    background-image: url("../img/bg3.png");
+    /* background-image: url("../img/bg3.png"); */
+    /* background-image: url("https://assets.website-files.com/57ea3312eaa002fa3bee3f81/57ea528dfbbf45e84764f665_backg-2.png"), 
+                      url("https://assets.website-files.com/57ea3312eaa002fa3bee3f81/5e5c10b72089e59b3694eb87_sub.jpg"); */
+
+    background-image: url("https://assets.website-files.com/57ea3312eaa002fa3bee3f81/57ea528dfbbf45e84764f665_backg-2.png"),
+        url("../img/page-bg4.jpg");
 }
 .blur {
     opacity: 0;
@@ -836,7 +841,7 @@ Pages Header section style
     font-family: BLACKROSE;
     font-size: 12rem;
     /* color: #e3c47a; */
-     color: #ebb842;
+    color: #ebb842;
     width: 100%;
     margin-top: 0;
 }
@@ -1031,7 +1036,7 @@ label {
 .form_container input[type="text"],
 .form_container input[type="email"],
 textarea {
-    font-family: "Montserrat"; 
+    font-family: "Montserrat";
     width: 100%;
     padding: 5px 10px;
     margin-bottom: 8px;
@@ -1065,7 +1070,6 @@ textarea.input {
     background: #e3c47a;
 }
 
-
 .more {
     /* float: right; */
     margin: 2% 2% 0% 2.5%;
@@ -1081,15 +1085,11 @@ textarea.input {
     font-family: BLACKROSE;
     font-size: 2.4rem;
     letter-spacing: 1;
-    
 }
 
 .more:hover {
     background: #e3c47a;
 }
-
-
-
 
 .form_container input[type="text"]::selection,
 .form_container input[type="email"]::selection,
@@ -1454,8 +1454,6 @@ Remove or comment-out the code block below to see how the browser will fall-back
 
 .t-b-quote p {
     margin-top: -5rem;
- 
-   
 }
 
 .t-b-quote h2 {
@@ -1554,7 +1552,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
     transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
 }
 
- .card-img-border {
+.card-img-border {
     position: absolute;
     width: 180px;
     height: 180px;
@@ -1660,12 +1658,12 @@ Remove or comment-out the code block below to see how the browser will fall-back
 /* .card-in::before */
 /*,
 /* .card-in::after*/ /*{ */
-    /* position: absolute;
+/* position: absolute;
     width: 100px;
     height: 100px;
     color: transparent; */
-    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='rgb(235, 226, 205)'%3E%3Cpath d='M0 4v12h8a8 8 0 0 1-8 8v4a12 12 0 0 0 12-12V4H0zM20 4v12h8a8 8 0 0 1-8 8v4a12 12 0 0 0 12-12V4H20z'/%3E%3C/svg%3E"); */
-    /* background-image: url("../img/coffee_bean1.png");
+/* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='rgb(235, 226, 205)'%3E%3Cpath d='M0 4v12h8a8 8 0 0 1-8 8v4a12 12 0 0 0 12-12V4H0zM20 4v12h8a8 8 0 0 1-8 8v4a12 12 0 0 0 12-12V4H20z'/%3E%3C/svg%3E"); */
+/* background-image: url("../img/coffee_bean1.png");
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.4;
@@ -1720,19 +1718,19 @@ Remove or comment-out the code block below to see how the browser will fall-back
     border-bottom: 3px dashed #e3c47a;
 }
 
-a.active-filter{
+a.active-filter {
     color: #ca7030;
     text-decoration: none;
     border-bottom: 3px dashed #e3c47a;
 }
 
-a.active-filter::selection{
+a.active-filter::selection {
     overflow: hidden;
     outline: none;
     text-decoration: none;
 }
 
-.load-more{
+.load-more {
     text-align: center;
 }
 
@@ -1744,8 +1742,8 @@ a.active-filter::selection{
     transition: all 0.3s;
 }
 
-.show-more-btn{
- overflow: hidden;
+.show-more-btn {
+    overflow: hidden;
     display: inline-block;
     border-radius: 25px;
     border: 2.5px dashed #4b281091;
@@ -1768,148 +1766,146 @@ a.active-filter::selection{
     font-weight: 600;
 }
 
-
-
 @keyframes card-ani1 {
-  0% {
-    opacity: 0;
-    transform: translateX(30px) translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px) translateY(0px);
-  }
+    0% {
+        opacity: 0;
+        transform: translateX(30px) translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px);
+    }
 }
 @keyframes card-ani2 {
-  0% {
-    opacity: 0;
-    transform: translateX(0px) translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px) translateY(0px);
-    color: #9B9B9B;
-  }
+    0% {
+        opacity: 0;
+        transform: translateX(0px) translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px);
+        color: #9b9b9b;
+    }
 }
 
 .card {
-  width: 165px;
-  height: 280px;
-  padding: 30px;
-  border-radius: 10px;
-  margin: 80px auto 50px auto;
-  background-color: white;
-  animation: card-ani1 1s;
-  transition-delay: 1s;
-  transition-timing-function: easeOutCirc;
-  position: relative;
+    width: 165px;
+    height: 280px;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 80px auto 50px auto;
+    background-color: white;
+    animation: card-ani1 1s;
+    transition-delay: 1s;
+    transition-timing-function: easeOutCirc;
+    position: relative;
 }
 
 .card .name {
-  font-size: 28px;
-  margin: 15px auto 0px auto;
-  animation: card-ani2 1s;
-  animation-delay: 0s;
-  animation-fill-mode: forwards;
+    font-size: 28px;
+    margin: 15px auto 0px auto;
+    animation: card-ani2 1s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
 }
 .card hr {
-  border: 0;
-  height: 1px;
-  background-color: #d4d4d4;
-  animation: card-ani2 1s;
-  animation-delay: 0.1s;
-  animation-fill-mode: forwards;
+    border: 0;
+    height: 1px;
+    background-color: #d4d4d4;
+    animation: card-ani2 1s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
 }
- .card .title {
-  font-size: 14px;
-  animation: card-ani2 1s;
-  animation-delay: 0.3s;
-  animation-fill-mode: forwards;
+.card .title {
+    font-size: 14px;
+    animation: card-ani2 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
 }
 .card .email {
-  font-size: 14px;
-  margin: 160px auto 6px auto;
-  animation: card-ani2 1s;
-  animation-delay: 0.4s;
-  animation-fill-mode: forwards;
+    font-size: 14px;
+    margin: 160px auto 6px auto;
+    animation: card-ani2 1s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
 }
 .card .phone {
-  font-size: 14px;
-  animation: card-ani2 1s;
-  animation-delay: 0.6s;
-  animation-fill-mode: forwards;
+    font-size: 14px;
+    animation: card-ani2 1s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes card-ani3 {
-  0% {
-    opacity: 0;
-    transform: translateX(-60px) translateY(-60px);
-  }
-  100% {
-    opacity: 0.5;
-    transform: translateX(0px) translateY(0px);
-  }
+    0% {
+        opacity: 0;
+        transform: translateX(-60px) translateY(-60px);
+    }
+    100% {
+        opacity: 0.5;
+        transform: translateX(0px) translateY(0px);
+    }
 }
 .card .card-back {
-  width: 160px;
-  height: 275px;
-  padding: 30px;
-  border-radius: 10px;
-  margin: -286px 0px 0px -8px;
-  background-color: white;
-  z-index: -1;
-  position: relative;
-  opacity: 0.5;
-  animation: card-ani3 1s;
-  transition-delay: 10s;
-  transition-timing-function: easeOutCirc;
+    width: 160px;
+    height: 275px;
+    padding: 30px;
+    border-radius: 10px;
+    margin: -286px 0px 0px -8px;
+    background-color: white;
+    z-index: -1;
+    position: relative;
+    opacity: 0.5;
+    animation: card-ani3 1s;
+    transition-delay: 10s;
+    transition-timing-function: easeOutCirc;
 }
 @keyframes card-ani4 {
-  0% {
-    opacity: 0;
-    transform: translateX(50px) translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px) translateY(0px);
-  }
+    0% {
+        opacity: 0;
+        transform: translateX(50px) translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px);
+    }
 }
 .card .card-front {
-  width: 165px;
-  height: 275px;
-  padding: 30px;
-  border-radius: 10px;
-  margin: -373px 0px 0px -49px;
-  background-color: transparent;
-  border: solid 2px white;
-  z-index: -1;
-  position: relative;
-  animation: card-ani4 1s;
-  transition-delay: 6s;
-  animation-timing-function: easeOutCirc;
+    width: 165px;
+    height: 275px;
+    padding: 30px;
+    border-radius: 10px;
+    margin: -373px 0px 0px -49px;
+    background-color: transparent;
+    border: solid 2px white;
+    z-index: -1;
+    position: relative;
+    animation: card-ani4 1s;
+    transition-delay: 6s;
+    animation-timing-function: easeOutCirc;
 }
- .card .card2 {
-  width: 165px;
-  height: 280px;
-  padding: 30px;
-  border-radius: 10px;
-  margin: -323px auto 0px -30px;
-  background-color: transparent;
-  overflow: hidden;
-  position: relative;
-  animation: card-ani4 1s;
-  transition-delay: 6s;
-  animation-timing-function: easeOutCirc;
+.card .card2 {
+    width: 165px;
+    height: 280px;
+    padding: 30px;
+    border-radius: 10px;
+    margin: -323px auto 0px -30px;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    animation: card-ani4 1s;
+    transition-delay: 6s;
+    animation-timing-function: easeOutCirc;
 }
 .card .card2 .card-pink {
-  width: 165px;
-  height: 275px;
-  padding: 30px;
-  border-radius: 10px;
-  margin: -46px 0px 0px -49px;
-  background-color: transparent;
-  border: solid 2px #FFE0E3;
-  position: relative;
+    width: 165px;
+    height: 275px;
+    padding: 30px;
+    border-radius: 10px;
+    margin: -46px 0px 0px -49px;
+    background-color: transparent;
+    border: solid 2px #ffe0e3;
+    position: relative;
 }
 /*
 *
@@ -1925,10 +1921,7 @@ publication section style
     background-size: contain;
     background-position: center;
     transition: 0.7s; */
-    
 }
-
-
 
 /* .pubpanel::after {
     position: absolute;
@@ -1962,7 +1955,6 @@ publication section style
     }
 }
 
-
 .pubImg {
     position: relative;
     width: 100%;
@@ -1985,13 +1977,11 @@ publication section style
     background-image: url("../img/pub-pg.jpg");
 }
 
-
 /*
 *
 Quote section style
 *
 */
-
 
 .cardpub-in .cardpub-img {
     position: absolute;
@@ -2005,9 +1995,6 @@ Quote section style
     top: -45px;
     left: 8rem;
     transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
-
-
-   
 }
 
 .cardpub-in h4 {
@@ -2035,12 +2022,11 @@ Quote section style
     margin: 0 3px;
     position: relative;
     display: inline;
-    
-    /* top: 100px; */
 
+    /* top: 100px; */
 }
 
-.layer-type p{
+.layer-type p {
     font-size: 30px;
     color: #ddd7ca;
     font-weight: 500;
@@ -2050,11 +2036,9 @@ Quote section style
     margin: 0 3px;
     position: relative;
     display: inline;
-    
+
     /* top: 100px; */
 }
-
-
 
 .show-pub-btn,
 .show-pub-btn::after {
@@ -2082,7 +2066,6 @@ Quote section style
     font-weight: 500;
     opacity: 1;
     left: 10rem;
-    
 }
 
 .show-pub-btn:hover {
@@ -2118,13 +2101,7 @@ Quote section style
     /* transition: .5s; */
 }
 
-
-
-
 /* Content_style.css */
-
-
-
 
 /*
 *
@@ -2139,7 +2116,6 @@ publication section style
     background-size: contain;
     background-position: center;
     transition: 0.7s; */
-    
 }
 
 .flex {
@@ -2154,34 +2130,29 @@ publication section style
     padding-right: 12px;
 }
 
-
 /*-- Generate Columns */
 @media (min-width: 0) {
-   
-    .publication-container{
+    .publication-container {
         margin: 2rem 4rem;
     }
 }
 @media (min-width: 720px) {
-   
-    .publication-container{
+    .publication-container {
         margin: 2rem 4rem;
     }
 }
 @media (min-width: 1024px) {
-    
-    .publication-container{
+    .publication-container {
         margin: 2rem 12rem;
     }
 }
 @media (min-width: 1600px) {
-   
-    .publication-container{
+    .publication-container {
         margin: 2rem 12rem;
     }
 }
 
-.content .publication-container .layer-pg{
+.content .publication-container .layer-pg {
     position: absolute;
     color: transparent;
     background-color: #ebe2cd;
@@ -2189,10 +2160,9 @@ publication section style
     background-repeat: no-repeat;
     background-size: contain; */
     transition: 0.7s;
-    
+
     z-index: 100;
 }
-
 
 .pubpanel {
     margin-bottom: 2rem;
@@ -2201,11 +2171,11 @@ publication section style
     /* background: #D1B091;
     border: 1px solid #D1B091; */
     /* background-color: white; */
-  
+
     /* padding: 12px; */
     /* padding: 2px; */
     border-radius: 50px;
-   
+
     text-align: center;
     /* background-color: transparent; */
     box-shadow: none;
@@ -2213,12 +2183,7 @@ publication section style
     position: relative;
     background: white;
     /* background-color: rgba(160, 154, 165, 0.356); */
-
 }
-
-
-
-
 
 .cardpub-in {
     padding: 60px;
@@ -2230,8 +2195,6 @@ publication section style
     /* border: 1px dashed rgba(94, 93, 93, 0.171); */
     margin: 10px;
     /* background-color: rgba(255, 255, 255, 0.267); */
-
-    
 }
 
 .cardpub-in .cardpub-img {
@@ -2246,9 +2209,6 @@ publication section style
     top: -45px;
     left: 8rem;
     transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
-
-
-   
 }
 
 .cardpub-in h4 {
@@ -2276,11 +2236,9 @@ publication section style
     margin: 0 3px;
     position: relative;
     display: inline;
-    
+
     /* top: 100px; */
-
 }
-
 
 .cardpub-in:hover p {
     opacity: 1;
@@ -2310,12 +2268,9 @@ publication section style
     content: close-quote;
     top: 20px;
     right: 15px;
-    
 }
 
-
-
-.layer-type p{
+.layer-type p {
     font-size: 30px;
     color: #ddd7ca;
     font-weight: 500;
@@ -2325,11 +2280,11 @@ publication section style
     margin: 0 3px;
     position: relative;
     display: inline;
-   
+
     /* top: 100px; */
 }
 
-.layer-type{
+.layer-type {
     position: absolute;
     width: 120px;
     height: 120px;
@@ -2341,15 +2296,12 @@ publication section style
     top: -10px;
     left: 120px;
     z-index: 100;
-    
 }
 
-.layer-type:hover{
+.layer-type:hover {
     transform: scale(1.15);
     transition: 0.5s;
 }
-
-
 
 .show-pub-btn,
 .show-pub-btn::after {
@@ -2377,7 +2329,6 @@ publication section style
     font-weight: 500;
     opacity: 1;
     left: 10rem;
-    
 }
 
 .show-pub-btn:hover {
@@ -2387,15 +2338,13 @@ publication section style
     font-weight: 500;
 }
 
-
 .cardpub-in:hover .show-pub-btn {
     opacity: 1;
     transition: 0.5s;
 }
 
-
 .swiper-slide__inner:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -2406,8 +2355,7 @@ publication section style
     opacity: 0.3;
 }
 
-
-.layer img{
+.layer img {
     width: 150px;
     height: 150px;
     transition: 0.7s;
@@ -2416,7 +2364,7 @@ publication section style
     margin-top: -90rem;
 }
 
-.layer-2 img{
+.layer-2 img {
     width: 150px;
     height: 150px;
     transition: 0.7s;
@@ -2425,8 +2373,7 @@ publication section style
     margin-top: -50rem;
 }
 
-
-.layer-3 img{
+.layer-3 img {
     width: 150px;
     height: 150px;
     transition: 0.7s;
@@ -2435,11 +2382,10 @@ publication section style
     margin-top: -20rem;
 }
 
-
 /* responsive */
 
- /* Small devices (landscape phones, 576px and up) */
- @media screen and (min-width: 350px) {
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 350px) {
     .col-xs-12 {
         flex: 0 0 100%;
         max-width: 100%;
@@ -2452,19 +2398,14 @@ publication section style
         background-size: contain;
         background-position: center;
         transition: 0.7s; */
-        
     }
 
     .card-img-border {
-       
         left: 5rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 9.5rem;
-        
     }
 
     .show-pro-btn {
@@ -2473,7 +2414,6 @@ publication section style
         padding: 2 40 2 40;
         margin: 10 0 0 0;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -2482,38 +2422,34 @@ publication section style
         margin-left: 8rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer img{
+    .layer img {
         width: 100px;
         height: 100px;
-         margin-left: 250px;
-         margin-top: -235rem;
-        
-     }
-     
-     .layer-2 img{
-        
-         width: 100px;
-         height: 100px;
-         margin-left: 10px;
-        margin-top: -54rem;
-     }
-     
-     .layer-3 img{
-         width: 100px;
-         height: 100px;
-         margin-left: 250px;
-        margin-top: -10rem;
-     }
+        margin-left: 250px;
+        margin-top: -235rem;
+    }
 
-   }
- @media screen and (min-width: 375px) {
+    .layer-2 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
+        margin-top: -54rem;
+    }
+
+    .layer-3 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 250px;
+        margin-top: -10rem;
+    }
+}
+@media screen and (min-width: 375px) {
     .col-xs-12 {
         flex: 0 0 100%;
         max-width: 100%;
@@ -2526,18 +2462,13 @@ publication section style
         background-size: contain;
         background-position: center;
         transition: 0.7s; */
-        
     }
     .card-img-border {
-       
         left: 5rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 9.5rem;
-        
     }
 
     .show-pro-btn {
@@ -2546,7 +2477,6 @@ publication section style
         padding: 2 40 2 40;
         margin: 10 0 0 0;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -2555,54 +2485,46 @@ publication section style
         margin-left: 8rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer img{
+    .layer img {
         width: 100px;
         height: 100px;
-         margin-left: 270px;
-         margin-top: -240rem;
-        
-     }
-     
-     .layer-2 img{
-        
-         width: 100px;
-         height: 100px;
-         margin-left: 10px;
+        margin-left: 270px;
+        margin-top: -240rem;
+    }
+
+    .layer-2 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
         margin-top: -50rem;
-     }
-     
-     .layer-3 img{
-         width: 100px;
-         height: 100px;
-         margin-left: 270px;
+    }
+
+    .layer-3 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 270px;
         margin-top: -10rem;
-     }
+    }
+}
 
-   }
-
-   @media screen and (min-width: 414px) {
+@media screen and (min-width: 414px) {
     .col-xs-12 {
         flex: 0 0 100%;
         max-width: 100%;
     }
 
     .card-img-border {
-       
         left: 7.5rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 12rem;
-        
     }
 
     .show-pro-btn {
@@ -2611,7 +2533,6 @@ publication section style
         padding: 2 40 2 40;
         margin: 10 0 0 0;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -2620,39 +2541,34 @@ publication section style
         margin-left: 10rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
-    .layer img{
+    .layer img {
         width: 100px;
         height: 100px;
-         margin-left: 310px;
-         margin-top: -240rem;
-        
-     }
-     
-     .layer-2 img{
-        
-         width: 100px;
-         height: 100px;
-         margin-left: 10px;
+        margin-left: 310px;
+        margin-top: -240rem;
+    }
+
+    .layer-2 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
         margin-top: -46rem;
-     }
-     
-     .layer-3 img{
-         width: 100px;
-         height: 100px;
-         margin-left: 310px;
+    }
+
+    .layer-3 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 310px;
         margin-top: -10rem;
-     }
+    }
+}
 
-   }
-
- 
- @media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) {
     .col-xs-12 {
         flex: 0 0 100%;
         max-width: 100%;
@@ -2665,18 +2581,13 @@ publication section style
         background-size: contain;
         background-position: center;
         transition: 0.7s; */
-        
     }
     .card-img-border {
-       
         left: 8.5rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 13rem;
-        
     }
 
     .show-pro-btn {
@@ -2685,7 +2596,6 @@ publication section style
         padding: 2 40 2 40;
         margin: 10 0 0 0;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -2694,54 +2604,46 @@ publication section style
         margin-left: 11rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer img{
+    .layer img {
         width: 100px;
         height: 100px;
-         margin-left: 380px;
-         margin-top: -240rem;
-        
-     }
-     
-     .layer-2 img{
-        
-         width: 100px;
-         height: 100px;
-         margin-left: 10px;
+        margin-left: 380px;
+        margin-top: -240rem;
+    }
+
+    .layer-2 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
         margin-top: -43rem;
-     }
-     
-     .layer-3 img{
-         width: 100px;
-         height: 100px;
-         margin-left: 380px;
+    }
+
+    .layer-3 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 380px;
         margin-top: -10rem;
-     }
+    }
+}
 
-   }
-
-   @media screen and (min-width: 530px) {
+@media screen and (min-width: 530px) {
     .col-xs-12 {
         flex: 0 0 100%;
         max-width: 100%;
     }
 
     .card-img-border {
-       
         left: 10.5rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 15rem;
-        
     }
 
     .show-pro-btn {
@@ -2750,7 +2652,6 @@ publication section style
         padding: 2 40 2 40;
         margin: 10 0 0 0;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -2759,54 +2660,46 @@ publication section style
         margin-left: 13rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer img{
+    .layer img {
         width: 100px;
         height: 100px;
-         margin-left: 410px;
-         margin-top: -240rem;
-        
-     }
-     
-     .layer-2 img{
-        
-         width: 100px;
-         height: 100px;
-         margin-left: 10px;
+        margin-left: 410px;
+        margin-top: -240rem;
+    }
+
+    .layer-2 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
         margin-top: -43rem;
-     }
-     
-     .layer-3 img{
-         width: 100px;
-         height: 100px;
-         margin-left: 410px;
+    }
+
+    .layer-3 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 410px;
         margin-top: -10rem;
-     }
+    }
+}
 
-   }
-
-   @media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) {
     .col-sm-6 {
         flex: 0 0 100%;
         max-width: 100%;
     }
 
     .card-img-border {
-       
         left: 12.5rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 17rem;
-        
     }
 
     .show-pro-btn {
@@ -2815,7 +2708,6 @@ publication section style
         padding: 2 40 2 40;
         margin: 10 0 0 0;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -2824,55 +2716,46 @@ publication section style
         margin-left: 15rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer img{
+    .layer img {
         width: 100px;
         height: 100px;
-         margin-left: 480px;
-         margin-top: -240rem;
-        
-     }
-     
-     .layer-2 img{
-        
-         width: 100px;
-         height: 100px;
-         margin-left: 10px;
+        margin-left: 480px;
+        margin-top: -240rem;
+    }
+
+    .layer-2 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
         margin-top: -40rem;
-     }
-     
-     .layer-3 img{
-         width: 100px;
-         height: 100px;
-         margin-left: 480px;
+    }
+
+    .layer-3 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 480px;
         margin-top: -10rem;
-     }
-   
+    }
 }
 
 @media screen and (min-width: 620px) {
-
     .col-sm-6 {
         flex: 0 0 100%;
         max-width: 100%;
     }
 
     .card-img-border {
-       
         left: 13.5rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 18rem;
-        
     }
 
     .show-pro-btn {
@@ -2881,7 +2764,6 @@ publication section style
         padding: 2 40 2 40;
         margin: 10 0 0 0;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -2890,39 +2772,35 @@ publication section style
         margin-left: 16rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer img{
+    .layer img {
         width: 100px;
         height: 100px;
-         margin-left: 520px;
-         margin-top: -240rem;
-        
-     }
-     
-     .layer-2 img{
-        
-         width: 100px;
-         height: 100px;
-         margin-left: 10px;
-        margin-top: -40rem;
-     }
-     
-     .layer-3 img{
-         width: 100px;
-         height: 100px;
-         margin-left: 520px;
-        margin-top: -10rem;
-     }
+        margin-left: 520px;
+        margin-top: -240rem;
+    }
 
+    .layer-2 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
+        margin-top: -40rem;
+    }
+
+    .layer-3 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 520px;
+        margin-top: -10rem;
+    }
 }
 
-   @media screen and (min-width: 650px) {
+@media screen and (min-width: 650px) {
     .col-sm-6 {
         flex: 0 0 50%;
         max-width: 50%;
@@ -2935,19 +2813,14 @@ publication section style
         background-size: contain;
         background-position: center;
         transition: 0.7s; */
-        
     }
 
     .card-img-border {
-       
         left: 3.5rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 8rem;
-        
     }
 
     .show-pro-btn {
@@ -2956,7 +2829,6 @@ publication section style
         padding: 2 13 2 13;
         margin: 10 0 0 0;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -2965,59 +2837,48 @@ publication section style
         margin-left: 20rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer img{
+    .layer img {
         width: 100px;
         height: 100px;
-         margin-left: 550px;
-         margin-top: -125rem;
-        
-     }
-     
-     .layer-2 img{
-        
-         width: 100px;
-         height: 100px;
-         margin-left: 10px;
+        margin-left: 550px;
+        margin-top: -125rem;
+    }
+
+    .layer-2 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
         margin-top: -40rem;
-     }
-     
-     .layer-3 img{
-         width: 100px;
-         height: 100px;
-         margin-left: 550px;
+    }
+
+    .layer-3 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 550px;
         margin-top: -10rem;
-     }
+    }
+}
 
-   }
-
-
-   /* Medium devices (tablets, 768px and up) */
+/* Medium devices (tablets, 768px and up) */
 
 @media screen and (min-width: 768px) {
-
     .col-sm-6 {
         flex: 0 0 50%;
         max-width: 50%;
     }
 
-    
     .card-img-border {
-       
         left: 6rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 10.5rem;
-        
     }
 
     .show-pro-btn {
@@ -3027,7 +2888,6 @@ publication section style
         margin: 10 0 0 0;
         bottom: -13px;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -3036,55 +2896,46 @@ publication section style
         margin-left: 25rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer img{
+    .layer img {
         width: 100px;
         height: 100px;
-         margin-left: 650px;
-         margin-top: -125rem;
-        
-     }
-     
-     .layer-2 img{
-        
-         width: 100px;
-         height: 100px;
-         margin-left: 10px;
-        margin-top: -36rem;
-     }
-     
-     .layer-3 img{
-         width: 100px;
-         height: 100px;
-         margin-left: 650px;
-        margin-top: -10rem;
-     }
+        margin-left: 650px;
+        margin-top: -125rem;
+    }
 
+    .layer-2 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
+        margin-top: -36rem;
+    }
+
+    .layer-3 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 650px;
+        margin-top: -10rem;
+    }
 }
 
 @media screen and (min-width: 868px) {
-
     .col-sm-6 {
         flex: 0 0 50%;
         max-width: 50%;
     }
 
     .card-img-border {
-       
         left: 8rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 12.5rem;
-        
     }
 
     .show-pro-btn {
@@ -3094,7 +2945,6 @@ publication section style
         margin: 10 0 0 0;
         bottom: -13px;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -3103,58 +2953,48 @@ publication section style
         margin-left: 30rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer img{
+    .layer img {
         width: 100px;
         height: 100px;
-         margin-left: 730px;
-         margin-top: -125rem;
-        
-     }
-     
-     .layer-2 img{
-        
-         width: 100px;
-         height: 100px;
-         margin-left: 10px;
+        margin-left: 730px;
+        margin-top: -125rem;
+    }
+
+    .layer-2 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
         margin-top: -36rem;
-     }
-     
-     .layer-3 img{
-         width: 100px;
-         height: 100px;
-         margin-left: 730px;
+    }
+
+    .layer-3 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 730px;
         margin-top: -10rem;
-     }
-
+    }
 }
-
 
 /* Large devices (desktops, 992px and up) */
 
 @media screen and (min-width: 992px) {
-
     .col-md-4 {
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
     }
 
     .card-img-border {
-       
         left: 5rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 9.5rem;
-        
     }
 
     .show-pro-btn {
@@ -3164,7 +3004,6 @@ publication section style
         margin: 10 0 0 0;
         bottom: -13px;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -3173,59 +3012,48 @@ publication section style
         margin-left: 40rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer img{
+    .layer img {
         width: 100px;
         height: 100px;
-         margin-left: 880px;
-         margin-top: -100rem;
-        
-     }
-     
-     .layer-2 img{
-        
-         width: 100px;
-         height: 100px;
-         margin-left: 10px;
+        margin-left: 880px;
+        margin-top: -100rem;
+    }
+
+    .layer-2 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
         margin-top: -36rem;
-     }
-     
-     .layer-3 img{
-         width: 100px;
-         height: 100px;
-         margin-left: 880px;
+    }
+
+    .layer-3 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 880px;
         margin-top: -10rem;
-     }
-
-
-
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 
 @media screen and (min-width: 1200px) {
-    
     .col-lg-4 {
         flex: 0 0 25%;
         max-width: 25%;
     }
 
     .card-img-border {
-       
         left: 5rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 9.5rem;
-        
     }
 
     .show-pro-btn {
@@ -3235,7 +3063,6 @@ publication section style
         margin: 10 0 0 0;
         bottom: -13px;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -3244,55 +3071,46 @@ publication section style
         margin-left: 50rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer img{
-       width: 100px;
-       height: 100px;
+    .layer img {
+        width: 100px;
+        height: 100px;
         margin-left: 1090px;
         margin-top: -70rem;
-       
     }
-    
-    .layer-2 img{
-       
+
+    .layer-2 img {
         width: 100px;
         height: 100px;
         margin-left: 10px;
-       margin-top: -36rem;
+        margin-top: -36rem;
     }
-    
-    .layer-3 img{
+
+    .layer-3 img {
         width: 100px;
         height: 100px;
         margin-left: 1090px;
-       margin-top: -10rem;
+        margin-top: -10rem;
     }
-
 }
 
 @media screen and (min-width: 1366px) {
-
     .col-lg-4 {
         flex: 0 0 25%;
         max-width: 25%;
     }
 
     .card-img-border {
-       
         left: 5rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 9.5rem;
-        
     }
 
     .show-pro-btn {
@@ -3302,7 +3120,6 @@ publication section style
         margin: 10 0 0 0;
         bottom: -13px;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -3311,35 +3128,28 @@ publication section style
         margin-left: 60rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer img{
-       
+    .layer img {
         margin-left: 1190px;
         margin-top: -70rem;
-       
     }
-    
-    .layer-2 img{
-       
+
+    .layer-2 img {
         display: none;
-       
-       /* margin-top: -30rem; */
+
+        /* margin-top: -30rem; */
     }
-    
-    .layer-3 img{
-       
+
+    .layer-3 img {
         margin-left: 1190px;
-       margin-top: -10rem;
+        margin-top: -10rem;
     }
-
 }
-
 
 @media screen and (min-width: 1563px) {
     .col-lg-4 {
@@ -3353,15 +3163,11 @@ publication section style
     }
 
     .card-img-border {
-       
         left: 7rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 11.5rem;
-        
     }
 
     .show-pro-btn {
@@ -3371,7 +3177,6 @@ publication section style
         margin: 10 0 0 0;
         bottom: -13px;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -3380,36 +3185,27 @@ publication section style
         margin-left: 70rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer img{
-       
+    .layer img {
         margin-left: 1380px;
-       
-    }
-    
-    .layer-2 img{
-       
-       
-       margin-top: -40rem;
-    }
-    
-    .layer-3 img{
-       
-        margin-left: 1380px;
-       margin-top: -10rem;
     }
 
+    .layer-2 img {
+        margin-top: -40rem;
+    }
+
+    .layer-3 img {
+        margin-left: 1380px;
+        margin-top: -10rem;
+    }
 }
 
-
 @media screen and (min-width: 1600px) {
-
     .col-lg-4 {
         flex: 0 0 25%;
         max-width: 25%;
@@ -3421,15 +3217,11 @@ publication section style
     }
 
     .card-img-border {
-       
         left: 8rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 12.5rem;
-        
     }
 
     .show-pro-btn {
@@ -3439,7 +3231,6 @@ publication section style
         margin: 10 0 0 0;
         bottom: -13px;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -3448,31 +3239,24 @@ publication section style
         margin-left: 70rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer img{
-       
+    .layer img {
         margin-left: 1400px;
-       
-    }
-    
-    .layer-2 img{
-       
-       
-       margin-top: -40rem;
-    }
-    
-    .layer-3 img{
-       
-        margin-left: 1400px;
-       margin-top: -10rem;
     }
 
+    .layer-2 img {
+        margin-top: -40rem;
+    }
+
+    .layer-3 img {
+        margin-left: 1400px;
+        margin-top: -10rem;
+    }
 }
 
 @media screen and (min-width: 1700px) {
@@ -3487,15 +3271,11 @@ publication section style
     }
 
     .card-img-border {
-       
         left: 7rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 11.5rem;
-        
     }
 
     .show-pro-btn {
@@ -3505,7 +3285,6 @@ publication section style
         margin: 10 0 0 0;
         bottom: -13px;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -3514,34 +3293,27 @@ publication section style
         margin-left: 65rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer img{
-       
+    .layer img {
         margin-left: 1500px;
-       
-    }
-    
-    .layer-2 img{
-       
-       
-       margin-top: -40rem;
-    }
-    
-    .layer-3 img{
-       
-        margin-left: 1500px;
-       margin-top: -10rem;
     }
 
+    .layer-2 img {
+        margin-top: -40rem;
+    }
+
+    .layer-3 img {
+        margin-left: 1500px;
+        margin-top: -10rem;
+    }
 }
 
-   @media screen and (min-width: 1920px) {
+@media screen and (min-width: 1920px) {
     .publication-container {
         margin: 7rem;
         padding: 50px;
@@ -3550,7 +3322,6 @@ publication section style
         background-size: contain;
         background-position: center;
         transition: 0.7s; -*/
-        
     }
 
     .col-lg-4 {
@@ -3564,15 +3335,11 @@ publication section style
     }
 
     .card-img-border {
-       
         left: 10rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 14.5rem;
-        
     }
 
     .show-pro-btn {
@@ -3582,7 +3349,6 @@ publication section style
         margin: 10 0 0 0;
         bottom: -13px;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -3591,7 +3357,6 @@ publication section style
         margin-left: 75rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
@@ -3600,25 +3365,16 @@ publication section style
         padding: 90px;
     }
 
-    .layer img{
-       
+    .layer img {
         margin-left: 1750px;
-       
     }
-    
-    
-    
-    .layer-3 img{
-       
+
+    .layer-3 img {
         margin-left: 1750px;
-       
     }
-    
-    
-   }
+}
 
-   @media screen and (min-width: 2020px) {
-
+@media screen and (min-width: 2020px) {
     .col-lg-4 {
         flex: 0 0 25%;
         max-width: 25%;
@@ -3630,15 +3386,11 @@ publication section style
     }
 
     .card-img-border {
-       
         left: 10rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 14.5rem;
-        
     }
 
     .show-pro-btn {
@@ -3648,7 +3400,6 @@ publication section style
         margin: 10 0 0 0;
         bottom: -13px;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -3657,29 +3408,22 @@ publication section style
         margin-left: 75rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer-2 img{
-       
+    .layer-2 img {
         margin-top: -45rem;
     }
-    
-    
-    
-    .layer-3 img{
-       
+
+    .layer-3 img {
         margin-top: -20rem;
     }
+}
 
-   }
-
-   @media screen and (min-width: 2200px) {
-
+@media screen and (min-width: 2200px) {
     .col-lg-4 {
         flex: 0 0 25%;
         max-width: 25%;
@@ -3691,15 +3435,11 @@ publication section style
     }
 
     .card-img-border {
-       
         left: 14rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 18.5rem;
-        
     }
 
     .show-pro-btn {
@@ -3709,7 +3449,6 @@ publication section style
         margin: 10 0 0 0;
         bottom: -13px;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -3718,31 +3457,24 @@ publication section style
         margin-left: 100rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer img{
-       
+    .layer img {
         margin-left: 1950px;
         margin-top: -90rem;
     }
-    
-    
-    
-    .layer-3 img{
-       
+
+    .layer-3 img {
         margin-left: 1950px;
         margin-top: -20rem;
     }
+}
 
-   }
-
-   @media screen and (min-width: 2560px) {
-
+@media screen and (min-width: 2560px) {
     .col-lg-4 {
         flex: 0 0 25%;
         max-width: 25%;
@@ -3754,15 +3486,11 @@ publication section style
     }
 
     .card-img-border {
-       
         left: 16rem;
-       
     }
 
     .card-in .card-img {
-        
         left: 20.5rem;
-        
     }
 
     .show-pro-btn {
@@ -3772,7 +3500,6 @@ publication section style
         margin: 10 0 0 0;
         bottom: -13px;
         border-radius: 50px;
-        
     }
 
     .more {
@@ -3781,36 +3508,19 @@ publication section style
         margin-left: 110rem;
         margin-top: 50px;
         padding: 6px 30px;
-        
     }
 
     .quote {
         left: -2rem;
     }
 
-    .layer img{
-       
+    .layer img {
         margin-left: 2300px;
         margin-top: -90rem;
     }
-    
-    
-    
-    
-    
-    .layer-3 img{
-       
+
+    .layer-3 img {
         margin-left: 2300px;
         margin-top: -20rem;
     }
-
-   }
-
-   
-
- 
-
-
-
-
-
+}
